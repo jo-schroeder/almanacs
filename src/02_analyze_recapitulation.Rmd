@@ -1,0 +1,100 @@
+---
+title: "02_analyze_recapitulation"
+output: html_document
+date: "2024-11-04"
+---
+
+```{r setup, include=FALSE}
+## Load libraries
+library(tidyverse)
+library(ipumsr)
+library(srvyr)
+library(readxl)
+
+setwd("~/Documents/git/almanacs/")
+```
+
+```{r}
+# Explore our categories
+recap_path <- "../data/New Recapitulation Data.xlsx"
+names <- excel_sheets(recap_path)
+n_sheets <- length(names)
+
+# Read in recapitulation data (local copy)
+# The only thing we're reading in right now is the raw data to be categorized
+recapitulation <- list()
+for (i in 2:n_sheets) {
+  print(paste("Reading in sheet", i))
+  tryCatch({  
+    sheet_recapitulation <- read_excel("../data/Copy of New Recapitulation Data.xlsx", sheet = i) %>%
+      select(2) %>% rename(raw_data = Category)
+    recapitulation[[names[i]]] <- sheet_recapitulation
+  }, error=function(e){cat("ERROR :",conditionMessage(e), "\n")})  
+}
+
+# Combine info from each sheet
+categories <- read_excel("../data/New Recapitulation Data.xlsx", sheet = 1) %>% pivot_longer(cols = everything()) %>%
+  filter(name != "...8") %>%
+  rename(category = name, raw_data = value) %>%
+  filter(!is.na(raw_data)) %>%
+  mutate(raw_data = tolower(str_squish(raw_data)))
+
+# Assign categories to the raw data 
+recapitulation_raw_data <- do.call(rbind.data.frame, recapitulation) %>%
+  rownames_to_column() %>% mutate(place = gsub("\\..*","",rowname)) %>%
+  mutate(raw_data = tolower(str_squish(raw_data))) %>% 
+  filter(!is.na(raw_data)) %>%
+  left_join(categories, by = "raw_data") %>%
+  select(place, -rowname, raw_data, category)
+
+```
+
+```{r}
+# HISTOGRAMS!!!
+
+# Frequency of raw data labels within a selected category
+selected_category = "Religious Individuals / Employees / Ecclesiastical Trainees"
+recapitulation_raw_data %>%
+  mutate(raw_data = str_sub(raw_data, 1, 20)) %>%
+  filter(category == selected_category) %>%
+  ggplot(aes(x = forcats::fct_infreq(raw_data))) +
+    geom_histogram(stat = "count") + 
+    theme(axis.text.x = element_text(angle = 70, vjust = 1, hjust=1)) +
+    labs(x = selected_category,
+         y = "Number of Times Raw Data Appears")
+
+# By place 
+recapitulation_raw_data %>%
+  mutate(raw_data = str_sub(raw_data, 1, 20)) %>%
+  filter(category == selected_category) %>%
+  ggplot(aes(x = forcats::fct_infreq(raw_data),
+             fill = place)) +
+    geom_histogram(stat = "count") + 
+    theme(axis.text.x = element_text(angle = 70, vjust = 1, hjust=1),
+          legend.position = "none") +
+    labs(x = selected_category,
+         y = "Number of Times Raw Data Appears")
+```
+
+```{r}
+# Reading in recapitulation data
+recap_path <- "../data/Copy of New Recapitulation Data.xlsx"
+names <- excel_sheets(recap_path)
+n_sheets <- length(names)
+
+# Read in recapitulation data (local copy)
+# This reads in all columns of the dataset (i.e. labels, raw data, and numeric values)
+recapitulation <- list()
+for (i in 2:n_sheets) {
+  print(i)
+  sheet_recapitulation <- read_excel("../data/Copy of New Recapitulation Data.xlsx", sheet = i) %>%
+    select(1:12) %>%
+    rename_with(~ substr(., 1, 4)) %>% rename(category_cleaned = `...1`, category_raw = Cate)
+  recapitulation[[names[i]]] <- sheet_recapitulation
+}
+
+#Next: 
+# getting ipumsr data
+# unlisting recapitulation data
+```
+

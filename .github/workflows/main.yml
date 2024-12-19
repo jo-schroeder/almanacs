@@ -23,6 +23,12 @@ jobs:
         R -e "install.packages('rmarkdown')"
         R -e "install.packages('knitr')"
         R -e "install.packages('pandoc')"
+        R -e "install.packages('tidyverse')"
+        R -e "install.packages('stringr')"
+        R -e "install.packages('googledrive')"
+        R -e "install.packages('googlesheets4')"
+        R -e "install.packages('DT')"
+        R -e "install.packages('jsonlite')"
 
     - name: Build site
       run: |
@@ -32,4 +38,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_site  # Change to your output directory
+        publish_dir: ./_docs  # Change to your output directory

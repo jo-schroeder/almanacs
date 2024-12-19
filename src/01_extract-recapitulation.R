@@ -8,7 +8,7 @@ numbers <- 819941:820657 #all pages
 #numbers <- 820024:820034 #this is small for an example
 #numbers <- 820061:820062 #error example
 #numbers <- 820327 #error example
-recapitulation <- lst()
+recapitulation <- list()
 for (i in numbers) {
   print(paste0("We're on page ", ((i - 819941) + 1)))
   url <- paste0("https://digital.library.villanova.edu/files/vudl:", i ,"/OCR-DIRTY")
@@ -16,6 +16,7 @@ for (i in numbers) {
   text <- paste(text, collapse = " ")
   if (str_detect(text, "RECAPITULATION") == TRUE) {
     print("We have recapitulation!")
+    print(text)
     
     text <- str_replace_all(text, "[\r\n]+", " ")    # Replace line breaks
     text <- str_replace_all(text, "\\.+", " ")       # Replace multiple dots with a single space
@@ -23,8 +24,10 @@ for (i in numbers) {
     
     # Step 3: Extract the section between "RECAPITULATION" and "ARCHDIOCESE OF NEW YORK"
     # This should capture everything between the two keywords without interruption
-    recap_text <- str_extract(text, "RECAPITULATION(.*?)ARCHDIOCESE OF ")
-    ### ADD DIOCESE, SOME ARE PROVINCES?
+    
+    recap_text <- str_extract(text, "RECAPITULATION(.*?)DIOCESE OF")
+    
+    ## Need to match: Archdiocese, Diocese, Province (messed up OCR?), End of page
     # Display extracted section for verification
     cat(recap_text)
     
@@ -32,6 +35,7 @@ for (i in numbers) {
     if (is.na(recap_text) || nchar(recap_text) == 0) {
       message("Extraction of 'RECAPITULATION' section failed.")
       recapitulation[[paste0("Page ", ((i - 819941) + 1))]] <- "FAILED"
+      
     } else {
     
     # Step 4: Refine text to remove unwanted characters within the recap_text

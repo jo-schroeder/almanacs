@@ -1,0 +1,10 @@
+name: "almanac-reports"
+output_dir: "docs"
+navbar:
+  title: "Almanac Reports"
+  left:
+    - text: ""
+      href: index.html
+output:
+  html_document:
+    theme: cosmo

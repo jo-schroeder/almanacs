@@ -1,0 +1,134 @@
+---
+title: "03_explore_person_ids"
+output: html_document
+date: "2024-11-07"
+---
+
+```{r setup, message = FALSE, warning = FALSE, include = FALSE}
+library(tidyverse)
+library(stringr)
+library(googledrive)
+library(googlesheets4)
+library(DT)
+library(jsonlite)
+
+gs4_deauth()
+gs4_auth(cache = ".secrets", email = "schroejh@bc.edu", scope = "https://www.googleapis.com/auth/drive")
+drive_auth(token = gs4_token())
+
+```
+
+```{r, message = FALSE, warning = FALSE, include = FALSE}
+# Get file ids from folders
+folder_ids <- c("1vsjVWIWOAH1xN8RPvhgmI6ky1vA7CfcJ",
+    "145ECofup4M7ZnA1dUF5_pDZN3OWEK1Yb",
+    "1gi-k4cgD-XR_AiaSq6J9OPf3OWwkIPCt",
+    "1IYkTrGI07fTcjaggY_12V72syNATNSIp",
+    "10-NQy1b9lXuXnm5X_FuzYpetI_1PgjOQ",
+    "1FbOjmMtKKbgpDou-eyVbhb162RQJMNy-",
+    "1LEYANh7PIV9BIC4GpmWByWR4mi2dNtih")
+
+files <- lapply(folder_ids, function(folder) {
+  drive_ls(as_id(folder))
+})
+files <- do.call("rbind", files)
+```
+
+```{r, message = FALSE, warning = FALSE, include = FALSE}
+# Get the peopleInfo sheet from each file
+sheet <- "master"
+lookup <- c(persTitle = "personTitle", persTitle = "title", instID = 0, instID = "ros", attendingInstID = "attendingIstD", attendingInstID = "attendingChurchID", attendingInstID = "AttendingChurchID")
+not_these <- c("", "temp")
+
+time1 <- Sys.time()
+peopleInfos <- data.frame("instID" = NA, "type" = NA, "instName" = NA, "language" = NA, "instNote" = NA, "placeName" = NA, "region" = NA, "county_orig" = NA, "county_reg"   = NA, "city_orig" = NA, "city_reg" = NA, "state_orig" = NA, "state_reg" = NA, "latitude" = NA, "longitude" = NA, "attendingInstID" = NA, "attendingChurch" = NA, "attendingChurchFrequency" = NA, "attendingChurchNote" = NA, "persID" = NA, "persTitle" = NA, "persName" = NA, "persSuffix" = NA, "persRole" = NA, "persNote"      = NA, "memberType" = NA, "member" = NA, "affiliated" = NA, "place" = NA, "year" = NA)
+
+for (i in 1:nrow(files)) {
+   
+  tryCatch(
+    {
+    sheet_peopleInfo <- read_sheet(files$id[i], sheet = sheet) %>%
+       filter(!is.na(persName)) %>%
+       mutate(place = str_extract(files$name[i], "[A-Za-z]+"),
+              year = str_extract(files$name[i], "\\d+")) %>%
+      rename(any_of(lookup)) %>%
+      mutate(across(everything(), as.character),
+             city_reg = ifelse(is.na(city_reg), "none", city_reg), 
+             state_reg = ifelse(is.na(state_reg), "none", state_reg)) %>%
+      select(-any_of(not_these))
+  
+     if(nrow(sheet_peopleInfo) != 0) {
+      peopleInfos <- bind_rows(sheet_peopleInfo, peopleInfos)
+      }
+     else {
+       next
+      }
+  },
+  error = function(e) {
+    message("Something didn't work right!")
+  })
+  
+}
+
+time2 <- Sys.time()
+print(time2-time1)
+#write_csv(peopleInfos, "peopleInfos.csv")
+#getwd()
+
+
+```
+
+```{r, echo = FALSE}
+peopleInfos_subset <- peopleInfos %>% select(1:30)
+write_json(peopleInfos_subset, "./data/data.json", pretty = TRUE)
+
+datatable(
+  data.frame(), # Empty data frame; the table will be populated by JSON
+  rownames = FALSE,
+  options = list(
+    ajax = list(
+      url = 'https://raw.githubusercontent.com/jo-schroeder/almanacs/refs/heads/main/data/employee.json',
+      dataSrc = ""
+    )
+  )
+)
+```
+
+```{r, include = FALSE, eval = FALSE}
+# Get the peopleInfo sheet from each file
+sheet <- "master"
+
+time1 <- Sys.time()
+masterCols <- data.frame()
+
+masterCols <- read_sheet(files$id[1], sheet = sheet) %>% colnames() %>% data.frame()
+colnames(masterCols) <- files$name[1]
+
+for (i in 2:nrow(files)) {
+   
+  tryCatch(
+    {
+      masterCols_sheet <- read_sheet(files$id[i], sheet = sheet) %>% colnames() %>%
+        data.frame()
+      colnames(masterCols_sheet) <- files$name[i]
+      masterCols <- bind_cols(masterCols, masterCols_sheet)
+  },
+  error = function(e) {
+    message("Something didn't work right!")
+  })
+  
+}
+
+time2 <- Sys.time()
+print(time2-time1)
+#write_csv(peopleInfos, "peopleInfos.csv")
+#getwd()
+
+columns <- t(masterCols) %>% as.data.frame()
+unique(columns$V29)
+
+columns %>% filter(V21 == "personTitle")
+
+write.csv(columns, "columns.csv")
+```
+
