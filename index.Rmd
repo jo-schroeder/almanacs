@@ -1,8 +1,9 @@
 ---
-title: "03_explore_person_ids"
+title: ""
 output: html_document
-date: "2024-11-07"
+date: ""
 ---
+Last updated `r Sys.Date()`
 
 ```{r setup, message = FALSE, warning = FALSE, include = FALSE}
 library(tidyverse)
@@ -10,7 +11,8 @@ library(stringr)
 library(googledrive)
 library(googlesheets4)
 library(DT)
-library(jsonlite)
+library(purrr)
+library(lubridate)
 
 gs4_deauth()
 gs4_auth(cache = ".secrets", email = "schroejh@bc.edu", scope = "https://www.googleapis.com/auth/drive")
@@ -31,34 +33,41 @@ folder_ids <- c("1vsjVWIWOAH1xN8RPvhgmI6ky1vA7CfcJ",
 files <- lapply(folder_ids, function(folder) {
   drive_ls(as_id(folder))
 })
-files <- do.call("rbind", files)
+
+#Data frame with all files
+files <- do.call("rbind", files) 
+new_files <- files %>% 
+  mutate(modifiedTime = map_chr(drive_resource, ~ .x[["modifiedTime"]])) %>%
+  mutate(modified_yesterday = ifelse(Sys.time() -as_datetime(modifiedTime) <= 24, TRUE, FALSE)) %>% 
+  filter(modified_yesterday == TRUE)
 ```
 
 ```{r, message = FALSE, warning = FALSE, include = FALSE}
-# Get the peopleInfo sheet from each file
+# Get the master sheet from each file
 sheet <- "master"
 lookup <- c(persTitle = "personTitle", persTitle = "title", instID = 0, instID = "ros", attendingInstID = "attendingIstD", attendingInstID = "attendingChurchID", attendingInstID = "AttendingChurchID")
 not_these <- c("", "temp")
 
 time1 <- Sys.time()
-peopleInfos <- data.frame("instID" = NA, "type" = NA, "instName" = NA, "language" = NA, "instNote" = NA, "placeName" = NA, "region" = NA, "county_orig" = NA, "county_reg"   = NA, "city_orig" = NA, "city_reg" = NA, "state_orig" = NA, "state_reg" = NA, "latitude" = NA, "longitude" = NA, "attendingInstID" = NA, "attendingChurch" = NA, "attendingChurchFrequency" = NA, "attendingChurchNote" = NA, "persID" = NA, "persTitle" = NA, "persName" = NA, "persSuffix" = NA, "persRole" = NA, "persNote"      = NA, "memberType" = NA, "member" = NA, "affiliated" = NA, "place" = NA, "year" = NA)
+master <- data.frame("instID" = NA, "type" = NA, "instName" = NA, "language" = NA, "instNote" = NA, "placeName" = NA, "region" = NA, "county_orig" = NA, "county_reg"   = NA, "city_orig" = NA, "city_reg" = NA, "state_orig" = NA, "state_reg" = NA, "latitude" = NA, "longitude" = NA, "attendingInstID" = NA, "attendingChurch" = NA, "attendingChurchFrequency" = NA, "attendingChurchNote" = NA, "persID" = NA, "persTitle" = NA, "persName" = NA, "persSuffix" = NA, "persRole" = NA, "persNote"      = NA, "memberType" = NA, "member" = NA, "affiliated" = NA, "place" = NA, "year" = NA)
 
-for (i in 1:nrow(files)) {
+for (i in 1:nrow(new_files)) {
    
   tryCatch(
     {
-    sheet_peopleInfo <- read_sheet(files$id[i], sheet = sheet) %>%
+    sheet_master <- read_sheet(files$id[i], sheet = sheet) %>%
        filter(!is.na(persName)) %>%
        mutate(place = str_extract(files$name[i], "[A-Za-z]+"),
-              year = str_extract(files$name[i], "\\d+")) %>%
+              year = str_extract(files$name[i], "\\d+"),
+              file_id = files$id[i]) %>%
       rename(any_of(lookup)) %>%
       mutate(across(everything(), as.character),
              city_reg = ifelse(is.na(city_reg), "none", city_reg), 
              state_reg = ifelse(is.na(state_reg), "none", state_reg)) %>%
       select(-any_of(not_these))
   
-     if(nrow(sheet_peopleInfo) != 0) {
-      peopleInfos <- bind_rows(sheet_peopleInfo, peopleInfos)
+     if(nrow(sheet_master) != 0) {
+      master <- bind_rows(sheet_master, master)
       }
      else {
        next
@@ -71,27 +80,51 @@ for (i in 1:nrow(files)) {
 }
 
 time2 <- Sys.time()
+
 print(time2-time1)
-#write_csv(peopleInfos, "peopleInfos.csv")
-#getwd()
-
-
+master_new <- master %>% select(1:31)
 ```
 
-```{r, echo = FALSE}
-peopleInfos_subset <- peopleInfos %>% select(1:30)
-write_json(peopleInfos_subset, "./data/data.json", pretty = TRUE)
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+# Making Tables
+master <- read_csv('./_data/master.csv') %>% mutate(across(everything(), as.character)) %>% filter(!(file_id %in% new_files$id)) %>% bind_rows(master_new)
 
-datatable(
-  data.frame(), # Empty data frame; the table will be populated by JSON
-  rownames = FALSE,
-  options = list(
-    ajax = list(
-      url = 'https://raw.githubusercontent.com/jo-schroeder/almanacs/refs/heads/main/data/employee.json',
-      dataSrc = ""
-    )
-  )
-)
+write_csv(master, "./_data/master.csv")
+
+#Inst info
+master_inst <- master %>% select(c(1:6, 29:30)) %>%
+  fill(instID, .direction = "down") %>% distinct() %>%
+  filter_at(vars(type, instName, language, instNote,
+                 placeName), any_vars(!is.na(.)))
+
+#Inst geo info
+master_geo <- master %>% select(c(1, 7:15, 29:30)) %>% 
+  mutate(city_reg = ifelse(city_reg == "none", NA, city_reg),
+         state_reg = ifelse(state_reg == "none", NA, state_reg)) %>%
+  fill(instID, .direction = "down") %>% distinct() %>%
+  filter_at(vars(region, county_orig, county_reg, city_orig, city_reg,
+                 state_orig, state_reg, latitude, longitude),
+            any_vars(!is.na(.)))
+
+#Attending info
+master_att <- master %>% select(c(1, 16:19, 29:30)) %>%
+  fill(instID, .direction = "down") %>% distinct() %>%
+  filter_at(vars(attendingInstID, attendingChurch,
+                 attendingChurchFrequency, attendingChurchNote),
+            any_vars(!is.na(.)))
+
+#Person info
+master_pers <- master %>% select(c(1, 20:28, 29:30)) %>% 
+  fill(instID, .direction = "down") %>% distinct() %>%
+  filter_at(vars(persID, persTitle, persName, persSuffix, persRole,
+                 persNote, memberType, member, affiliated),
+            any_vars(!is.na(.)))
+
+datatable(master_inst)
+datatable(master_geo)
+datatable(master_att)
+datatable(master_pers)
+
 ```
 
 ```{r, include = FALSE, eval = FALSE}

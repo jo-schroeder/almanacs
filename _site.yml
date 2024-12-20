@@ -1,5 +1,6 @@
 name: "almanac-reports"
 output_dir: "docs"
+exclude: ["/data", "/src"]
 navbar:
   title: "Almanac Reports"
   left:
