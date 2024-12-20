@@ -43,7 +43,7 @@ jobs:
     - name: Install R Packages
       run: |
         R -e "options(repos = 'https://cloud.r-project.org')"
-        R -e "install.packages(c('rmarkdown', 'knitr', 'tidyverse', 'stringr', 'googledrive', 'googlesheets4', 'DT', 'jsonlite', 'purrr', 'lubridate'))"
+        R -e "install.packages(c('rmarkdown', 'knitr', 'dplyr', 'readr', 'tidyr', 'stringr', 'googledrive', 'googlesheets4', 'DT', 'jsonlite', 'purrr', 'lubridate'))"
 
     - name: Check Pandoc Version
       run: pandoc --version

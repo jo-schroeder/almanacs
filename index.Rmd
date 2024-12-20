@@ -6,7 +6,9 @@ date: ""
 Last updated `r Sys.Date()`
 
 ```{r setup, message = FALSE, warning = FALSE, include = FALSE}
-library(tidyverse)
+library(dplyr)
+library(readr)
+library(tidyr)
 library(stringr)
 library(googledrive)
 library(googlesheets4)

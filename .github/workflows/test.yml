@@ -32,7 +32,9 @@ jobs:
             any::rmarkdown
             any::knitr
             any::pandoc
-            any::tidyverse
+            any::dplyr
+            any::tidyr
+            any::readr
             any::stringr
             any::googledrive
             any::googlesheets4
