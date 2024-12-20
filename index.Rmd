@@ -16,9 +16,8 @@ library(DT)
 library(purrr)
 library(lubridate)
 
-gs4_deauth()
-gs4_auth(cache = ".secrets", email = "schroejh@bc.edu", scope = "https://www.googleapis.com/auth/drive")
-drive_auth(token = gs4_token())
+gs4_auth(path = ".secrets.json")
+drive_auth(path = ".secrets.json")
 
 ```
 

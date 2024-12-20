@@ -48,6 +48,12 @@ jobs:
     - name: Check Pandoc Version
       run: pandoc --version
 
+    - name: Setup Google Sheets Authentication
+      run: |
+        echo $GS4_AUTH_TOKEN | base64 --decode > .secrets
+      env:
+        GS4_AUTH_TOKEN: ${{ secrets.GS4_AUTH_TOKEN }}
+
     - name: Build Site
       run: |
         Rscript -e "rmarkdown::render_site()"
