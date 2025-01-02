@@ -32,8 +32,8 @@ token_file <- file.path(cache_dir, "token.rds")
 writeBin(decoded_cert, token_file)
 
 # Authenticate with the cached token
-gs4_auth(cache = cache_dir)
-drive_auth(cache = cache_dir)
+gs4_auth(path = token_file)
+drive_auth(path = token_file)
 
 #Local Authentication
 #gs4_auth(cache = ".secrets", email = "schroejh@bc.edu", scope = "https://www.googleapis.com/auth/drive")

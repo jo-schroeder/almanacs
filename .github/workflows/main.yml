@@ -31,16 +31,22 @@ jobs:
           libpng-dev \
           libtiff5-dev \
           libjpeg-dev
+          
+    - name: Retrieve R Version
+      id: r_version
+      run: |
+        R_VERSION=$(R --version | head -n 1 | awk '{print $3}' | sed 's/[[:alpha:]]//g')
+        echo "R_VERSION=${R_VERSION}" >> $GITHUB_ENV
 
-    - name: Cache R packages
+   - name: Cache R packages
       uses: actions/cache@v3
       with:
         path: ~/.cache/R
-        key: ${{ runner.os }}-r-${{ hashFiles('**/*.R', '**/*.Rmd') }}
+        key: ${{ runner.os }}-r-${{ env.R_VERSION }}
         restore-keys: |
           ${{ runner.os }}-r-
 
-    - name: Install R Packages
+    - name: Install R Packages if not cached
       run: |
         R -e "options(repos = 'https://cloud.r-project.org')"
         R -e "install.packages(c('rmarkdown', 'knitr', 'dplyr', 'readr', 'tidyr', 'stringr', 'googledrive', 'googlesheets4', 'DT', 'jsonlite', 'purrr', 'lubridate', 'openssl'))"
