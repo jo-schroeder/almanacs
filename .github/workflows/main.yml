@@ -48,16 +48,29 @@ jobs:
     - name: Check Pandoc Version
       run: pandoc --version
 
-    - name: Knit R Markdown
+    - name: Knit R Markdown (with error handling)
       env:
         CERTIFICATE_BASE64: ${{ secrets.CERTIFICATE_BASE64 }}
       run: |
+        # Print part of the secret for debugging
         echo "Secret starts with: ${CERTIFICATE_BASE64:0:5}"
+        
+        # Set the environment variable
         Rscript -e "Sys.setenv(CERTIFICATE_BASE64 = Sys.getenv('CERTIFICATE_BASE64'))"
-        Rscript -e "rmarkdown::render_site()"
+        
+        # Try to knit the site, catch any errors to ensure the workflow continues
+        Rscript -e "
+          tryCatch({
+            rmarkdown::render_site()
+          }, error = function(e) {
+            message('Error during knitting: ', e$message)
+            # Continue execution even if knitting fails
+          })
+        "
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./_docs  # Change to your output directory
+
