@@ -15,10 +15,26 @@ library(googlesheets4)
 library(DT)
 library(purrr)
 library(lubridate)
+library(openssl)
 
 gs4_deauth()
-gs4_auth(cache = ".secrets", email = "schroejh@bc.edu", scope = "https://www.googleapis.com/auth/drive")
-drive_auth(token = gs4_token())
+
+# Authenticate through Actions
+certificate <- Sys.getenv("CERTIFICATE_BASE64")
+decoded_cert <- base64_decode(certificate)
+
+# Save the decoded certificate as a file
+cert_file <- ".secrets/token.json"
+dir.create(".secrets", showWarnings = FALSE) # Ensure the .secrets directory exists
+writeBin(decoded_cert, cert_file)
+
+# Authenticate with Google Sheets and Drive using the decoded certificate
+gs4_auth(path = cert_file, email = "schroejh@bc.edu", scopes = "https://www.googleapis.com/auth/drive")
+drive_auth(path = cert_file)
+
+#Local Authentication
+#gs4_auth(cache = ".secrets", email = "schroejh@bc.edu", scope = "https://www.googleapis.com/auth/drive")
+#drive_auth(token = gs4_token())
 
 ```
 
