@@ -15,29 +15,15 @@ library(googlesheets4)
 library(DT)
 library(purrr)
 library(lubridate)
-library(openssl)
+library(gargle)
 
 gs4_deauth()
-
-# Authenticate through Actions
-certificate <- Sys.getenv("CERTIFICATE_BASE64")
-
-# Decode the base64 token
-decoded_cert <- base64_decode(certificate)
-
-# Save it to the expected location
-cache_dir <- ".secrets/.cache/gargle"
-dir.create(cache_dir, recursive = TRUE, showWarnings = FALSE)
-token_file <- file.path(cache_dir, "token.rds")
-writeBin(decoded_cert, token_file)
-
-# Authenticate with the cached token
-gs4_auth(path = token_file)
-drive_auth(path = token_file)
-
-#Local Authentication
+gs4_auth(token = gargle::secret_read_rds(
+  ".secrets/gs4-token.rds",
+  key = "GOOGLE_DRIVE_KEY"
+))
 #gs4_auth(cache = ".secrets", email = "schroejh@bc.edu", scope = "https://www.googleapis.com/auth/drive")
-#drive_auth(token = gs4_token())
+drive_auth(token = gs4_token())
 
 ```
 
@@ -185,4 +171,3 @@ columns %>% filter(V21 == "personTitle")
 
 write.csv(columns, "columns.csv")
 ```
-

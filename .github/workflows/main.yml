@@ -38,7 +38,7 @@ jobs:
         R_VERSION=$(R --version | head -n 1 | awk '{print $3}' | sed 's/[[:alpha:]]//g')
         echo "R_VERSION=${R_VERSION}" >> $GITHUB_ENV
 
-    - name: Cache R packages
+   - name: Cache R packages
       uses: actions/cache@v3
       with:
         path: ~/.cache/R
@@ -49,20 +49,20 @@ jobs:
     - name: Install R Packages if not cached
       run: |
         R -e "options(repos = 'https://cloud.r-project.org')"
-        R -e "install.packages(c('rmarkdown', 'knitr', 'dplyr', 'readr', 'tidyr', 'stringr', 'googledrive', 'googlesheets4', 'DT', 'jsonlite', 'purrr', 'lubridate', 'openssl'))"
+        R -e "install.packages(c('rmarkdown', 'knitr', 'dplyr', 'readr', 'tidyr', 'stringr', 'googledrive', 'googlesheets4', 'DT', 'jsonlite', 'purrr', 'lubridate', 'gargle'))"
 
     - name: Check Pandoc Version
       run: pandoc --version
 
     - name: Knit R Markdown (with error handling)
       env:
-        CERTIFICATE_BASE64: ${{ secrets.CERTIFICATE_BASE64 }}
+        GOOGLE_DRIVE_KEY: ${{ secrets.GOOGLE_DRIVE_KEY }}
       run: |
         # Print part of the secret for debugging
-        echo "Secret starts with: ${CERTIFICATE_BASE64:0:5}"
+        echo "Secret starts with: ${GOOGLE_DRIVE_KEY:0:5}"
         
         # Set the environment variable
-        Rscript -e "Sys.setenv(CERTIFICATE_BASE64 = Sys.getenv('CERTIFICATE_BASE64'))"
+        Rscript -e "Sys.setenv(GOOGLE_DRIVE_KEY = Sys.getenv('GOOGLE_DRIVE_KEY'))"
         
         # Try to knit the site, catch any errors to ensure the workflow continues
         Rscript -e "
@@ -79,4 +79,5 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./_docs  # Change to your output directory
+
 
