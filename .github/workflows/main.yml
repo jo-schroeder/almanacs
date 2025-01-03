@@ -44,7 +44,7 @@ jobs:
     - name: Cache R packages
       uses: actions/cache@v3
       with:
-        path: ~/.cache/R
+        path: /home/runner/work/_temp/Library
         key: ${{ runner.os }}-r-${{ env.R_VERSION }}
         restore-keys: |
           ${{ runner.os }}-r-
@@ -52,7 +52,7 @@ jobs:
     - name: Install R Packages if not cached
       run: |
         R -e "options(repos = 'https://cloud.r-project.org')"
-        R -e "install.packages(c('rmarkdown', 'knitr', 'dplyr', 'readr', 'tidyr', 'stringr', 'googledrive', 'googlesheets4', 'DT', 'jsonlite', 'purrr', 'lubridate', 'gargle'))"
+        R -e ".libPaths('/home/runner/work/_temp/Library'); install.packages(c('rmarkdown', 'knitr', 'dplyr', 'readr', 'tidyr', 'stringr', 'googledrive', 'googlesheets4', 'DT', 'jsonlite', 'purrr', 'lubridate', 'gargle'))"
 
     - name: Check Pandoc Version
       run: pandoc --version
