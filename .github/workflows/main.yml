@@ -38,6 +38,9 @@ jobs:
         R_VERSION=$(R --version | head -n 1 | awk '{print $3}' | sed 's/[[:alpha:]]//g')
         echo "R_VERSION=${R_VERSION}" >> $GITHUB_ENV
 
+    - name: Check R Library Paths
+      run: R -e '.libPaths()'
+
     - name: Cache R packages
       uses: actions/cache@v3
       with:
@@ -78,6 +81,6 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_docs  # Change to your output directory
+        publish_dir: ./docs  # Change to your output directory
 
 
