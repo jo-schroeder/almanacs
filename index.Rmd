@@ -63,7 +63,6 @@ for (i in 1:nrow(new_files)) {
   tryCatch(
     {
     sheet_master <- read_sheet(files$id[i], sheet = sheet) %>%
-       filter(!is.na(persName)) %>%
        mutate(place = str_extract(files$name[i], "[A-Za-z]+"),
               year = str_extract(files$name[i], "\\d+"),
               file_id = files$id[i]) %>%
@@ -72,7 +71,8 @@ for (i in 1:nrow(new_files)) {
              city_reg = ifelse(is.na(city_reg), "none", city_reg), 
              state_reg = ifelse(is.na(state_reg), "none", state_reg)) %>%
       select(-any_of(not_these))
-  
+    print(files$id[i])
+    print(nrow(sheet_master))
      if(nrow(sheet_master) != 0) {
       master <- bind_rows(sheet_master, master)
       }
@@ -127,11 +127,31 @@ master_pers <- master %>% select(c(1, 20:28, 29:30)) %>%
                  persNote, memberType, member, affiliated),
             any_vars(!is.na(.)))
 
-datatable(master_inst)
-datatable(master_geo)
-datatable(master_att)
-datatable(master_pers)
+```
 
+# Institution Information
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+datatable(master_inst, filter = list(position = 'top', clear = FALSE))
+```
+
+# Institution Geographic Information
+
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+datatable(master_geo, filter = list(position = 'top', clear = FALSE))
+```
+
+# Institution Attending Information
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+datatable(master_att, filter = list(position = 'top', clear = FALSE))
+```
+
+# Institution Person Information
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+datatable(master_pers, filter = list(position = 'top', clear = FALSE))
 ```
 
 ```{r, include = FALSE, eval = FALSE}
