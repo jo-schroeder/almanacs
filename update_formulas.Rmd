@@ -125,7 +125,6 @@ for(i in 1:nrow(files)){
 
 
 ```{r}
-
 for(i in 139:nrow(files)){
   
   nrows <- as.numeric(nrow(range_read(files$id[i])))
@@ -360,4 +359,185 @@ for(i in 139:nrow(files)){
 #}
 
 ```
+```{r}
+#for(i in 1:nrow(files)){
+ 
+  i = 1
+  
+  nrows <- as.numeric(nrow(range_read(files$id[i])))
 
+A_persTitle <- rep('=master!U:U', nrows - 1)
+A_persTitle <- as.data.frame(list(form = A_persTitle)) 
+B_persName <- rep('=master!V:V', nrows - 1)
+B_persName <- as.data.frame(list(form = B_persName)) 
+C_persSuffix <- rep('=master!W:W', nrows - 1)  
+C_persSuffix <- as.data.frame(list(form = C_persSuffix)) 
+D_persRole <- rep('=master!X:X', nrows - 1) 
+D_persRole <- as.data.frame(list(form = D_persRole)) 
+E_persNote <- rep('=master!Y:Y', nrows - 1) 
+E_persNote <- as.data.frame(list(form = E_persNote)) 
+
+F_persName_clean <- '=ARRAYFORMULA(LOWER(REGEXREPLACE(REGEXREPLACE(REGEXREPLACE(B2:B, "[[:punct:]-—]", ""), "\\b(Von|De|La|Der|Van|von|de|la|der|van)\\s+(\\w+)", "$1-$2"), "^\\s", "")))'
+F_persName_clean <- as.data.frame(list(form = F_persName_clean)) 
+
+G_lastName <- '=ARRAYFORMULA(IFERROR(REGEXEXTRACT(F2:F, "\\s(\\S+)$"), F2:F))'
+G_lastName <- as.data.frame(list(form = G_lastName)) 
+
+H_firstMiddle <- '=ARRAYFORMULA(IF(LEN(F2:F) - LEN(SUBSTITUTE(F2:F, " ", "")) = 0, , IFERROR(REGEXEXTRACT(F2:F, "^(.*)\\s\\S+$"), F2:F)))'
+H_firstMiddle <- as.data.frame(list(form = H_firstMiddle)) 
+
+I_firstName <- '=ARRAYFORMULA(IFERROR(REGEXEXTRACT(H2:H, "^\\S+"), H2:H))'
+I_firstName <- as.data.frame(list(form = I_firstName)) 
+
+J_middleName <- '=ARRAYFORMULA(IFERROR(REGEXEXTRACT(H2:H, "^\\S+\\s(.*)"), ""))'
+J_middleName <- as.data.frame(list(form = J_middleName)) 
+
+K_initialID <- data.frame(form = '=ARRAYFORMULA(
+  SUBSTITUTE(
+    IF( 
+      REGEXMATCH(A2:A, "(Sister|Mother|OtherException|Brother|Bro.|Sœur|Soeur)") +
+      REGEXMATCH(B2:B, "(Brother|Sister|Ladies|Sœur|Soeur)") +
+      (ISBLANK(I2:I) * ISBLANK(G2:G)),
+      "",
+      IF(
+        ISBLANK(I2:I),
+        G2:G,
+        IF(
+          LEN(I2:I) >= 3,
+          IF(
+            ISBLANK(J2:J),
+            LEFT(I2:I, 3) & "_" & G2:G,
+            LEFT(I2:I, 3) & "_" & LEFT(J2:J, 1) & "_" & G2:G
+          ),
+          IF(
+            LEN(I2:I) = 2,
+            IF(
+              ISBLANK(J2:J),
+              LEFT(I2:I, 2) & "_" & G2:G,
+              LEFT(I2:I, 2) & "_" & LEFT(J2:J, 1) & "_" & G2:G
+            ),
+            IF(
+              LEN(I2:I) = 1,
+              IF(
+                ISBLANK(J2:J),
+                LEFT(I2:I, 1) & "_" & G2:G,
+                LEFT(I2:I, 1) & "_" & LEFT(J2:J, 1) & "_" & G2:G
+              ),
+              ""
+            )
+          )
+        )
+      )
+    ),
+    "__", "_"
+  )
+)')
+
+    L_persID_gen <- paste0('=ARRAYFORMULA(XLOOKUP(peopleInfo!K', 2:nrows , ' & master!AD$2 & master!AC$2,
+  IMPORTRANGE("10rvRUGe4br313NCdOI7saxbwb9xmuY5OyOZkFojPk2k", "personIDs!A:A") & 
+  IMPORTRANGE("10rvRUGe4br313NCdOI7saxbwb9xmuY5OyOZkFojPk2k", "personIDs!B:B") & 
+  IMPORTRANGE("10rvRUGe4br313NCdOI7saxbwb9xmuY5OyOZkFojPk2k", "personIDs!C:C"),
+  IMPORTRANGE("10rvRUGe4br313NCdOI7saxbwb9xmuY5OyOZkFojPk2k", "personIDs!E:E"), ""))')
+  
+  formula <- as.data.frame(list(formula = L_persID_gen)) 
+  formula$formula <- gs4_formula(formula$formula)
+
+A_persTitle$form <- gs4_formula(A_persTitle$form) 
+B_persName$form <- gs4_formula(B_persName$form) 
+C_persSuffix$form <- gs4_formula(C_persSuffix$form) 
+D_persRole$form <- gs4_formula(D_persRole$form) 
+E_persNote$form <- gs4_formula(E_persNote$form) 
+F_persName_clean$form <- gs4_formula(F_persName_clean$form) 
+G_lastName$form <- gs4_formula(G_lastName$form) 
+H_firstMiddle$form <- gs4_formula(H_firstMiddle$form) 
+I_firstName$form <- gs4_formula(I_firstName$form) 
+J_middleName$form <- gs4_formula(J_middleName$form) 
+K_initialID$form <- gs4_formula(K_initialID$form) 
+
+  range_write(files$id[i], 
+            A_persTitle,
+            sheet = "peopleInfo",
+            range = paste0("A2:A", nrows),
+            col_names = FALSE,
+            reformat = FALSE)
+  
+  range_write(files$id[i], 
+            B_persName,
+            sheet = "peopleInfo",
+            range = paste0("B2:B", nrows),
+            col_names = FALSE,
+            reformat = FALSE)
+  
+    range_write(files$id[i], 
+            C_persSuffix,
+            sheet = "peopleInfo",
+            range = paste0("C2:C", nrows),
+            col_names = FALSE,
+            reformat = FALSE)
+    
+    range_write(files$id[i], 
+            D_persRole,
+            sheet = "peopleInfo",
+            range = paste0("D2:D", nrows),
+            col_names = FALSE,
+            reformat = FALSE)
+  
+    range_write(files$id[i], 
+            E_persNote,
+            sheet = "peopleInfo",
+            range = paste0("E2:E", nrows),
+            col_names = FALSE,
+            reformat = FALSE)
+    
+    range_write(files$id[i], 
+            F_persName_clean,
+            sheet = "peopleInfo",
+            range = "F2",
+            col_names = FALSE,
+            reformat = FALSE)
+  
+    range_write(files$id[i], 
+            G_lastName,
+            sheet = "peopleInfo",
+            range = "G2",
+            col_names = FALSE,
+            reformat = FALSE)
+    
+    range_write(files$id[i], 
+            H_firstMiddle,
+            sheet = "peopleInfo",
+            range = "H2",
+            col_names = FALSE,
+            reformat = FALSE)
+    
+        range_write(files$id[i], 
+            I_firstName,
+            sheet = "peopleInfo",
+            range = "I2",
+            col_names = FALSE,
+            reformat = FALSE)
+        
+        range_write(files$id[i], 
+            J_middleName,
+            sheet = "peopleInfo",
+            range = "J2",
+            col_names = FALSE,
+            reformat = FALSE)
+        
+        range_write(files$id[i], 
+            K_initialID,
+            sheet = "peopleInfo",
+            range = "K2",
+            col_names = FALSE,
+            reformat = FALSE)
+        
+        range_write(files$id[i], 
+            formula,
+            sheet = "peopleInfo",
+            range = paste0("L2:L", nrows),
+            col_names = FALSE,
+            reformat = FALSE)
+  
+#}
+
+```
