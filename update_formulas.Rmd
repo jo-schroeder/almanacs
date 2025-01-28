@@ -541,3 +541,21 @@ K_initialID$form <- gs4_formula(K_initialID$form)
 #}
 
 ```
+
+```{r}
+df <- NULL
+
+#for(i in 1:nrow(files)){
+ 
+  i = 1
+  peopleInfo <- range_read(files$id[i], 
+               sheet = "peopleInfo", 
+               range = "A1:O1")
+  
+  
+  df <- bind_cols(df, colnames(peopleInfo)) 
+  #}
+  
+colnames(df) <- files$name
+```
+
