@@ -974,18 +974,29 @@ names  <- info %>% pivot_longer(cols = everything()) %>%
 ```
 
 ```{r}
-for(i in 3:length(names)){
-  
-    sheet_delete(names[i],
-             "instIDs")
-  
-    
-    sheet_delete(names[i],
-             "peopleWithInsts")
-    
-    sheet_delete(names[i],
-             "attendedChurches")
+df <- NULL
 
-}
+for(i in 1:nrow(files)){
+ 
+  master <- range_read(files$id[i],
+               sheet = "master",
+               range = "A:A") %>%
+              rownames_to_column()
+  colnames(master) <- c("rowname", "master")
+ 
+  instLocations <- range_read(files$id[i],
+               sheet = "instLocations",
+               range = "A:A") %>%
+              rownames_to_column()
+  colnames(instLocations) <- c("rowname", "instLocations")
+
+  df <- master %>% full_join(instLocations, by = "rowname")
+  df$name <- files$name[i]
+ 
+  }
+ 
+df <- df %>%
+  filter(master != instLocations)
+
 ```
 

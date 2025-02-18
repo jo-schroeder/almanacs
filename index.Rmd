@@ -89,14 +89,14 @@ for (i in 1:nrow(new_files)) {
 time2 <- Sys.time()
 
 print(time2-time1)
-master_new <- master %>% select(1:31)
+master_new <- master %>% select(1:32)
 ```
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
 # Making Tables
-master <- read_csv('./_data/master.csv') %>% mutate(across(everything(), as.character)) %>% filter(!(file_id %in% new_files$id)) %>% bind_rows(master_new)
+master <- read_csv('./_data/master.csv.gz') %>% mutate(across(everything(), as.character)) %>% filter(!(file_id %in% new_files$id)) %>% bind_rows(master_new)
 
-write_csv(master, "./_data/master.csv")
+write_csv(master_new, "./_data/master.csv.gz")
 
 #Inst info
 master_inst <- master %>% select(c(1:6, 29:30)) %>%
