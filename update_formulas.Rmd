@@ -976,37 +976,85 @@ names  <- info %>% pivot_longer(cols = everything()) %>%
 ```{r}
 files <- files %>% filter(name != "***TEMPLATE")
 
-df <- NULL
-info <- NULL
+info1 <- NULL
+info2 <- NULL
+info3 <- NULL
 
-for(i in 186:nrow(files)){
+for(i in 1:nrow(files)){
  
-  i=129
+tryCatch(  
+  {
+    
+  attendedChurches <- range_read(files$id[i],
+              sheet = "attendedChurches")
+  attendedcolnames <- colnames(attendedChurches)
+  attendedChurches <- attendedChurches %>%
+              rownames_to_column() %>%
+              pivot_longer(!rowname)
+  
+  peopleWithInsts <- range_read(files$id[i],
+              sheet = "peopleWithInsts") 
+  peoplecolnames <- colnames(peopleWithInsts)
+  peopleWithInsts <- peopleWithInsts %>%
+              rownames_to_column() %>%
+              pivot_longer(!rowname)
+  
+  instIDs <- range_read(files$id[i],
+              sheet = "instIDs") 
+  instcolnames <- colnames(instIDs)
+  instIDs <- instIDs %>% 
+              rownames_to_column() %>%
+              pivot_longer(!rowname)
+
   master <- range_read(files$id[i],
-               sheet = "master",
-               range = "A:A") %>%
-              rownames_to_column()
-  colnames(master) <- c("rowname", "master")
- 
-  instLocations <- range_read(files$id[i],
-               sheet = "instLocations",
-               range = "A:A") %>%
-              rownames_to_column()
-  colnames(instLocations) <- c("rowname", "instLocations")
+               sheet = "master") %>%
+              rownames_to_column() %>%
+              pivot_longer(!rowname, values_transform = as.character)
 
-  df <- master %>% full_join(instLocations, by = "rowname")
-  df$name <- files$name[i]
+  df1 <- master %>% filter(name %in% attendedcolnames) %>% 
+    full_join(attendedChurches, by = c("rowname", "name"))
   
-  df %>% mutate(master = as.character(master), 
-                instLocations = as.character(instLocations))
+  df2 <- master %>% filter(name %in% peoplecolnames) %>% 
+    full_join(peopleWithInsts, by = c("rowname", "name"))
   
-  info <- bind_rows(info, df)
+  df3 <- master %>% filter(name %in% instcolnames) %>% 
+    full_join(instIDs, by = c("rowname", "name"))
  
+  df1_filtered <- df1 %>%
+    filter(value.x != value.y) %>%
+    mutate(sheet = files$name[i]) %>%
+    mutate(rowname = as.numeric(rowname)) %>%
+    slice_min(rowname)
+  
+  df2_filtered <- df2 %>%
+    filter(value.x != value.y) %>%
+    mutate(sheet = files$name[i]) %>%
+    mutate(rowname = as.numeric(rowname)) %>%
+    slice_min(rowname)
+  
+  df3_filtered <- df3 %>%
+    filter(value.x != value.y) %>%
+    mutate(sheet = files$name[i]) %>%
+    mutate(rowname = as.numeric(rowname)) %>%
+    slice_min(rowname)
+
+tryCatch(  
+  {
+    info1 <- bind_rows(info1, df1_filtered)
+    info2 <- bind_rows(info2, df2_filtered)
+    info3 <- bind_rows(info3, df3_filtered)
+  },
+  error = function(cond) {
+    message("Giving us trouble!")
   }
- 
-test2 <- info %>%
-  filter(master != instLocations)
+)
+  },
+  error = function(cond) {
+    message("Check if it has the right sheet names!")
+  }
+)
+  
+  }
 
-test <- test2 %>% select(rowname, name) %>% group_by(name) %>% slice_min(rowname)
 ```
 
