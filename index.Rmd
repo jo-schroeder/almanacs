@@ -95,9 +95,9 @@ master_new <- master %>% select(1:32)
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
 # Making Tables
-master_test <- fread("./_data/master.csv.gz") %>% mutate(across(everything(), as.character)) %>% filter(!(file_id %in% new_files$id)) %>% bind_rows(master_new)
+master <- fread("./_data/master.csv.gz") %>% mutate(across(everything(), as.character)) %>% filter(!(file_id %in% new_files$id)) %>% bind_rows(master_new)
 
-fwrite(master_new, "./_data/master.csv.gz")
+fwrite(master, "./_data/master.csv.gz")
 
 #Inst info
 master_inst <- master %>% select(c(1:6, 29:30)) %>%

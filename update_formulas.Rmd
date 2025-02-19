@@ -974,10 +974,14 @@ names  <- info %>% pivot_longer(cols = everything()) %>%
 ```
 
 ```{r}
-df <- NULL
+files <- files %>% filter(name != "***TEMPLATE")
 
-for(i in 1:nrow(files)){
+df <- NULL
+info <- NULL
+
+for(i in 186:nrow(files)){
  
+  i=129
   master <- range_read(files$id[i],
                sheet = "master",
                range = "A:A") %>%
@@ -992,11 +996,17 @@ for(i in 1:nrow(files)){
 
   df <- master %>% full_join(instLocations, by = "rowname")
   df$name <- files$name[i]
+  
+  df %>% mutate(master = as.character(master), 
+                instLocations = as.character(instLocations))
+  
+  info <- bind_rows(info, df)
  
   }
  
-df <- df %>%
+test2 <- info %>%
   filter(master != instLocations)
 
+test <- test2 %>% select(rowname, name) %>% group_by(name) %>% slice_min(rowname)
 ```
 
