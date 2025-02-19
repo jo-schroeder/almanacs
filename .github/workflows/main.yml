@@ -52,7 +52,7 @@ jobs:
     - name: Install R Packages if not cached
       run: |
         R -e "options(repos = 'https://cloud.r-project.org')"
-        R -e ".libPaths('/home/runner/work/_temp/Library'); install.packages(c('rmarkdown', 'knitr', 'dplyr', 'readr', 'tidyr', 'stringr', 'googledrive', 'googlesheets4', 'DT', 'jsonlite', 'purrr', 'lubridate', 'gargle', 'data.table'))"
+        R -e ".libPaths('/home/runner/work/_temp/Library'); install.packages(c('rmarkdown', 'knitr', 'dplyr', 'readr', 'tidyr', 'stringr', 'googledrive', 'googlesheets4', 'DT', 'jsonlite', 'purrr', 'lubridate', 'gargle', 'data.table', 'R.utils'))"
 
     - name: Check Pandoc Version
       run: pandoc --version
