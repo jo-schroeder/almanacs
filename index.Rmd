@@ -16,6 +16,7 @@ library(DT)
 library(purrr)
 library(lubridate)
 library(gargle)
+library(data.table)
 
 gs4_deauth()
 gs4_auth(token = gargle::secret_read_rds(
@@ -94,9 +95,9 @@ master_new <- master %>% select(1:32)
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
 # Making Tables
-master <- read_csv('./_data/master.csv.gz') %>% mutate(across(everything(), as.character)) %>% filter(!(file_id %in% new_files$id)) %>% bind_rows(master_new)
+master_test <- fread("./_data/master.csv.gz") %>% mutate(across(everything(), as.character)) %>% filter(!(file_id %in% new_files$id)) %>% bind_rows(master_new)
 
-write_csv(master_new, "./_data/master.csv.gz")
+fwrite(master_new, "./_data/master.csv.gz")
 
 #Inst info
 master_inst <- master %>% select(c(1:6, 29:30)) %>%
@@ -190,4 +191,6 @@ unique(columns$V29)
 columns %>% filter(V21 == "personTitle")
 
 write.csv(columns, "columns.csv")
+
+
 ```
