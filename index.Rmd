@@ -57,14 +57,14 @@ lookup <- c(persTitle = "personTitle", persTitle = "title", instID = 0, instID =
 not_these <- c("", "temp")
 
 time1 <- Sys.time()
-master <- data.frame("instID" = NA, "type" = NA, "instName" = NA, "language" = NA, "instNote" = NA, "placeName" = NA, "region" = NA, "county_orig" = NA, "county_reg"   = NA, "city_orig" = NA, "city_reg" = NA, "state_orig" = NA, "state_reg" = NA, "latitude" = NA, "longitude" = NA, "attendingInstID" = NA, "attendingChurch" = NA, "attendingChurchFrequency" = NA, "attendingChurchNote" = NA, "persID" = NA, "persTitle" = NA, "persName" = NA, "persSuffix" = NA, "persRole" = NA, "persNote"      = NA, "memberType" = NA, "member" = NA, "affiliated" = NA, "place" = NA, "year" = NA)
+master <- data.frame("instID" = NA, "type" = NA, "instName" = NA, "language" = NA, "instNote" = NA, "placeName" = NA, "region" = NA, "county_orig" = NA, "county_reg"   = NA, "city_orig" = NA, "city_reg" = NA, "state_orig" = NA, "state_reg" = NA, "latitude" = NA, "longitude" = NA, "attendingInstID" = NA, "attendingChurch" = NA, "attendingChurchFrequency" = NA, "attendingChurchNote" = NA, "persID" = NA, "persTitle" = NA, "persName" = NA, "persSuffix" = NA, "persRole" = NA, "persNote"      = NA, "memberType" = NA, "member" = NA, "affiliated" = NA, "diocese" = NA, "year" = NA)
 
-for (i in 1:nrow(new_files)) {
+for (i in 1:nrow(files)) {
    
   tryCatch(
     {
     sheet_master <- read_sheet(files$id[i], sheet = sheet) %>%
-       mutate(place = str_extract(files$name[i], "[A-Za-z]+"),
+       mutate(diocese = str_extract(files$name[i], "[A-Za-z]+"),
               year = str_extract(files$name[i], "\\d+"),
               file_id = files$id[i]) %>%
       rename(any_of(lookup)) %>%
@@ -95,7 +95,7 @@ master_new <- master %>% select(1:32)
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
 # Making Tables
-master <- fread("./_data/master.csv.gz") %>% mutate(across(everything(), as.character)) %>% filter(!(file_id %in% new_files$id)) %>% bind_rows(master_new)
+master <- fread("./_data/master.csv.gz") %>% mutate(across(everything(), as.character)) %>% filter(!(file_id %in% new_files$id)) %>% bind_rows(master_new) %>% mutate_all(list(~na_if(.,"")))
 
 fwrite(master, "./_data/master.csv.gz")
 
