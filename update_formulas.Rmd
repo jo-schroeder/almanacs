@@ -1058,3 +1058,172 @@ tryCatch(
 
 ```
 
+```{r}
+info <- NULL
+
+    for(i in 1:nrow(files)){
+      
+      F2 <- range_read_cells(files$id[i], 
+                sheet = "peopleInfo",
+                cell_data = "full",
+                range = "F2")
+      
+      if(nrow(F2) == 0) {
+        
+        info <- bind_cols(info, "dumb!")
+        
+      } else {
+        
+      info_sheet <- F2[[4]][[1]][["userEnteredValue"]][["formulaValue"]]
+      
+      if(is.null(info_sheet)) {
+        
+        info <- bind_cols(info, "smarties")
+        
+      } else {
+        
+        info <- bind_cols(info, info_sheet)
+        
+      }
+      
+      }
+      
+      Sys.sleep(2)
+            
+    }
+
+colnames(info) <- files$name
+
+
+for(i in 1:nrow(files)){
+
+    F_persName_clean <-
+      '=ARRAYFORMULA(LOWER(REGEXREPLACE(REGEXREPLACE(REGEXREPLACE(B2:B, "[[:punct:]-—]", ""), "\\b(Von|De|La|Der|Van|von|de|la|der|van|Du|Da|du|da)\\s+(\\w+)", "$1-$2"), "^\\s", "")))'
+    
+    F_persName_clean <- as.data.frame(list(form = F_persName_clean)) 
+    
+    F_persName_clean$form <- gs4_formula(F_persName_clean$form) 
+
+    range_write(files$id[i], 
+            F_persName_clean,
+            sheet = "peopleInfo",
+            range = "F2",
+            col_names = FALSE,
+            reformat = FALSE)
+
+}
+```
+
+```{r}
+info <- info %>% pivot_longer(everything()) 
+
+info %>% filter(str_detect(value, '"^\\s", ""'))
+```
+
+```{r}
+files <- files %>% filter(name != "***TEMPLATE")
+
+info1 <- NULL
+
+for(i in 1:nrow(files)){
+
+  master <- range_read(files$id[i],
+               sheet = "master", 
+               range = c("A:K")) %>%
+    mutate_all(as.character()) %>%
+    mutate(instID = as.character(instID),
+           type = as.character(type),
+           instName = as.character(instName),
+           filename = files$name[i]) %>%
+    filter(!is.na(instID))
+
+tryCatch(  
+  {
+    info1 <- bind_rows(info1, master)
+  },
+  error = function(cond) {
+    message("Giving us trouble!")
+  }
+)
+
+  
+}
+
+getwd()
+
+store <- info1
+```
+
+
+```{r}
+info1 <- #read_csv('./_data/info_for_later.csv') %>%
+  mutate(year = as.numeric(str_extract(sheet_name, "\\d+"))) %>%
+  select(instID, instName, year) 
+
+n_inst <- length(unique(info1$instID))
+
+filter_out <- info1 %>% group_by(instID, year) %>% 
+  mutate(count = n()) %>% filter(count > 1) %>% pull(instID)
+  
+different_names <- info1 %>%
+  filter(!(instID %in% filter_out), 
+         !is.na(instName)) %>%
+  group_by(instID) %>%
+  mutate(count_ids = n()) %>% ungroup() %>%
+  group_by(instID, instName) %>%
+  mutate(count_names = n()) %>%
+  filter(count_ids != count_names) %>%
+  arrange(instID, year) %>%
+  mutate(diocese = str_sub(instID, 1, 3))
+
+n_inst_different <- length(unique(different_names$instID)) 
+
+info2 <- info1 %>%
+  mutate(year = as.numeric(str_extract(filename, "\\d+"))) %>%
+  select(instID, instName, year) 
+
+n_inst <- length(unique(info1$instID))
+
+filter_out <- info2 %>% group_by(instID, year) %>% 
+  mutate(count = n()) %>% filter(count > 1) %>% pull(instID)
+  
+different_names <- info1 %>%
+  filter(!(instID %in% filter_out), 
+         !is.na(instName)) %>%
+  group_by(instID) %>%
+  mutate(count_ids = n()) %>% ungroup() %>%
+  group_by(instID, instName) %>%
+  mutate(count_names = n()) %>%
+  filter(count_ids != count_names) %>%
+  arrange(instID, year) %>%
+  mutate(diocese = str_sub(instID, 1, 3))
+
+summary <- info1 %>% 
+  select(filename, instID, city_orig, type) %>%
+  filter(type %in% c('church', 'chapel')) %>%
+  mutate(year = as.numeric(str_extract(filename, "\\d+")),
+         diocese = str_extract(filename, "[A-Za-z]+")) %>%
+  filter(!is.na(city_orig)) %>% select(-filename) %>%
+  group_by(diocese, city_orig, year) %>% mutate(count = n()) %>%
+  ungroup(year) %>% 
+  distinct(diocese, city_orig, count) %>%
+  mutate(count_of_count = n()) %>%
+  filter(count_of_count > 1) %>%
+  mutate(combine = paste0(diocese, city_orig))
+problems <- unique(summary$combine)
+
+joined <- info1 %>%
+  select(filename, instID, city_orig, type) %>%
+  filter(type %in% c('church', 'chapel')) %>%
+  mutate(year = as.numeric(str_extract(filename, "\\d+")),
+         diocese = str_extract(filename, "[A-Za-z]+")) %>%
+  filter(!is.na(city_orig)) %>% select(-filename) %>%
+  group_by(diocese, city_orig, year) %>% mutate(count = n()) %>%
+  select(-instID) %>% mutate(combine = paste0(diocese, city_orig)) %>%
+  filter(combine %in% problems) %>% distinct(diocese, city_orig, year, count) %>%
+  filter(diocese != "Alton", diocese != "SantaFe", count <= 5) %>%
+  arrange(city_orig, year)
+  
+
+```
+

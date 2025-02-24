@@ -1,0 +1,1823 @@
+instID,instName,year,count_ids,count_names
+alb.ny.0008,St. Nicholas,1868,3,1
+alb.ny.0008,Angel's Guardian,1869,3,1
+alb.ny.0008,Our Lady of Angels,1870,3,1
+alb.ny.0029,St. Peter's,1868,3,2
+alb.ny.0029,St. Peter's,1869,3,2
+alb.ny.0029,St. Mary's,1870,3,1
+alb.ny.0053,St. Mary's,1868,3,1
+alb.ny.0053,St. Patrick's,1869,3,2
+alb.ny.0053,St. Patrick's,1870,3,2
+alb.ny.0055,St. Mary's,1868,3,2
+alb.ny.0055,St. Mary's,1869,3,2
+alb.ny.0055,St. Joseph's,1870,3,1
+alb.ny.0057,St. Lawrence,1868,3,2
+alb.ny.0057,St. Lawrence,1869,3,2
+alb.ny.0057,St. Mary's,1870,3,1
+alb.ny.0085,St. —,1868,3,2
+alb.ny.0085,St. —,1869,3,2
+alb.ny.0085,St. Mary of the Vale,1870,3,1
+alb.ny.0086,St. —,1868,3,1
+alb.ny.0086,St. Mary's,1869,3,2
+alb.ny.0086,St. Mary's,1870,3,2
+alb.ny.0094,—,1868,2,1
+alb.ny.0094,St. Peter's,1870,2,1
+alb.ny.0122,—,1868,3,2
+alb.ny.0122,—,1869,3,2
+alb.ny.0122,Immaculate Conception,1870,3,1
+alb.ny.0125,St. —,1868,3,1
+alb.ny.0125,—,1869,3,2
+alb.ny.0125,—,1870,3,2
+alb.ny.0126,St. Ambrose,1868,3,1
+alb.ny.0126,Church of Angel Guardians,1869,3,2
+alb.ny.0126,Church of Angel Guardians,1870,3,2
+alb.ny.0127,St. —,1868,3,1
+alb.ny.0127,—,1869,3,1
+alb.ny.0127,St. Joseph's,1870,3,1
+alb.ny.0129,St. —,1868,3,1
+alb.ny.0129,St. John Baptist,1869,3,2
+alb.ny.0129,St. John Baptist,1870,3,2
+alb.ny.0131,St. —,1868,3,1
+alb.ny.0131,St. Patrick's,1869,3,2
+alb.ny.0131,St. Patrick's,1870,3,2
+alb.ny.0142,St. Mary's,1868,3,2
+alb.ny.0142,St. Mary's,1869,3,2
+alb.ny.0142,St. Patrick's,1870,3,1
+alb.ny.0223,St. John the Baptist,1869,2,1
+alb.ny.0223,St. Peter's,1870,2,1
+alb.ny.0224,St. Joseph's Church,1869,2,1
+alb.ny.0224,St. John Baptist,1870,2,1
+alb.ny.0244,St. Mary's,1869,2,1
+alb.ny.0244,"St. Mary's,",1870,2,1
+alt.il.0002,St. Mary's of the Immaculate Conception,1864,7,1
+alt.il.0002,St. Mary's,1865,7,5
+alt.il.0002,St. Mary's,1866,7,5
+alt.il.0002,St. Mary's,1867,7,5
+alt.il.0002,Immaculate Conception,1868,7,1
+alt.il.0002,St. Mary's,1869,7,5
+alt.il.0002,St. Mary's,1870,7,5
+alt.il.0008,St. Francis' Assisi,1865,6,1
+alt.il.0008,St. Francis' of Assisi,1866,6,1
+alt.il.0008,St. Francis of Assisium,1867,6,1
+alt.il.0008,St. Francis of Assisi,1868,6,3
+alt.il.0008,St. Francis of Assisi,1869,6,3
+alt.il.0008,St. Francis of Assisi,1870,6,3
+alt.il.0009,St. Alexius',1864,7,4
+alt.il.0009,St. Alexius',1865,7,4
+alt.il.0009,St. Alexius',1866,7,4
+alt.il.0009,St. Alexius',1867,7,4
+alt.il.0009,St. Alexius,1868,7,3
+alt.il.0009,St. Alexius,1869,7,3
+alt.il.0009,St. Alexius,1870,7,3
+alt.il.0013,St. John's,1865,6,4
+alt.il.0013,St. John's,1866,6,4
+alt.il.0013,St. John's,1867,6,4
+alt.il.0013,St. John's,1868,6,4
+alt.il.0013,St. John Baptist,1869,6,2
+alt.il.0013,St. John Baptist,1870,6,2
+alt.il.0015,St. Boniface's,1869,2,1
+alt.il.0015,St. Rose's,1870,2,1
+alt.il.0018,Immaculate Conception,1864,7,6
+alt.il.0018,Immaculate Conception,1865,7,6
+alt.il.0018,Immaculate Conception,1866,7,6
+alt.il.0018,Immaculate Conception,1867,7,6
+alt.il.0018,Immaculate Conception,1868,7,6
+alt.il.0018,Immaculate Conception,1869,7,6
+alt.il.0018,St. Mary's,1870,7,1
+alt.il.0023,Immaculate Conception,1865,6,4
+alt.il.0023,Immaculate Conception,1866,6,4
+alt.il.0023,Immaculate Conception,1867,6,4
+alt.il.0023,Immaculate Conception,1868,6,4
+alt.il.0023,St. Mary's,1869,6,2
+alt.il.0023,St. Mary's,1870,6,2
+alt.il.0030,Help of Christians,1864,7,6
+alt.il.0030,Help of Christians,1865,7,6
+alt.il.0030,Help of Christians,1866,7,6
+alt.il.0030,Help of Christians,1867,7,6
+alt.il.0030,Help of Christians,1868,7,6
+alt.il.0030,Help of Christians,1869,7,6
+alt.il.0030,St. Mary's of Help,1870,7,1
+alt.il.0040,Immaculate Conception,1864,7,6
+alt.il.0040,Immaculate Conception,1865,7,6
+alt.il.0040,Immaculate Conception,1866,7,6
+alt.il.0040,Immaculate Conception,1867,7,6
+alt.il.0040,Immaculate Conception,1868,7,6
+alt.il.0040,Immaculate Conception,1869,7,6
+alt.il.0040,St. Mary's,1870,7,1
+alt.il.0049,St. Henry's,1864,7,4
+alt.il.0049,St. Henry's,1865,7,4
+alt.il.0049,St. Henry's,1866,7,4
+alt.il.0049,St. Henry's,1867,7,4
+alt.il.0049,SS. Boniface and Henry,1868,7,1
+alt.il.0049,St. Boniface's,1869,7,2
+alt.il.0049,St. Boniface's,1870,7,2
+alt.il.0051,Help of Christians,1864,7,6
+alt.il.0051,Help of Christians,1865,7,6
+alt.il.0051,Help of Christians,1866,7,6
+alt.il.0051,Help of Christians,1867,7,6
+alt.il.0051,Help of Christians,1868,7,6
+alt.il.0051,Help of Christians,1869,7,6
+alt.il.0051,St. Mary's of Help,1870,7,1
+alt.il.0058,St. Francis,1864,7,4
+alt.il.0058,St. Francis,1865,7,4
+alt.il.0058,St. Francis,1866,7,4
+alt.il.0058,St. Francis,1867,7,4
+alt.il.0058,St. Francis Xavier,1868,7,3
+alt.il.0058,St. Francis Xavier,1869,7,3
+alt.il.0058,St. Francis Xavier,1870,7,3
+alt.il.0065,St. Mary's,1864,7,5
+alt.il.0065,St. Mary's,1865,7,5
+alt.il.0065,St. Mary's,1866,7,5
+alt.il.0065,St. Mary's,1867,7,5
+alt.il.0065,St. Mary's,1868,7,5
+alt.il.0065,St. Elizabeth's,1869,7,2
+alt.il.0065,St. Elizabeth's,1870,7,2
+alt.il.0067,St. Patrick's,1864,7,6
+alt.il.0067,St. Patrick's,1865,7,6
+alt.il.0067,St. Patrick's,1866,7,6
+alt.il.0067,St. Patrick's,1867,7,6
+alt.il.0067,St. Patrick's,1868,7,6
+alt.il.0067,St. Patrick's,1869,7,6
+alt.il.0067,St. Mary's,1870,7,1
+alt.il.0068,Childhood of Jesus,1864,7,1
+alt.il.0068,Holy Childhood of Jesus,1865,7,6
+alt.il.0068,Holy Childhood of Jesus,1866,7,6
+alt.il.0068,Holy Childhood of Jesus,1867,7,6
+alt.il.0068,Holy Childhood of Jesus,1868,7,6
+alt.il.0068,Holy Childhood of Jesus,1869,7,6
+alt.il.0068,Holy Childhood of Jesus,1870,7,6
+alt.il.0069,Imm. Conception,1864,7,1
+alt.il.0069,Immaculate Conception,1865,7,6
+alt.il.0069,Immaculate Conception,1866,7,6
+alt.il.0069,Immaculate Conception,1867,7,6
+alt.il.0069,Immaculate Conception,1868,7,6
+alt.il.0069,Immaculate Conception,1869,7,6
+alt.il.0069,Immaculate Conception,1870,7,6
+alt.il.0070,St. James',1864,7,6
+alt.il.0070,St. James',1865,7,6
+alt.il.0070,St. James',1866,7,6
+alt.il.0070,St. James',1867,7,6
+alt.il.0070,St. James',1868,7,6
+alt.il.0070,St. James',1869,7,6
+alt.il.0070,St. James,1870,7,1
+alt.il.0073,St. Patrick's,1864,7,5
+alt.il.0073,St. Patrick's,1865,7,5
+alt.il.0073,St. Patrick's,1866,7,5
+alt.il.0073,St. Patrick's,1867,7,5
+alt.il.0073,St. Patrick's,1868,7,5
+alt.il.0073,St. Mary's,1869,7,2
+alt.il.0073,St. Mary's,1870,7,2
+alt.il.0078,St. Thomas',1866,5,2
+alt.il.0078,St. Thomas',1867,5,2
+alt.il.0078,St. Thomas,1868,5,3
+alt.il.0078,St. Thomas,1869,5,3
+alt.il.0078,St. Thomas,1870,5,3
+alt.il.0079,St. Aloysius',1865,6,3
+alt.il.0079,St. Aloysius',1866,6,3
+alt.il.0079,St. Aloysius',1867,6,3
+alt.il.0079,St. Aloysius,1868,6,3
+alt.il.0079,St. Aloysius,1869,6,3
+alt.il.0079,St. Aloysius,1870,6,3
+alt.il.0091,St. Augustin's,1864,7,1
+alt.il.0091,St. Augustine's,1865,7,6
+alt.il.0091,St. Augustine's,1866,7,6
+alt.il.0091,St. Augustine's,1867,7,6
+alt.il.0091,St. Augustine's,1868,7,6
+alt.il.0091,St. Augustine's,1869,7,6
+alt.il.0091,St. Augustine's,1870,7,6
+alt.il.0092,St. Philip's,1864,7,2
+alt.il.0092,St. Philip's,1865,7,2
+alt.il.0092,St. Joseph's,1866,7,5
+alt.il.0092,St. Joseph's,1867,7,5
+alt.il.0092,St. Joseph's,1868,7,5
+alt.il.0092,St. Joseph's,1869,7,5
+alt.il.0092,St. Joseph's,1870,7,5
+alt.il.0094,St. Lawrence's,1864,7,6
+alt.il.0094,St. Lawrence's,1865,7,6
+alt.il.0094,St. Lawrence's,1866,7,6
+alt.il.0094,St. Lawrence's,1867,7,6
+alt.il.0094,St. Lawrence's,1868,7,6
+alt.il.0094,St. Lawrence's,1869,7,6
+alt.il.0094,St. Peter's,1870,7,1
+alt.il.0095,St. Francis Solanus',1864,7,6
+alt.il.0095,St. Francis Solanus',1865,7,6
+alt.il.0095,St. Francis Solanus',1866,7,6
+alt.il.0095,St. Francis Selanus',1867,7,1
+alt.il.0095,St. Francis Solanus',1868,7,6
+alt.il.0095,St. Francis Solanus',1869,7,6
+alt.il.0095,St. Francis Solanus',1870,7,6
+alt.il.0096,Immaculate Conception,1868,3,1
+alt.il.0096,St. Mary's,1869,3,2
+alt.il.0096,St. Mary's,1870,3,2
+alt.il.0098,St. Joseph's Chapel,1868,3,1
+alt.il.0098,St. Mary's Chapel,1869,3,2
+alt.il.0098,St. Mary's Chapel,1870,3,2
+alt.il.0100,St. John Baptist's,1864,7,3
+alt.il.0100,St. John Baptist's,1865,7,3
+alt.il.0100,St. John Baptist's,1866,7,3
+alt.il.0100,St. John Baptist,1867,7,4
+alt.il.0100,St. John Baptist,1868,7,4
+alt.il.0100,St. John Baptist,1869,7,4
+alt.il.0100,St. John Baptist,1870,7,4
+alt.il.0104,St. Francis Xavier's,1864,7,5
+alt.il.0104,St. Francis Xavier's,1865,7,5
+alt.il.0104,St. Francis Xavier's,1866,7,5
+alt.il.0104,St. Francis Xavier's,1867,7,5
+alt.il.0104,St. Francis Xavier's,1868,7,5
+alt.il.0104,St. Francis Xavier,1869,7,2
+alt.il.0104,St. Francis Xavier,1870,7,2
+alt.il.0105,Mt. St. John's,1864,6,4
+alt.il.0105,Mt. St. John's,1865,6,4
+alt.il.0105,Mt. St. John's,1866,6,4
+alt.il.0105,Mt. St. John's,1867,6,4
+alt.il.0105,St. John's,1868,6,2
+alt.il.0105,St. John's,1869,6,2
+alt.il.0121,St. John the Baptist,1864,7,1
+alt.il.0121,St. John the Baptist's,1865,7,2
+alt.il.0121,St. John the Baptist's,1866,7,2
+alt.il.0121,SS. Peter and Paul's,1867,7,4
+alt.il.0121,SS. Peter and Paul's,1868,7,4
+alt.il.0121,SS. Peter and Paul's,1869,7,4
+alt.il.0121,SS. Peter and Paul's,1870,7,4
+alt.il.0125,St. William's,1864,7,3
+alt.il.0125,St. William's,1865,7,3
+alt.il.0125,St. William's,1866,7,3
+alt.il.0125,St. Bernards's,1867,7,4
+alt.il.0125,St. Bernards's,1868,7,4
+alt.il.0125,St. Bernards's,1869,7,4
+alt.il.0125,St. Bernards's,1870,7,4
+alt.il.0127,SS. Peter and Francis Seraph,1864,7,3
+alt.il.0127,SS. Peter and Francis Seraph,1865,7,3
+alt.il.0127,SS. Peter and Francis Seraph,1866,7,3
+alt.il.0127,SS. Peter and Francis',1867,7,4
+alt.il.0127,SS. Peter and Francis',1868,7,4
+alt.il.0127,SS. Peter and Francis',1869,7,4
+alt.il.0127,SS. Peter and Francis',1870,7,4
+alt.il.0134,SS. Peter and Francis Seraph,1864,7,3
+alt.il.0134,SS. Peter and Francis Seraph,1865,7,3
+alt.il.0134,SS. Peter and Francis Seraph,1866,7,3
+alt.il.0134,SS. Peter and Francis,1867,7,4
+alt.il.0134,SS. Peter and Francis,1868,7,4
+alt.il.0134,SS. Peter and Francis,1869,7,4
+alt.il.0134,SS. Peter and Francis,1870,7,4
+alt.il.0136,St. Mary's,1869,2,1
+alt.il.0136,Nativity of the Blessed Virgin Mary,1870,2,1
+alt.il.0222,"Ursuline Convent of the Holy Family, Female Academy, Boarding, and Day School",1864,7,4
+alt.il.0222,"Ursuline Convent of the Holy Family, Female Academy, Boarding, and Day School",1865,7,4
+alt.il.0222,"Ursuline Convent of the Holy Family, Female Academy, Boarding, and Day School",1866,7,4
+alt.il.0222,"Ursuline Convent of the Holy Family, Female Academy, Boarding, and Day School",1867,7,4
+alt.il.0222,"Ursuline Convent of the Holy Family, Academy, Boarding, and Day School",1868,7,1
+alt.il.0222,Ursuline Convent of the Holy Family,1869,7,2
+alt.il.0222,Ursuline Convent of the Holy Family,1870,7,2
+alt.il.0224,The Sisters of Loretto,1864,7,1
+alt.il.0224,Convent and Academy of the Sisters of Loretto,1865,7,5
+alt.il.0224,Convent and Academy of the Sisters of Loretto,1866,7,5
+alt.il.0224,Convent and Academy of the Sisters of Loretto,1867,7,5
+alt.il.0224,Convent and Academy of the Sisters of Loretto,1868,7,5
+alt.il.0224,Convent and Academy of the Sisters of Loretto,1869,7,5
+alt.il.0224,St. Joseph's Convent and Academy of the Sisters of Loretto,1870,7,1
+alt.il.0225,Convent and Academy of the Poor School Sisters of Notre Dame,1868,3,2
+alt.il.0225,Convent and Academy of the Poor School Sisters of Notre Dame,1869,3,2
+alt.il.0225,Convent of the Holy Family and Academy of the Poor School Sisters of Notre Dame,1870,3,1
+alt.il.0227,Hospital,1865,6,2
+alt.il.0227,Hospital,1866,6,2
+alt.il.0227,Hospital at Alton,1867,6,1
+alt.il.0227,St. Joseph's Hospital at Alton,1868,6,2
+alt.il.0227,St. Joseph's Hospital at Alton,1869,6,2
+alt.il.0227,St. Joseph's Hospital,1870,6,1
+alt.il.0228,Hospital at Quincy,1867,4,1
+alt.il.0228,St. Joseph's Hospital at Quincy,1868,4,1
+alt.il.0228,St. Mary's Hospital at Quincy,1869,4,1
+alt.il.0228,St. Mary's Hospital,1870,4,1
+alt.il.0229,Orphan Asylum,1865,6,2
+alt.il.0229,Orphan Asylum,1866,6,2
+alt.il.0229,Orphan Asylum at Quincy,1867,6,1
+alt.il.0229,St. Aloysius' Orphan Asylum at Quincy,1868,6,2
+alt.il.0229,St. Aloysius' Orphan Asylum at Quincy,1869,6,2
+alt.il.0229,St. Aloysius' Orphan Asylum,1870,6,1
+alt.il.0231,Cathedral schools,1868,3,2
+alt.il.0231,Cathedral schools,1869,3,2
+alt.il.0231,Cathedral schools at SS. Peter and Paul Cathedral,1870,3,1
+alt.il.0232,The Parochial Schools,1864,7,4
+alt.il.0232,The Parochial Schools,1865,7,4
+alt.il.0232,The Parochial Schools,1866,7,4
+alt.il.0232,The Parochial Schools,1867,7,4
+alt.il.0232,Immaculate Conception,1868,7,1
+alt.il.0232,St. Mary's,1869,7,1
+alt.il.0232,Parochial school at St. Mary's Church,1870,7,1
+alt.il.0274,St. Lawrence's,1868,3,2
+alt.il.0274,St. Lawrence's,1869,3,2
+alt.il.0274,Parochial school at St. Peter's Church,1870,3,1
+alt.il.0287,The Parochial Schools,1864,7,4
+alt.il.0287,The Parochial Schools,1865,7,4
+alt.il.0287,The Parochial Schools,1866,7,4
+alt.il.0287,The Parochial Schools,1867,7,4
+alt.il.0287,Parochial school at Immaculate Conception Church,1868,7,3
+alt.il.0287,Parochial school at Immaculate Conception Church,1869,7,3
+alt.il.0287,Parochial school at Immaculate Conception Church,1870,7,3
+bal.md.0006,St. Ignatius,1866,5,2
+bal.md.0006,St. Ignatius,1867,5,2
+bal.md.0006,St. Ignatius',1868,5,3
+bal.md.0006,St. Ignatius',1869,5,3
+bal.md.0006,St. Ignatius',1870,5,3
+bal.md.0021,St. Francis' Chapel,1866,5,2
+bal.md.0021,St. Francis' Chapel,1867,5,2
+bal.md.0021,St. Frances' Chapel,1868,5,2
+bal.md.0021,St. Frances' Chapel,1869,5,2
+bal.md.0021,St. Frances' Chapel (colored Sisters of Providence),1870,5,1
+bal.md.0028,"Blooming Rose, Mountain Church",1866,5,3
+bal.md.0028,"Blooming Rose, Mountain Church",1867,5,3
+bal.md.0028,"Blooming Rose, Mountain Church",1868,5,3
+bal.md.0028,Blooming Rose Mountain Church,1869,5,2
+bal.md.0028,Blooming Rose Mountain Church,1870,5,2
+bal.md.0054,St. Philip's,1869,2,1
+bal.md.0054,St. Philip Neri,1870,2,1
+bal.md.0069,St. Thomas',1866,5,3
+bal.md.0069,St. Thomas',1867,5,3
+bal.md.0069,St. Thomas',1868,5,3
+bal.md.0069,St. Thomas,1869,5,2
+bal.md.0069,St. Thomas,1870,5,2
+bal.md.0087,Redemptorist House of Studies,1869,2,1
+bal.md.0087,"St. Clement's, Redemptorist House of Studies",1870,2,1
+bal.md.0089,St. John's,1866,5,4
+bal.md.0089,St. John's,1867,5,4
+bal.md.0089,Saint John's,1868,5,1
+bal.md.0089,St. John's,1869,5,4
+bal.md.0089,St. John's,1870,5,4
+bal.md.0093,St. Inigoe's,1866,5,2
+bal.md.0093,St. Inigoe's,1867,5,2
+bal.md.0093,St. Inigoes',1868,5,3
+bal.md.0093,St. Inigoes',1869,5,3
+bal.md.0093,St. Inigoes',1870,5,3
+bal.md.0114,St. Patrick's,1866,5,1
+bal.md.0114,Saint Patrick's,1867,5,4
+bal.md.0114,Saint Patrick's,1868,5,4
+bal.md.0114,Saint Patrick's,1869,5,4
+bal.md.0114,Saint Patrick's,1870,5,4
+bal.md.0134,Convent and House of Studies of the Redemptorists,1866,5,3
+bal.md.0134,Convent and House of Studies of the Redemptorists,1867,5,3
+bal.md.0134,Convent and House of Studies of the Redemptorists,1868,5,3
+bal.md.0134,Convent of the Redemptorists,1869,5,2
+bal.md.0134,Convent of the Redemptorists,1870,5,2
+bal.md.0171,St. Edward's Female Academy,1868,3,1
+bal.md.0171,St. Edward's Academy,1869,3,2
+bal.md.0171,St. Edward's Academy,1870,3,2
+bal.md.0172,Academy of St. Joseph and Male Parish School of the Cathedral,1866,5,1
+bal.md.0172,"Academy of St. Joseph, and Male Parish School of the Cathedral",1867,5,3
+bal.md.0172,"Academy of St. Joseph, and Male Parish School of the Cathedral",1868,5,3
+bal.md.0172,"Academy of St. Joseph, and Male Parish School of the Cathedral",1869,5,3
+bal.md.0172,Academy of St. Joseph and Male Parish of the Cathedral,1870,5,1
+bal.md.0191,School for Girls,1866,5,2
+bal.md.0191,Schools for Girls,1867,5,3
+bal.md.0191,Schools for Girls,1868,5,3
+bal.md.0191,Schools for Girls,1869,5,3
+bal.md.0191,School for Girls,1870,5,2
+bal.md.0193,School for German Children,1866,5,3
+bal.md.0193,School for German Children,1867,5,3
+bal.md.0193,School for German Children,1868,5,3
+bal.md.0193,Holy Cross School for German Children,1869,5,1
+bal.md.0193,Holy Cross Schools for German Children,1870,5,1
+bal.md.0207,Academy of the Christian Brothers and Parochial School of St. Patrick,1868,3,1
+bal.md.0207,Parochial School of St. Patrick,1869,3,2
+bal.md.0207,Parochial School of St. Patrick,1870,3,2
+bal.md.0217,St. Matthew's Girls' School,1868,3,1
+bal.md.0217,St. Matthew's Girl's School,1869,3,2
+bal.md.0217,St. Matthew's Girl's School,1870,3,2
+bal.md.0242,St. Alphonsus' Convent of the Congregation of the Most Holy Redeemer,1867,4,3
+bal.md.0242,St. Alphonsus' Convent of the Congregation of the Most Holy Redeemer,1868,4,3
+bal.md.0242,St. Alphonsus' Convent of the Congregation of the Most Holy Redeemer,1869,4,3
+bal.md.0242,Asylum of the Little Sisters of the Poor,1870,4,1
+boi.id.0004,St. Dominic's,1865,5,1
+boi.id.0004,St. Dominick's,1866,5,4
+boi.id.0004,St. Dominick's,1867,5,4
+boi.id.0004,St. Dominick's,1868,5,4
+boi.id.0004,St. Dominick's,1869,5,4
+bos.ma.0030,St. ------,1868,3,1
+bos.ma.0030,St. Joseph's,1869,3,2
+bos.ma.0030,St. Joseph's,1870,3,2
+bos.ma.0165,(new church),1869,2,1
+bos.ma.0165,St. Patrick's,1870,2,1
+bos.ma.0200,Academy of Notre Dame,1868,3,1
+bos.ma.0200,Academy of Notre Dame d'Esperance,1869,3,2
+bos.ma.0200,Academy of Notre Dame d'Esperance,1870,3,2
+bos.ma.0215,Orphan Asylum,1869,2,1
+bos.ma.0215,St. Patrick's Orphan Asylum,1870,2,1
+bos.ma.0217,Carney Hospital,1868,3,2
+bos.ma.0217,Carnay Hospital,1869,3,1
+bos.ma.0217,Carney Hospital,1870,3,2
+bos.ma.0235,St. Gregory's,1868,3,2
+bos.ma.0235,St. Gregory's,1869,3,2
+bos.ma.0235,Parochial School for Girls,1870,3,1
+bro.ny.0005,SS. Peter's and Paul's,1866,5,4
+bro.ny.0005,SS. Peter's and Paul's,1867,5,4
+bro.ny.0005,SS. Peter's and Paul's,1868,5,4
+bro.ny.0005,SS. Peter's and Paul's,1869,5,4
+bro.ny.0005,SS. Peter and Paul's,1870,5,1
+bro.ny.0062,"B.V. Mary, Help of Christians",1866,5,3
+bro.ny.0062,"B.V. Mary, Help of Christians",1867,5,3
+bro.ny.0062,"B.V. Mary, Help of Christians",1868,5,3
+bro.ny.0062,B.V. Mary Help of Christians,1869,5,2
+bro.ny.0062,B.V. Mary Help of Christians,1870,5,2
+bro.ny.0078,New Male Orphan,1866,5,2
+bro.ny.0078,New Male Orphan,1867,5,2
+bro.ny.0078,New Male Orphan Asylum,1868,5,3
+bro.ny.0078,New Male Orphan Asylum,1869,5,3
+bro.ny.0078,New Male Orphan Asylum,1870,5,3
+bro.ny.0079,Female Orphan Asylum,1866,5,4
+bro.ny.0079,Female Orphan Asylum,1867,5,4
+bro.ny.0079,Female Orphan Asylum,1868,5,4
+bro.ny.0079,Female Orphan Asylum,1869,5,4
+bro.ny.0079,St. Paul's Female Orphan Asylum,1870,5,1
+bro.ny.0082,Monastery and Academy of the Brothers of the Third Order of St. Francis,1866,5,3
+bro.ny.0082,Monastery and Academy of the Brothers of the Third Order of St. Francis,1867,5,3
+bro.ny.0082,Monastery and Academy of the Brothers of the Third Order of St. Francis,1868,5,3
+bro.ny.0082,Academy of the Brothers of the Third Order of St. Francis,1869,5,2
+bro.ny.0082,Academy of the Brothers of the Third Order of St. Francis,1870,5,2
+bro.ny.0085,Sisters of the Poor,1866,5,3
+bro.ny.0085,Sisters of the Poor,1867,5,3
+bro.ny.0085,Sisters of the Poor,1868,5,3
+bro.ny.0085,Sisters of the Poor of St. Francis,1869,5,1
+bro.ny.0085,"Sisters of the Poor of St. Francis, St. Peter's Hospital",1870,5,1
+buf.ny.0012,St. Vincent de Paul's,1868,3,2
+buf.ny.0012,St. Vincent de Paul's,1869,3,2
+buf.ny.0012,St. Vincent's,1870,3,1
+buf.ny.0019,Chapel at St. Vincent's Asylum for Widows and Foundlings,1868,3,2
+buf.ny.0019,Chapel at St. Vincent's Asylum for Widows and Foundlings,1869,3,2
+buf.ny.0019,Chapel at St. Vincent's Foundling and Lying-in Asylum,1870,3,1
+buf.ny.0022,Chapel of the Gray Nuns,1868,3,2
+buf.ny.0022,Chapel of the Gray Nuns,1869,3,2
+buf.ny.0022,Chapel at the Convent of the Gray Nuns,1870,3,1
+buf.ny.0093,St. Gabriel,1869,2,1
+buf.ny.0093,St. Raphael's,1870,2,1
+buf.ny.0107,Annunciation,1868,3,2
+buf.ny.0107,Annunciation,1869,3,2
+buf.ny.0107,Annunciation B.V.M.,1870,3,1
+buf.ny.0136,St. Joseph's School,1868,3,2
+buf.ny.0136,St. Joseph's School,1869,3,2
+buf.ny.0136,"St. Joseph's School, Cathedral",1870,3,1
+buf.ny.0137,St. Joseph's School for Girls,1868,3,2
+buf.ny.0137,St. Joseph's School for Girls,1869,3,2
+buf.ny.0137,St. Joseph's School,1870,3,1
+buf.ny.0166,St. Mary's Orphan Asylum,1868,3,1
+buf.ny.0166,St. Mary's Orphan Asylum and School,1869,3,2
+buf.ny.0166,St. Mary's Orphan Asylum and School,1870,3,2
+bur.vt.0001,St. Mary's Cathedral,1868,3,1
+bur.vt.0001,Cathedral of the Immaculate Conception,1869,3,2
+bur.vt.0001,Cathedral of the Immaculate Conception,1870,3,2
+bur.vt.0032,Assumption of the B. V. M,1868,3,2
+bur.vt.0032,Assumption of the B. V. M,1869,3,2
+bur.vt.0032,Assumption of the Blessed Virgin Mary,1870,3,1
+bur.vt.0053,Nativity of the B. V. M,1868,3,2
+bur.vt.0053,Nativity of the B. V. M,1869,3,2
+bur.vt.0053,Nativity of the Blessed Virgin Mary,1870,3,1
+cha.sc.0021,St. Mary's,1868,3,2
+cha.sc.0021,St. Mary's,1869,3,2
+cha.sc.0021,St. Mary of the Immaculate Conception,1870,3,1
+cha.sc.0040,Girl's Orphan Asylum,1868,3,2
+cha.sc.0040,Girl's Orphan Asylum,1869,3,2
+cha.sc.0040,Convent of the Sisters of Our Lady of Mercy,1870,3,1
+cha.sc.0041,Boy's Orphan Asylum,1868,3,2
+cha.sc.0041,Boy's Orphan Asylum,1869,3,2
+cha.sc.0041,Convent of the Sisters of Our Lady of Mercy,1870,3,1
+cha.sc.0042,Academy of the Sisters,1868,3,2
+cha.sc.0042,Academy of the Sisters,1869,3,2
+cha.sc.0042,"Saint Mary, Star of the Sea",1870,3,1
+den.co.0016,St. Patrick's,1866,4,3
+den.co.0016,St. Patrick's,1867,4,3
+den.co.0016,St. Patrick's,1868,4,3
+den.co.0016,Church of St. Patrick,1870,4,1
+den.co.0037,Chapel of the Holy Trinity,1866,2,1
+den.co.0037,Church of the Holy Trinity,1870,2,1
+den.co.0054,St. Mary's Convent and Academy of the Sisters of Loretto,1866,4,1
+den.co.0054,St. Mary's Convent and Academy,1867,4,3
+den.co.0054,St. Mary's Convent and Academy,1868,4,3
+den.co.0054,St. Mary's Convent and Academy,1870,4,3
+det.mi.0014,Immaculate Conception,1867,4,2
+det.mi.0014,Immaculate Conception,1868,4,2
+det.mi.0014,Immaculate Conception of the B.V.M.,1869,4,2
+det.mi.0014,Immaculate Conception of the B.V.M.,1870,4,2
+det.mi.0035,St. Francis Xavier,1867,4,1
+det.mi.0035,St. Francis Xavier's,1868,4,3
+det.mi.0035,St. Francis Xavier's,1869,4,3
+det.mi.0035,St. Francis Xavier's,1870,4,3
+det.mi.0047,St. Philip Beniti,1867,4,1
+det.mi.0047,St. Philip Benitii,1868,4,3
+det.mi.0047,St. Philip Benitii,1869,4,3
+det.mi.0047,St. Philip Benitii,1870,4,3
+det.mi.0048,Assumption B.M.V.,1867,4,3
+det.mi.0048,Assumption B.M.V.,1868,4,3
+det.mi.0048,Assumption B.M.V.,1869,4,3
+det.mi.0048,Assumption B.V.M.,1870,4,1
+det.mi.0049,Annunciation B.M.V.,1867,4,2
+det.mi.0049,Annunciation B.M.V.,1868,4,2
+det.mi.0049,Annunciation B.V.M.,1869,4,2
+det.mi.0049,Annunciation B.V.M.,1870,4,2
+det.mi.0082,St. Lawrence,1868,3,1
+det.mi.0082,St. Alphonsus',1869,3,2
+det.mi.0082,St. Alphonsus',1870,3,2
+det.mi.0109,Immaculate Conception B.M.V.,1867,4,2
+det.mi.0109,Immaculate Conception B.M.V.,1868,4,2
+det.mi.0109,Immaculate Conception B.V.M.,1869,4,2
+det.mi.0109,Immaculate Conception B.V.M.,1870,4,2
+det.mi.0123,Immaculate Conception B.M.V.,1867,4,2
+det.mi.0123,Immaculate Conception B.M.V.,1868,4,2
+det.mi.0123,Immaculate Conception B.V.M.,1869,4,2
+det.mi.0123,Immaculate Conception B.V.M.,1870,4,2
+det.mi.0141,St. Vincent de Paul's,1867,4,1
+det.mi.0141,St. Vincent of Paul's,1868,4,3
+det.mi.0141,St. Vincent of Paul's,1869,4,3
+det.mi.0141,St. Vincent of Paul's,1870,4,3
+det.mi.0157,St. Louis',1867,4,2
+det.mi.0157,St. Louis',1868,4,2
+det.mi.0157,St. Louis,1869,4,2
+det.mi.0157,St. Louis,1870,4,2
+det.mi.0161,Immaculate Conception B.M.V.,1867,4,2
+det.mi.0161,Immaculate Conception B.M.V.,1868,4,2
+det.mi.0161,Immaculate Conception B.V.M.,1869,4,2
+det.mi.0161,Immaculate Conception B.V.M.,1870,4,2
+det.mi.0172,St. Peter's,1867,4,2
+det.mi.0172,St. Peter's,1868,4,2
+det.mi.0172,St. Mary's,1869,4,2
+det.mi.0172,St. Mary's,1870,4,2
+det.mi.0181,Sister-Servants of the Immaculate Heart of Mary,1867,4,3
+det.mi.0181,Sister-Servants of the Immaculate Heart of Mary,1868,4,3
+det.mi.0181,Sister-Servants of the Immaculate Heart of Mary,1869,4,3
+det.mi.0181,Mother House and Novitiate of the Sister-Servants of the Immaculate Heart of Mary,1870,4,1
+erie.pa.0011,St. Joseph's,1868,3,2
+erie.pa.0011,St. Joseph's,1869,3,2
+erie.pa.0011,Immaculate Heart of Mary,1870,3,1
+erie.pa.0046,St. Francis',1868,3,2
+erie.pa.0046,St. Francis',1869,3,2
+erie.pa.0046,St. Francis Xavier's,1870,3,1
+erie.pa.0072,St. Aloysius',1868,3,2
+erie.pa.0072,St. Aloysius',1869,3,2
+erie.pa.0072,St. Elizabeth's,1870,3,1
+erie.pa.0099,St. Mary's,1868,3,2
+erie.pa.0099,St. Mary's,1869,3,2
+erie.pa.0099,St. Mary's School,1870,3,1
+erie.pa.0100,St. Joseph's,1868,3,2
+erie.pa.0100,St. Joseph's,1869,3,2
+erie.pa.0100,St. Joseph's School,1870,3,1
+erie.pa.0116,Mother House and Novitiate of the Sisters of St. Bridget,1868,2,1
+erie.pa.0116,Mother House and Novitiate of St. Bridget,1869,2,1
+erie.pa.0117,Academy of the Sisters of St. Bridget,1868,2,1
+erie.pa.0117,Academy of St. Bridget,1869,2,1
+gal.tx.0023,St. Mary's Church,1867,4,3
+gal.tx.0023,St. Mary's Church,1868,4,3
+gal.tx.0023,St. Mary's Church,1869,4,3
+gal.tx.0023,Church of the Immaculate Conception,1870,4,1
+gal.tx.0167,Sœurs Hospitalières,1869,2,1
+gal.tx.0167,St. Mary's Infirmary,1870,2,1
+gra.ca.0053,St. Canicus,1866,5,3
+gra.ca.0053,St. Canicus,1867,5,3
+gra.ca.0053,St. Canicus,1868,5,3
+gra.ca.0053,St. Canice,1869,5,2
+gra.ca.0053,St. Canice,1870,5,2
+gra.ca.0076,Most Holy Trinity,1866,5,1
+gra.ca.0076,St. Patrick's,1867,5,4
+gra.ca.0076,St. Patrick's,1868,5,4
+gra.ca.0076,St. Patrick's,1869,5,4
+gra.ca.0076,St. Patrick's,1870,5,4
+gra.ca.0082,St. Dominick's Church,1868,3,2
+gra.ca.0082,St. Dominick's Church,1869,3,2
+gra.ca.0082,St. Augustine's Church,1870,3,1
+gra.ca.0101,St. Mary of the Mountain,1865,6,1
+gra.ca.0101,St. Mary's,1866,6,5
+gra.ca.0101,St. Mary's,1867,6,5
+gra.ca.0101,St. Mary's,1868,6,5
+gra.ca.0101,St. Mary's,1869,6,5
+gra.ca.0101,St. Mary's,1870,6,5
+gra.ca.0110,"School for boys, at the St. Joseph's Church",1865,6,5
+gra.ca.0110,"School for boys, at the St. Joseph's Church",1866,6,5
+gra.ca.0110,"School for boys, at the St. Joseph's Church",1867,6,5
+gra.ca.0110,"School for boys, at the St. Joseph's Church",1868,6,5
+gra.ca.0110,"School for boys, at the St. Joseph's Church",1869,6,5
+gra.ca.0110,School for boys,1870,6,1
+har.pa.0068,St. Joseph's Academy,1868,3,1
+har.pa.0068,St. Joseph's Convent,1869,3,1
+har.pa.0068,St. Joseph's Convent and Academy,1870,3,1
+har.pa.0070,Convent of the Sisters,1869,2,1
+har.pa.0070,Convent and Academy of the Sisters of Mercy,1870,2,1
+lac.wi.0017,St. Mary's Nativity,1869,2,1
+lac.wi.0017,Nativity B.V.M.,1870,2,1
+mar.mi.0002,St. Mary's Church,1868,3,1
+mar.mi.0002,St. Mary's,1869,3,2
+mar.mi.0002,St. Mary's,1870,3,2
+mar.mi.0003,Church of the Assumption of the B.V. Mary,1868,3,1
+mar.mi.0003,Assumption,1869,3,2
+mar.mi.0003,Assumption,1870,3,2
+mar.mi.0004,Church of the Most Holy Redeemer,1868,3,1
+mar.mi.0004,Holy Redeemer,1869,3,2
+mar.mi.0004,Holy Redeemer,1870,3,2
+mar.mi.0006,Church of the Immaculate Conception of the B.V. Mary,1868,3,1
+mar.mi.0006,Immaculate Conception,1869,3,2
+mar.mi.0006,Immaculate Conception,1870,3,2
+mar.mi.0007,St. Ann's Church,1868,3,1
+mar.mi.0007,St. Ann's,1869,3,2
+mar.mi.0007,St. Ann's,1870,3,2
+mar.mi.0008,Church of St. Ignatius Loyola,1868,3,1
+mar.mi.0008,St. Ignatius Loyola,1869,3,2
+mar.mi.0008,St. Ignatius Loyola,1870,3,2
+mar.mi.0009,Church of St. Joseph,1868,3,1
+mar.mi.0009,St. Joseph's,1869,3,2
+mar.mi.0009,St. Joseph's,1870,3,2
+mar.mi.0010,Church of the Most Holy Name of Jesus,1868,3,1
+mar.mi.0010,Holy Name,1869,3,2
+mar.mi.0010,Holy Name,1870,3,2
+mar.mi.0011,St. Ann's Church,1868,3,1
+mar.mi.0011,St. Ann's,1869,3,2
+mar.mi.0011,St. Ann's,1870,3,2
+mar.mi.0012,St. Martin's Church,1868,3,1
+mar.mi.0012,SS. Peter and Paul's,1869,3,2
+mar.mi.0012,SS. Peter and Paul's,1870,3,2
+mar.mi.0014,St. Paul's Church,1868,3,1
+mar.mi.0014,St. Paul's,1869,3,2
+mar.mi.0014,St. Paul's,1870,3,2
+mar.mi.0015,Church of St. Francis Xavier,1868,3,1
+mar.mi.0015,St. Francis Xavier's,1869,3,2
+mar.mi.0015,St. Francis Xavier's,1870,3,2
+mar.mi.0016,St. Patrick's Church,1868,3,1
+mar.mi.0016,St. Patrick's,1869,3,2
+mar.mi.0016,St. Patrick's,1870,3,2
+mar.mi.0017,Church of St. Ignatius Loyola,1868,3,1
+mar.mi.0017,St. Ignatius Loyola,1869,3,2
+mar.mi.0017,St. Ignatius Loyola,1870,3,2
+mar.mi.0020,"Church of Our Saviour, the Friend of Children",1868,3,1
+mar.mi.0020,"Our Saviour, Friend of Children",1869,3,2
+mar.mi.0020,"Our Saviour, Friend of Children",1870,3,2
+mar.mi.0038,"Ursuline Convent, Academy, Boarding and Day School",1868,3,1
+mar.mi.0038,"Ursuline Convent, Academy, and Day School",1869,3,2
+mar.mi.0038,"Ursuline Convent, Academy, and Day School",1870,3,2
+mar.mi.0039,"Convent of Sisters of St. Joseph, Academy, Boarding and Day-School",1868,3,2
+mar.mi.0039,"Convent of Sisters of St. Joseph, Academy, Boarding and Day-School",1869,3,2
+mar.mi.0039,"Convent of Sisters of St. Joseph, Academy, Boarding and Day School",1870,3,1
+mar.mi.0040,"Convent of Sisters of St. Joseph, Boarding and Day-School",1868,3,2
+mar.mi.0040,"Convent of Sisters of St. Joseph, Boarding and Day-School",1869,3,2
+mar.mi.0040,"Convent of Sisters of St. Joseph, Boarding and Day School",1870,3,1
+mar.mi.0041,"Convent of Sisters of St. Joseph, Boarding and Day-School",1868,3,2
+mar.mi.0041,"Convent of Sisters of St. Joseph, Boarding and Day-School",1869,3,2
+mar.mi.0041,"Convent of Sisters of St. Joseph, Boarding and Day School",1870,3,1
+mob.al.0040,Brothers' Academy and Boarding-School,1867,4,3
+mob.al.0040,Brothers' Academy and Boarding-School,1868,4,3
+mob.al.0040,Brothers' Academy and Boarding-School,1869,4,3
+mob.al.0040,Brothers' Academy and Boarding School,1870,4,1
+mob.al.0041,Brothers' Day Schools,1869,2,1
+mob.al.0041,Brothers' Day School,1870,2,1
+mon.ca.0014,Church of the Immaculate Conception,1864,7,6
+mon.ca.0014,Church of the Immaculate Conception,1865,7,6
+mon.ca.0014,Immaculate Conception,1866,7,1
+mon.ca.0014,Church of the Immaculate Conception,1867,7,6
+mon.ca.0014,Church of the Immaculate Conception,1868,7,6
+mon.ca.0014,Church of the Immaculate Conception,1869,7,6
+mon.ca.0014,Church of the Immaculate Conception,1870,7,6
+mon.ca.0017,San Bernardine of Sienna,1865,6,1
+mon.ca.0017,San Bernardino of Sienna,1866,6,5
+mon.ca.0017,San Bernardino of Sienna,1867,6,5
+mon.ca.0017,San Bernardino of Sienna,1868,6,5
+mon.ca.0017,San Bernardino of Sienna,1869,6,5
+mon.ca.0017,San Bernardino of Sienna,1870,6,5
+mon.ca.0037,St. Charles Borromeo,1864,7,2
+mon.ca.0037,St. Charles Borromeo,1865,7,2
+mon.ca.0037,St. Charles Borromeo's,1866,7,5
+mon.ca.0037,St. Charles Borromeo's,1867,7,5
+mon.ca.0037,St. Charles Borromeo's,1868,7,5
+mon.ca.0037,St. Charles Borromeo's,1869,7,5
+mon.ca.0037,St. Charles Borromeo's,1870,7,5
+mon.ca.0044,St. Patrick's,1866,5,1
+mon.ca.0044,St. Mary's Church,1867,5,4
+mon.ca.0044,St. Mary's Church,1868,5,4
+mon.ca.0044,St. Mary's Church,1869,5,4
+mon.ca.0044,St. Mary's Church,1870,5,4
+mon.ca.0045,St. Martin,1864,3,2
+mon.ca.0045,St. Martin,1865,3,2
+mon.ca.0045,St. Martin's,1866,3,1
+nash.tn.0002,St. John the Evangelist,1864,6,1
+nash.tn.0002,St. John's,1865,6,5
+nash.tn.0002,St. John's,1867,6,5
+nash.tn.0002,St. John's,1868,6,5
+nash.tn.0002,St. John's,1869,6,5
+nash.tn.0002,St. John's,1870,6,5
+nash.tn.0003,Church of the Assumption of B.V.,1864,6,2
+nash.tn.0003,Church of the Assumption of B.V.,1865,6,2
+nash.tn.0003,Church of the Assumption,1867,6,4
+nash.tn.0003,Church of the Assumption,1868,6,4
+nash.tn.0003,Church of the Assumption,1869,6,4
+nash.tn.0003,Church of the Assumption,1870,6,4
+nash.tn.0004,SS. Peter and Paul,1864,6,2
+nash.tn.0004,SS. Peter and Paul,1865,6,2
+nash.tn.0004,St. Peter's,1867,6,4
+nash.tn.0004,St. Peter's,1868,6,4
+nash.tn.0004,St. Peter's,1869,6,4
+nash.tn.0004,St. Peter's,1870,6,4
+nash.tn.0014,Church of Our Lady of Seven Dolors,1867,4,2
+nash.tn.0014,Church of Our Lady of Seven Dolors,1868,4,2
+nash.tn.0014,Church of Our Lady,1869,4,2
+nash.tn.0014,Church of Our Lady,1870,4,2
+nash.tn.0032,SS. Peter and Paul,1864,3,1
+nash.tn.0032,SS. Peter and Paul's,1865,3,2
+nash.tn.0032,SS. Peter and Paul's,1867,3,2
+nash.tn.0040,School of the Sisters of Mercy,1867,4,1
+nash.tn.0040,St. Bernard's Academy,1868,4,3
+nash.tn.0040,St. Bernard's Academy,1869,4,3
+nash.tn.0040,St. Bernard's Academy,1870,4,3
+nash.tn.0043,St. Agnes' Female Academy,1864,6,2
+nash.tn.0043,St. Agnes' Female Academy,1865,6,2
+nash.tn.0043,St. Agnes' Academy,1867,6,4
+nash.tn.0043,St. Agnes' Academy,1868,6,4
+nash.tn.0043,St. Agnes' Academy,1869,6,4
+nash.tn.0043,St. Agnes' Academy,1870,6,4
+nat.la.0012,Church of St. Anne,1868,3,2
+nat.la.0012,Church of St. Anne,1869,3,2
+nat.la.0012,Church of St. Ann,1870,3,1
+nat.la.0024,Church of St. Hyacinthe,1868,3,2
+nat.la.0024,Church of St. Hyacinthe,1869,3,2
+nat.la.0024,Church of St. Hyacinth,1870,3,1
+nat.la.0056,Chapel of St. Maurice,1868,3,2
+nat.la.0056,Chapel of St. Maurice,1869,3,2
+nat.la.0056,Church of St. Maurice,1870,3,1
+nat.la.0059,Academy of the Sacred Heart,1868,3,2
+nat.la.0059,Academy of the Sacred Heart,1869,3,2
+nat.la.0059,"Convent of the Sacred Heart, and Academy",1870,3,1
+nat.la.0060,"Convent of the Presentation, Mother House and Novitiate of the Daughters of the Cross",1868,3,2
+nat.la.0060,"Convent of the Presentation, Mother House and Novitiate of the Daughters of the Cross",1869,3,2
+nat.la.0060,"Convent of the Presentation, and Novitiate of the Daughters of the Cross",1870,3,1
+nat.la.0064,Convent of St. Mary,1868,3,2
+nat.la.0064,Convent of St. Mary,1869,3,2
+nat.la.0064,St. Mary's Day-school,1870,3,1
+nat.ms.0096,Day-School for Boys,1867,4,1
+nat.ms.0096,Cathedral School for Boys,1868,4,3
+nat.ms.0096,Cathedral School for Boys,1869,4,3
+nat.ms.0096,Cathedral School for Boys,1870,4,3
+nes.wa.0001,St. Augustin and St. James's Cathedral,1864,7,1
+nes.wa.0001,St. Augustin and St. James' Cathedral,1865,7,1
+nes.wa.0001,St. Augustine and St. James' Cathedral,1866,7,5
+nes.wa.0001,St. Augustine and St. James' Cathedral,1867,7,5
+nes.wa.0001,St. Augustine and St. James' Cathedral,1868,7,5
+nes.wa.0001,St. Augustine and St. James' Cathedral,1869,7,5
+nes.wa.0001,St. Augustine and St. James' Cathedral,1870,7,5
+nes.wa.0006,St. Francis Xavier,1864,7,1
+nes.wa.0006,St. Francis Xavier's,1865,7,6
+nes.wa.0006,St. Francis Xavier's,1866,7,6
+nes.wa.0006,St. Francis Xavier's,1867,7,6
+nes.wa.0006,St. Francis Xavier's,1868,7,6
+nes.wa.0006,St. Francis Xavier's,1869,7,6
+nes.wa.0006,St. Francis Xavier's,1870,7,6
+nes.wa.0022,St. Rosa,1864,7,1
+nes.wa.0022,St. Rosa's,1865,7,6
+nes.wa.0022,St. Rosa's,1866,7,6
+nes.wa.0022,St. Rosa's,1867,7,6
+nes.wa.0022,St. Rosa's,1868,7,6
+nes.wa.0022,St. Rosa's,1869,7,6
+nes.wa.0022,St. Rosa's,1870,7,6
+nes.wa.0023,St. Paul,1864,7,1
+nes.wa.0023,St. Paul's,1865,7,6
+nes.wa.0023,St. Paul's,1866,7,6
+nes.wa.0023,St. Paul's,1867,7,6
+nes.wa.0023,St. Paul's,1868,7,6
+nes.wa.0023,St. Paul's,1869,7,6
+nes.wa.0023,St. Paul's,1870,7,6
+nes.wa.0025,Old Mission,1865,6,1
+nes.wa.0025,Old St. Ignatius' Mission,1866,6,5
+nes.wa.0025,Old St. Ignatius' Mission,1867,6,5
+nes.wa.0025,Old St. Ignatius' Mission,1868,6,5
+nes.wa.0025,Old St. Ignatius' Mission,1869,6,5
+nes.wa.0025,Old St. Ignatius' Mission,1870,6,5
+nes.wa.0026,Holy Angels College,1864,7,2
+nes.wa.0026,Holy Angels' College,1865,7,5
+nes.wa.0026,Holy Angels' College,1866,7,5
+nes.wa.0026,Holy Angels' College,1867,7,5
+nes.wa.0026,Holy Angels' College,1868,7,5
+nes.wa.0026,Holy Angels' College,1869,7,5
+nes.wa.0026,Holy Angels College,1870,7,2
+nes.wa.0027,Providence School for Young Ladies,1864,7,1
+nes.wa.0027,Providence Academy,1865,7,3
+nes.wa.0027,Providence Academy,1866,7,3
+nes.wa.0027,Providence Academy,1867,7,3
+nes.wa.0027,Providence School,1868,7,3
+nes.wa.0027,Providence School,1869,7,3
+nes.wa.0027,Providence School,1870,7,3
+nes.wa.0029,St. Genevieve Female Orphan Asylum,1864,7,1
+nes.wa.0029,St. Vincent's Female Orphan Asylum,1865,7,3
+nes.wa.0029,St. Vincent's Female Orphan Asylum,1866,7,3
+nes.wa.0029,St. Vincent's Female Orphan Asylum,1867,7,3
+nes.wa.0029,St. Gonovefa Female Orphan Asylum,1868,7,2
+nes.wa.0029,St. Gonovefa Female Orphan Asylum,1869,7,2
+nes.wa.0029,St. Gonovefa's Female Orphan Asylum,1870,7,1
+nes.wa.0030,St. Vincent Male Orphan Asylum,1864,7,1
+nes.wa.0030,St. Vincent's Male Orphan Asylum,1865,7,6
+nes.wa.0030,St. Vincent's Male Orphan Asylum,1866,7,6
+nes.wa.0030,St. Vincent's Male Orphan Asylum,1867,7,6
+nes.wa.0030,St. Vincent's Male Orphan Asylum,1868,7,6
+nes.wa.0030,St. Vincent's Male Orphan Asylum,1869,7,6
+nes.wa.0030,St. Vincent's Male Orphan Asylum,1870,7,6
+nes.wa.0032,Young Lady's Academy,1864,7,1
+nes.wa.0032,Providence School,1865,7,1
+nes.wa.0032,St. Joseph's Academy,1866,7,5
+nes.wa.0032,St. Joseph's Academy,1867,7,5
+nes.wa.0032,St. Joseph's Academy,1868,7,5
+nes.wa.0032,St. Joseph's Academy,1869,7,5
+nes.wa.0032,St. Joseph's Academy,1870,7,5
+nes.wa.0034,"Convent of the Sisters of Charity, House of Providence",1864,6,1
+nes.wa.0034,Convent of the Sisters of Charity of the House of Providence,1865,6,5
+nes.wa.0034,Convent of the Sisters of Charity of the House of Providence,1866,6,5
+nes.wa.0034,Convent of the Sisters of Charity of the House of Providence,1867,6,5
+nes.wa.0034,Convent of the Sisters of Charity of the House of Providence,1868,6,5
+nes.wa.0034,Convent of the Sisters of Charity of the House of Providence,1869,6,5
+nes.wa.0041,St. Ignatius,1864,5,1
+nes.wa.0041,St. Ignatius',1865,5,4
+nes.wa.0041,St. Ignatius',1866,5,4
+nes.wa.0041,St. Ignatius',1867,5,4
+nes.wa.0041,St. Ignatius',1868,5,4
+new.la.0001,St. Louis Cathedral,1868,3,1
+new.la.0001,St. Louis' Cathedral,1869,3,2
+new.la.0001,St. Louis' Cathedral,1870,3,2
+new.la.0022,St. Thomas,1868,3,1
+new.la.0022,St. Henry's,1869,3,2
+new.la.0022,St. Henry's,1870,3,2
+new.la.0049,Chapel of Plaquemine Brule,1868,3,2
+new.la.0049,Chapel of Plaquemine Brule,1869,3,2
+new.la.0049,Chapel of Plaquemine Brulé,1870,3,1
+new.la.0102,St. Joseph's Parochial School for Boys,1868,3,2
+new.la.0102,St. Joseph's Parochial School for Boys,1869,3,2
+new.la.0102,St. Joseph's Parochial School,1870,3,1
+new.la.0144,Widows' Asylum,1868,3,2
+new.la.0144,Widows' Asylum,1869,3,2
+new.la.0144,Old Men and Women Asylum,1870,3,1
+new.la.0145,Infirm Old Men's Asylum,1868,3,2
+new.la.0145,Infirm Old Men's Asylum,1869,3,2
+new.la.0145,School for Colored Girls,1870,3,1
+new.nj.0007,St. Joseph's Chapel School-House,1866,5,2
+new.nj.0007,St. Joseph's Chapel School-House,1867,5,2
+new.nj.0007,St. Joseph's,1868,5,3
+new.nj.0007,St. Joseph's,1869,5,3
+new.nj.0007,St. Joseph's,1870,5,3
+new.nj.0024,"St. Mary's, Star of the Sea",1866,5,3
+new.nj.0024,"St. Mary's, Star of the Sea",1867,5,3
+new.nj.0024,"St. Mary's, Star of the Sea",1868,5,3
+new.nj.0024,St. Mary's Star of the Sea,1869,5,2
+new.nj.0024,St. Mary's Star of the Sea,1870,5,2
+new.nj.0034,Church of the Immaculate Conception,1866,5,2
+new.nj.0034,Church of the Immaculate Conception,1867,5,2
+new.nj.0034,Immaculate Conception,1868,5,3
+new.nj.0034,Immaculate Conception,1869,5,3
+new.nj.0034,Immaculate Conception,1870,5,3
+new.nj.0061,Church of the Immaculate Conception,1866,5,1
+new.nj.0061,Immaculate Conception,1867,5,4
+new.nj.0061,Immaculate Conception,1868,5,4
+new.nj.0061,Immaculate Conception,1869,5,4
+new.nj.0061,Immaculate Conception,1870,5,4
+new.nj.0064,St. Mary Magdalene's,1866,5,1
+new.nj.0064,St. Mary Magdalen's,1867,5,4
+new.nj.0064,St. Mary Magdalen's,1868,5,4
+new.nj.0064,St. Mary Magdalen's,1869,5,4
+new.nj.0064,St. Mary Magdalen's,1870,5,4
+new.nj.0113,St. Michael's Retreat (Passionists),1866,5,2
+new.nj.0113,St. Michael's Retreat (Passionists),1867,5,2
+new.nj.0113,St. Michael's Retreat (Passionist Monastery),1868,5,3
+new.nj.0113,St. Michael's Retreat (Passionist Monastery),1869,5,3
+new.nj.0113,St. Michael's Retreat (Passionist Monastery),1870,5,3
+new.nj.0117,St. Elizabeth's Academy,1866,5,4
+new.nj.0117,St. Elizabeth's Academy,1867,5,4
+new.nj.0117,St. Elizabeth's Academy for Girls,1868,5,1
+new.nj.0117,St. Elizabeth's Academy,1869,5,4
+new.nj.0117,St. Elizabeth's Academy,1870,5,4
+new.nj.0118,St. Joseph's Preparatory Boarding-School,1866,5,2
+new.nj.0118,St. Joseph's Preparatory Boarding-School,1867,5,2
+new.nj.0118,St. Joseph's Preparatory Boarding-School for Boys,1868,5,3
+new.nj.0118,St. Joseph's Preparatory Boarding-School for Boys,1869,5,3
+new.nj.0118,St. Joseph's Preparatory Boarding-School for Boys,1870,5,3
+new.nj.0136,Benedictine Convent,1866,4,2
+new.nj.0136,Benedictine Convent,1867,4,2
+new.nj.0136,St. Walburga's Convent,1869,4,2
+new.nj.0136,St. Walburga's Convent,1870,4,2
+new.nj.0138,St. Mary's Hospital of the Sisters of the Poor,1867,4,1
+new.nj.0138,St. Mary's Hospital,1868,4,3
+new.nj.0138,St. Mary's Hospital,1869,4,3
+new.nj.0138,St. Mary's Hospital,1870,4,3
+new.nj.0140,Hospital of St. Michael the Archangel,1868,3,1
+new.nj.0140,Hospital of Our Lady and St. Michael the Archangel,1869,3,2
+new.nj.0140,Hospital of Our Lady and St. Michael the Archangel,1870,3,2
+new.nj.0148,Convent of Sisters of Notre Dame,1866,2,1
+new.nj.0148,Convent of the Sisters of Notre Dame,1867,2,1
+new.nj.0149,House of Franciscan Sisters of the Poor,1866,2,1
+new.nj.0149,House of the Franciscan Sisters of the Poor,1867,2,1
+nyc.ny.0001,Convent of the Congregation of the Most Holy Redeemer,1866,4,3
+nyc.ny.0001,Convent of the Congregation of the Most Holy Redeemer,1867,4,3
+nyc.ny.0001,Convent of the Congregation of the Most Holy Redeemer,1868,4,3
+nyc.ny.0001,Congregation of the Most Holy Redeemer,1869,4,1
+nyc.ny.0004,House of Reception for Boys,1866,4,1
+nyc.ny.0004,Male Protectory,1867,4,3
+nyc.ny.0004,Male Protectory,1868,4,3
+nyc.ny.0004,Male Protectory,1869,4,3
+nyc.ny.0005,House of the Holy Angels,1866,4,1
+nyc.ny.0005,"House of the Holy Angels, Female Protectory",1867,4,3
+nyc.ny.0005,"House of the Holy Angels, Female Protectory",1868,4,3
+nyc.ny.0005,"House of the Holy Angels, Female Protectory",1869,4,3
+nyc.ny.0006,St. Francis',1865,4,2
+nyc.ny.0006,St. Francis',1866,4,2
+nyc.ny.0006,St. Francis of Assisi,1867,4,2
+nyc.ny.0006,St. Francis of Assisi,1868,4,2
+nyc.ny.0051,St. Nicholas',1865,6,1
+nyc.ny.0051,St. Nicholas,1866,6,5
+nyc.ny.0051,St. Nicholas,1867,6,5
+nyc.ny.0051,St. Nicholas,1868,6,5
+nyc.ny.0051,St. Nicholas,1869,6,5
+nyc.ny.0051,St. Nicholas,1870,6,5
+nyc.ny.0062,Epiphany,1869,2,1
+nyc.ny.0062,Church of the Epiphany,1870,2,1
+nyc.ny.0065,St. John the Baptist's,1865,6,1
+nyc.ny.0065,St. John Baptist,1866,6,2
+nyc.ny.0065,St. John Baptist,1867,6,2
+nyc.ny.0065,St. John Baptist's,1868,6,3
+nyc.ny.0065,St. John Baptist's,1869,6,3
+nyc.ny.0065,St. John Baptist's,1870,6,3
+nyc.ny.0067,St. Gabriel's,1865,6,5
+nyc.ny.0067,St. Gabriel's,1866,6,5
+nyc.ny.0067,St. Gabriel's,1867,6,5
+nyc.ny.0067,St. Gabriel's,1868,6,5
+nyc.ny.0067,St. Gabriel's,1869,6,5
+nyc.ny.0067,St. Gabriels',1870,6,1
+nyc.ny.0070,St. Boniface,1865,6,3
+nyc.ny.0070,St. Boniface,1866,6,3
+nyc.ny.0070,St. Boniface,1867,6,3
+nyc.ny.0070,St. Boniface's,1868,6,3
+nyc.ny.0070,St. Boniface's,1869,6,3
+nyc.ny.0070,St. Boniface's,1870,6,3
+nyc.ny.0072,St. John the Evangelist's,1865,6,4
+nyc.ny.0072,St. John the Evangelist,1866,6,2
+nyc.ny.0072,St. John the Evangelist,1867,6,2
+nyc.ny.0072,St. John the Evangelist's,1868,6,4
+nyc.ny.0072,St. John the Evangelist's,1869,6,4
+nyc.ny.0072,St. John the Evangelist's,1870,6,4
+nyc.ny.0075,St. Lawrence,1865,6,3
+nyc.ny.0075,St. Lawrence,1866,6,3
+nyc.ny.0075,St. Lawrence,1867,6,3
+nyc.ny.0075,St. Lawrence's,1868,6,3
+nyc.ny.0075,St. Lawrence's,1869,6,3
+nyc.ny.0075,St. Lawrence's,1870,6,3
+nyc.ny.0091,Chapel of Convent of Mercy,1867,4,1
+nyc.ny.0091,Chapel of St. Mary's Orphan Asylum,1868,4,3
+nyc.ny.0091,Chapel of St. Mary's Orphan Asylum,1869,4,3
+nyc.ny.0091,Chapel of St. Mary's Orphan Asylum,1870,4,3
+nyc.ny.0132,St. Rose,1865,6,5
+nyc.ny.0132,St. Rose's,1866,6,1
+nyc.ny.0132,St. Rose,1867,6,5
+nyc.ny.0132,St. Rose,1868,6,5
+nyc.ny.0132,St. Rose,1869,6,5
+nyc.ny.0132,St. Rose,1870,6,5
+nyc.ny.0135,Church of Our Lady,1865,6,2
+nyc.ny.0135,Church of Our Lady,1866,6,2
+nyc.ny.0135,Our Lady of Mercy,1867,6,4
+nyc.ny.0135,Our Lady of Mercy,1868,6,4
+nyc.ny.0135,Our Lady of Mercy,1869,6,4
+nyc.ny.0135,Our Lady of Mercy,1870,6,4
+nyc.ny.0142,Regina Coeli,1865,6,5
+nyc.ny.0142,Regina Coeli,1866,6,5
+nyc.ny.0142,Regina Coeli,1867,6,5
+nyc.ny.0142,Regina Coeli,1868,6,5
+nyc.ny.0142,Regina Coeli,1869,6,5
+nyc.ny.0142,Regina Ceoli,1870,6,1
+nyc.ny.0146,St. _______,1868,3,2
+nyc.ny.0146,St. _______,1869,3,2
+nyc.ny.0146,St. Joseph's,1870,3,1
+nyc.ny.0150,St. Joachim,1865,6,2
+nyc.ny.0150,St. Joachim,1866,6,2
+nyc.ny.0150,St. Joachim's,1867,6,4
+nyc.ny.0150,St. Joachim's,1868,6,4
+nyc.ny.0150,St. Joachim's,1869,6,4
+nyc.ny.0150,St. Joachim's,1870,6,4
+nyc.ny.0151,Immaculate Conception of B.V.M.,1865,6,1
+nyc.ny.0151,"Immaculate Conception, B.V.M.",1866,6,1
+nyc.ny.0151,Immaculate Conception B.V.M.,1867,6,4
+nyc.ny.0151,Immaculate Conception B.V.M.,1868,6,4
+nyc.ny.0151,Immaculate Conception B.V.M.,1869,6,4
+nyc.ny.0151,Immaculate Conception B.V.M.,1870,6,4
+nyc.ny.0166,St. Joseph's,1867,4,1
+nyc.ny.0166,St. Mary's,1868,4,3
+nyc.ny.0166,St. Mary's,1869,4,3
+nyc.ny.0166,St. Mary's,1870,4,3
+nyc.ny.0174,Immaculate Conception of B.V.M.,1865,6,2
+nyc.ny.0174,Immaculate Conception of B.V.M.,1866,6,2
+nyc.ny.0174,Immaculate Conception B.V.M.,1867,6,4
+nyc.ny.0174,Immaculate Conception B.V.M.,1868,6,4
+nyc.ny.0174,Immaculate Conception B.V.M.,1869,6,4
+nyc.ny.0174,Immaculate Conception B.V.M.,1870,6,4
+nyc.ny.0176,St. Joseph's,1867,4,1
+nyc.ny.0176,Church of the Nativity,1868,4,3
+nyc.ny.0176,Church of the Nativity,1869,4,3
+nyc.ny.0176,Church of the Nativity,1870,4,3
+nyc.ny.0203,Immaculate Conception of B.V.M.,1865,6,2
+nyc.ny.0203,Immaculate Conception of B.V.M.,1866,6,2
+nyc.ny.0203,Immaculate Conception B.V.M.,1867,6,4
+nyc.ny.0203,Immaculate Conception B.V.M.,1868,6,4
+nyc.ny.0203,Immaculate Conception B.V.M.,1869,6,4
+nyc.ny.0203,Immaculate Conception B.V.M.,1870,6,4
+nyc.ny.0207,St. Ignatius' Seminary,1866,5,1
+nyc.ny.0207,St. Ignatius' House of Retreat,1867,5,4
+nyc.ny.0207,St. Ignatius' House of Retreat,1868,5,4
+nyc.ny.0207,St. Ignatius' House of Retreat,1869,5,4
+nyc.ny.0207,St. Ignatius' House of Retreat,1870,5,4
+nyc.ny.0209,St. Alphonsus Convent of the Congregation of the Most Holy Redeemer,1867,4,1
+nyc.ny.0209,St. Alphonsus' Convent of the Congregation of the Most Holy Redeemer,1868,4,3
+nyc.ny.0209,St. Alphonsus' Convent of the Congregation of the Most Holy Redeemer,1869,4,3
+nyc.ny.0209,St. Alphonsus' Convent of the Congregation of the Most Holy Redeemer,1870,4,3
+nyc.ny.0224,The Academy of our Lady of Mercy,1866,5,2
+nyc.ny.0224,The Academy of our Lady of Mercy,1867,5,2
+nyc.ny.0224,Catharine's Academy of Our Lady of Mercy,1868,5,2
+nyc.ny.0224,Catharine's Academy of Our Lady of Mercy,1869,5,2
+nyc.ny.0224,St. Catharine's Academy of Our Lady of Mercy,1870,5,1
+nyc.ny.0231,Convent of the Sisters of St. Dominic,1866,5,1
+nyc.ny.0231,Convent of the Sisters of the Order of St. Dominic,1867,5,4
+nyc.ny.0231,Convent of the Sisters of the Order of St. Dominic,1868,5,4
+nyc.ny.0231,Convent of the Sisters of the Order of St. Dominic,1869,5,4
+nyc.ny.0231,Convent of the Sisters of the Order of St. Dominic,1870,5,4
+nyc.ny.0234,Convent of the Little Sisters of the Poor,1866,5,1
+nyc.ny.0234,Convent of the Sisters of the Poor of St. Francis,1867,5,4
+nyc.ny.0234,Convent of the Sisters of the Poor of St. Francis,1868,5,4
+nyc.ny.0234,Convent of the Sisters of the Poor of St. Francis,1869,5,4
+nyc.ny.0234,Convent of the Sisters of the Poor of St. Francis,1870,5,4
+nyc.ny.0235,Convent of the Sisters of the Third Order of St. Francis,1866,5,1
+nyc.ny.0235,Convent of the Missionary Sisters of the Third Order of St. Francis,1867,5,4
+nyc.ny.0235,Convent of the Missionary Sisters of the Third Order of St. Francis,1868,5,4
+nyc.ny.0235,Convent of the Missionary Sisters of the Third Order of St. Francis,1869,5,4
+nyc.ny.0235,Convent of the Missionary Sisters of the Third Order of St. Francis,1870,5,4
+nyc.ny.0243,Academy of the Holy Cross,1866,5,1
+nyc.ny.0243,Holy Cross Academy,1867,5,4
+nyc.ny.0243,Holy Cross Academy,1868,5,4
+nyc.ny.0243,Holy Cross Academy,1869,5,4
+nyc.ny.0243,Holy Cross Academy,1870,5,4
+nyc.ny.0253,St. Peter's School,1866,5,1
+nyc.ny.0253,St. Peter's Academy,1867,5,4
+nyc.ny.0253,St. Peter's Academy,1868,5,4
+nyc.ny.0253,St. Peter's Academy,1869,5,4
+nyc.ny.0253,St. Peter's Academy,1870,5,4
+nyc.ny.0326,St. Rose's,1867,4,1
+nyc.ny.0326,St. Rose,1868,4,3
+nyc.ny.0326,St. Rose,1869,4,3
+nyc.ny.0326,St. Rose,1870,4,3
+nyc.ny.0349,St. Vincent's Orphan Asylum,1866,5,1
+nyc.ny.0349,St. Vincent de Paul's Orphan Asylum,1867,5,4
+nyc.ny.0349,St. Vincent de Paul's Orphan Asylum,1868,5,4
+nyc.ny.0349,St. Vincent de Paul's Orphan Asylum,1869,5,4
+nyc.ny.0349,St. Vincent de Paul's Orphan Asylum,1870,5,4
+nyc.ny.0350,St. Stephen's Home for Destitute Little Girls,1868,3,1
+nyc.ny.0350,St. Stephen's Home for Destitute Children,1869,3,2
+nyc.ny.0350,St. Stephen's Home for Destitute Children,1870,3,2
+nyc.ny.0354,St. Francis' German Charitable Hospital,1866,5,1
+nyc.ny.0354,St. Francis' German Hospital,1867,5,4
+nyc.ny.0354,St. Francis' German Hospital,1868,5,4
+nyc.ny.0354,St. Francis' German Hospital,1869,5,4
+nyc.ny.0354,St. Francis' German Hospital,1870,5,4
+nyc.ny.0357,St. Alphonsus' School,1866,2,1
+nyc.ny.0357,The Society for the Protection of Destitute Roman Catholic Children in the City of New York,1870,2,1
+nyc.ny.0358,Manhattanville,1866,2,1
+nyc.ny.0358,Asylum for Foundlings,1870,2,1
+oma.ne.0030,The Academy of the Sister of Mercy,1866,5,1
+oma.ne.0030,Academy of Mount St. Mary's,1867,5,4
+oma.ne.0030,Academy of Mount St. Mary's,1868,5,4
+oma.ne.0030,Academy of Mount St. Mary's,1869,5,4
+oma.ne.0030,Academy of Mount St. Mary's,1870,5,4
+oma.ne.0031,Academy,1866,5,3
+oma.ne.0031,Academy,1867,5,3
+oma.ne.0031,Academy,1868,5,3
+oma.ne.0031,Academy of St. Benedict,1869,5,2
+oma.ne.0031,Academy of St. Benedict,1870,5,2
+oma.ne.0032,The Male and Female Schools of St. Philip Neri,1864,7,3
+oma.ne.0032,The Male and Female Schools of St. Philip Neri,1865,7,3
+oma.ne.0032,The Male and Female Schools of St. Philip Neri,1866,7,3
+oma.ne.0032,Day Schools,1867,7,4
+oma.ne.0032,Day Schools,1868,7,4
+oma.ne.0032,Day Schools,1869,7,4
+oma.ne.0032,Day Schools,1870,7,4
+oma.ne.0033,St. Benedict's School for Males and Females,1864,7,2
+oma.ne.0033,St. Benedict's School for Males and Females,1865,7,2
+oma.ne.0033,Day School,1866,7,1
+oma.ne.0033,Day Schools,1867,7,4
+oma.ne.0033,Day Schools,1868,7,4
+oma.ne.0033,Day Schools,1869,7,4
+oma.ne.0033,Day Schools,1870,7,4
+ore.or.0002,Sacred Heart,1864,7,1
+ore.or.0002,Sacred Heart's Church,1865,7,6
+ore.or.0002,Sacred Heart's Church,1866,7,6
+ore.or.0002,Sacred Heart's Church,1867,7,6
+ore.or.0002,Sacred Heart's Church,1868,7,6
+ore.or.0002,Sacred Heart's Church,1869,7,6
+ore.or.0002,Sacred Heart's Church,1870,7,6
+ore.or.0073,St. Mary's Academy,1864,7,2
+ore.or.0073,St. Mary's Academy,1865,7,2
+ore.or.0073,City or Parish School,1866,7,1
+ore.or.0073,City Parochial,1867,7,4
+ore.or.0073,City Parochial,1868,7,4
+ore.or.0073,City Parochial,1869,7,4
+ore.or.0073,City Parochial,1870,7,4
+ore.or.0074,St. Mary's Academy for Young Ladies,1864,7,1
+ore.or.0074,St. Mary's Academy,1865,7,6
+ore.or.0074,St. Mary's Academy,1866,7,6
+ore.or.0074,St. Mary's Academy,1867,7,6
+ore.or.0074,St. Mary's Academy,1868,7,6
+ore.or.0074,St. Mary's Academy,1869,7,6
+ore.or.0074,St. Mary's Academy,1870,7,6
+phi.pa.0017,St. Malachy's,1868,3,2
+phi.pa.0017,St. Malachi's,1869,3,1
+phi.pa.0017,St. Malachy's,1870,3,2
+phi.pa.0022,Church of the Annunciation,1868,3,1
+phi.pa.0022,Church of the Annunciation of the B.V.M.,1869,3,2
+phi.pa.0022,Church of the Annunciation of the B.V.M.,1870,3,2
+phi.pa.0023,St. Edward's the Confessor,1868,3,1
+phi.pa.0023,"St. Edward's, the Confessor",1869,3,2
+phi.pa.0023,"St. Edward's, the Confessor",1870,3,2
+phi.pa.0024,St. Bonifacius',1868,3,2
+phi.pa.0024,St. Bonifacius',1869,3,2
+phi.pa.0024,St. Bonufacu's,1870,3,1
+phi.pa.0025,St. Charles Borromeo's,1869,2,1
+phi.pa.0025,Chapel of St. Charles Borromeo,1870,2,1
+phi.pa.0028,St. Gregory's (West-Philadelphia),1868,3,2
+phi.pa.0028,St. Gregory's (West-Philadelphia),1869,3,2
+phi.pa.0028,Our Mother of Sorrows,1870,3,1
+phi.pa.0037,Immaculate Conception,1868,3,1
+phi.pa.0037,Immaculate Conception of the B.V.M.,1869,3,2
+phi.pa.0037,Immaculate Conception of the B.V.M.,1870,3,2
+phi.pa.0038,St. Mary our Lady of Consolation,1868,3,1
+phi.pa.0038,St. Mary Our Lady of Consolation,1869,3,2
+phi.pa.0038,St. Mary Our Lady of Consolation,1870,3,2
+phi.pa.0054,Our Lady of Mount Carmel,1868,3,1
+phi.pa.0054,Our Lady of Mt. Carmel,1869,3,2
+phi.pa.0054,Our Lady of Mt. Carmel,1870,3,2
+phi.pa.0074,St. Malachy's,1868,3,2
+phi.pa.0074,St. Malachy's,1869,3,2
+phi.pa.0074,St. Malachi's,1870,3,1
+phi.pa.0085,St. Charles Borromeo,1868,3,1
+phi.pa.0085,St. Charles Borromeo's,1869,3,2
+phi.pa.0085,St. Charles Borromeo's,1870,3,2
+phi.pa.0087,Nativity of the Blessed Virgin Mary,1868,3,2
+phi.pa.0087,Nativity of the Blessed Virgin Mary,1869,3,2
+phi.pa.0087,Nativity of the Blessed Virgin,1870,3,1
+phi.pa.0088,St. Thomas of Villanova,1868,3,1
+phi.pa.0088,St. Thomas of Villa Nova,1869,3,2
+phi.pa.0088,St. Thomas of Villa Nova,1870,3,2
+phi.pa.0089,St. Dennis',1868,3,2
+phi.pa.0089,St. Dennis',1869,3,2
+phi.pa.0089,St. Denis',1870,3,1
+phi.pa.0128,St. ------,1868,3,2
+phi.pa.0128,St. ------,1869,3,2
+phi.pa.0128,Church of the Holy Family,1870,3,1
+phi.pa.0138,St. Fidelis',1868,3,2
+phi.pa.0138,St. Fidelis',1869,3,2
+phi.pa.0138,St. Fidelis,1870,3,1
+phi.pa.0151,Brothers of the Christian Schools Academy,1868,3,1
+phi.pa.0151,La Salle College,1869,3,2
+phi.pa.0151,La Salle College,1870,3,2
+phi.pa.0169,Convent of the Sisters of the Third Order of St. Francis Assisium,1868,3,2
+phi.pa.0169,Convent of the Third Order of St. Francis,1869,3,1
+phi.pa.0169,Convent of the Sisters of the Third Order of St. Francis Assisium,1870,3,2
+phi.pa.0173,Oblate Sisters of Providence,1868,3,1
+phi.pa.0173,Convent of the Oblate Sisters of Providence,1869,3,2
+phi.pa.0173,Convent of the Oblate Sisters of Providence,1870,3,2
+phi.pa.0174,St. Joseph's Academy,1868,3,2
+phi.pa.0174,St. Joseph's Academy,1869,3,2
+phi.pa.0174,Mount St. Murray's Academy,1870,3,1
+phi.pa.0175,Academy of the Immaculate Conception,1868,3,2
+phi.pa.0175,Academy of the Immaculate Conception,1869,3,2
+phi.pa.0175,Industrial School of the Immaculate Conception,1870,3,1
+phi.pa.0188,St. Augustine's Academy,1868,3,2
+phi.pa.0188,St. Augustine's Academy,1869,3,2
+phi.pa.0188,St. Augustin's Academy,1870,3,1
+phi.pa.0246,Convent of the Sisters of St. Francis,1868,3,1
+phi.pa.0246,St. Mary's Hospital,1869,3,2
+phi.pa.0246,St. Mary's Hospital,1870,3,2
+pit.pa.0053,German Church,1868,3,1
+pit.pa.0053,"""German Church""",1869,3,2
+pit.pa.0053,"""German Church""",1870,3,2
+pit.pa.0065,German church,1868,3,1
+pit.pa.0065,"""German church""",1869,3,2
+pit.pa.0065,"""German church""",1870,3,2
+pit.pa.0069,New German church,1868,3,2
+pit.pa.0069,New German church,1869,3,2
+pit.pa.0069,"""New German church""",1870,3,1
+pit.pa.0080,new church,1868,3,1
+pit.pa.0080,"""new church""",1869,3,2
+pit.pa.0080,"""new church""",1870,3,2
+pit.pa.0082,Our Lady Help of Christians,1868,3,2
+pit.pa.0082,Our Lady Help of Christians,1869,3,2
+pit.pa.0082,"Our Lady, Help of Christians",1870,3,1
+pit.pa.0099,new German church,1868,3,2
+pit.pa.0099,new German church,1869,3,2
+pit.pa.0099,"""new German church""",1870,3,1
+pit.pa.0113,St. Paul's R. C. Orphan Asylum,1868,3,1
+pit.pa.0113,St. Paul's R.C. Orphan Asylum,1869,3,2
+pit.pa.0113,St. Paul's R.C. Orphan Asylum,1870,3,2
+pit.pa.0123,St. Xavier's,1868,3,2
+pit.pa.0123,St. Xavier's,1869,3,2
+pit.pa.0123,St. Xavier's Convent of Mercy,1870,3,1
+pit.pa.0137,St. Philomena's,1868,3,2
+pit.pa.0137,St. Philomena's,1869,3,2
+pit.pa.0137,St. Philomena's School,1870,3,1
+por.me.0001,Cathedral of the Immaculate Conception,1868,3,1
+por.me.0001,Cathedral Chapel of the Immaculate Conception,1869,3,2
+por.me.0001,Cathedral Chapel of the Immaculate Conception,1870,3,2
+por.me.0002,St. Dominic's,1868,3,1
+por.me.0002,St. Dominick's Church,1869,3,2
+por.me.0002,St. Dominick's Church,1870,3,2
+por.me.0070,Convent and Academy of the Ladies of the Congregation de Notre Dame,1868,3,1
+por.me.0070,Convent and Academy of the Ladies of the Congregation of Notre Dame,1869,3,2
+por.me.0070,Convent and Academy of the Ladies of the Congregation of Notre Dame,1870,3,2
+por.me.0076,Conventof the Sisters of Mercy,1868,3,1
+por.me.0076,House of the Sisters of Mercy,1869,3,2
+por.me.0076,House of the Sisters of Mercy,1870,3,2
+ric.va.0007,St. John the Evangelist,1867,4,2
+ric.va.0007,St. John the Evangelist,1868,4,2
+ric.va.0007,St. John the Evangelist's,1869,4,2
+ric.va.0007,St. John the Evangelist's,1870,4,2
+roc.ny.0008,St. Mary's,1868,3,1
+roc.ny.0008,Our Lady of Victory,1869,3,2
+roc.ny.0008,Our Lady of Victory,1870,3,2
+roc.ny.0011,Nativity of the B.V.M.,1868,3,2
+roc.ny.0011,Nativity of the B.V.M.,1869,3,2
+roc.ny.0011,Nativity of the Blessed Virgin Mary,1870,3,1
+roc.ny.0013,Assumption of the B.V.M.,1869,2,1
+roc.ny.0013,Assumption of the Blessed Virgin Mary,1870,2,1
+roc.ny.0026,St. Michael's,1868,3,1
+roc.ny.0026,St. Mary's,1869,3,2
+roc.ny.0026,St. Mary's,1870,3,2
+roc.ny.0045,St. Thomas',1868,3,1
+roc.ny.0045,St. Patricks's,1869,3,2
+roc.ny.0045,St. Patricks's,1870,3,2
+roc.ny.0053,St. Agnes',1868,3,1
+roc.ny.0053,St. Patrick's,1869,3,2
+roc.ny.0053,St. Patrick's,1870,3,2
+roc.ny.0056,St. James',1868,3,1
+roc.ny.0056,St. Joseph's,1869,3,2
+roc.ny.0056,St. Joseph's,1870,3,2
+roc.ny.0060,St. Luke's,1868,3,1
+roc.ny.0060,Immaculate Conception,1869,3,2
+roc.ny.0060,Immaculate Conception,1870,3,2
+roc.ny.0063,"St. Joseph's Convent, Redemptorist",1868,3,1
+roc.ny.0063,St. Joseph's Convent,1869,3,1
+roc.ny.0063,House of the Redemporists,1870,3,1
+roc.ny.0066,Academy of the Sacred Heart,1868,3,1
+roc.ny.0066,Convent and Academy of the Sacred Heart,1869,3,2
+roc.ny.0066,Convent and Academy of the Sacred Heart,1870,3,2
+roc.ny.0067,Academy of the Immaculate Conception of Our Lady of Mercy,1868,3,1
+roc.ny.0067,Convent and Academy of Our Lady of Mercy,1869,3,2
+roc.ny.0067,Convent and Academy of Our Lady of Mercy,1870,3,2
+roc.ny.0069,St. Mary's Orphan Boys' Asylum,1868,3,1
+roc.ny.0069,St. Mary's Boys' Orphan Asylum,1869,3,2
+roc.ny.0069,St. Mary's Boys' Orphan Asylum,1870,3,2
+roc.ny.0070,St. Patrick's Asylum,1868,3,1
+roc.ny.0070,St. Patrick's Girls' Orphan Asylum,1869,3,1
+roc.ny.0070,St. Patrick's Boys' Orphan Asylum,1870,3,1
+roc.ny.0074,St. Patrick's Female,1868,3,1
+roc.ny.0074,St. Patrick's Girls' School,1869,3,2
+roc.ny.0074,St. Patrick's Girls' School,1870,3,2
+roc.ny.0075,St. Joseph's Male,1868,3,1
+roc.ny.0075,St. Joseph's Boys' School,1869,3,1
+roc.ny.0075,St. Joseph's Male School,1870,3,1
+roc.ny.0076,St. Joseph's Female,1868,3,1
+roc.ny.0076,St. Joseph's Girls' School,1869,3,1
+roc.ny.0076,St. Joseph's Female School,1870,3,1
+san.nm.0002,Chapel of Nuestra Señora del Rosario,1864,7,1
+san.nm.0002,Chapel of N. Sen. del Rosario,1865,7,6
+san.nm.0002,Chapel of N. Sen. del Rosario,1866,7,6
+san.nm.0002,Chapel of N. Sen. del Rosario,1867,7,6
+san.nm.0002,Chapel of N. Sen. del Rosario,1868,7,6
+san.nm.0002,Chapel of N. Sen. del Rosario,1869,7,6
+san.nm.0002,Chapel of N. Sen. del Rosario,1870,7,6
+san.nm.0005,Chapel of Na. Señora de la Luz,1864,7,3
+san.nm.0005,Chapel of Na. Señora de la Luz,1865,7,3
+san.nm.0005,Chapel of Na. Señora de la Luz,1866,7,3
+san.nm.0005,Chapel of Na. Sra. de la Luz,1867,7,3
+san.nm.0005,Chapel of Na. Sen. de la Luz,1868,7,1
+san.nm.0005,Chapel of Na. Sra. de la Luz,1869,7,3
+san.nm.0005,Chapel of Na. Sra. de la Luz,1870,7,3
+san.nm.0042,Chapel of Santa Familia,1864,7,2
+san.nm.0042,Chapel of Santa Familia,1865,7,2
+san.nm.0042,Chapel of San José,1866,7,5
+san.nm.0042,Chapel of San José,1867,7,5
+san.nm.0042,Chapel of San José,1868,7,5
+san.nm.0042,Chapel of San José,1869,7,5
+san.nm.0042,Chapel of San José,1870,7,5
+san.nm.0068,Asuncion de N. Señora,1864,7,3
+san.nm.0068,Asuncion de N. Señora,1865,7,3
+san.nm.0068,Asuncion de N. Señora,1866,7,3
+san.nm.0068,Parish Church of Na. Sen. de los Dolores,1867,7,4
+san.nm.0068,Parish Church of Na. Sen. de los Dolores,1868,7,4
+san.nm.0068,Parish Church of Na. Sen. de los Dolores,1869,7,4
+san.nm.0068,Parish Church of Na. Sen. de los Dolores,1870,7,4
+san.nm.0141,San Fernando,1864,7,3
+san.nm.0141,San Fernando,1865,7,3
+san.nm.0141,San Fernando,1866,7,3
+san.nm.0141,Parish Church of Na. Sen. de Guadalupe,1867,7,4
+san.nm.0141,Parish Church of Na. Sen. de Guadalupe,1868,7,4
+san.nm.0141,Parish Church of Na. Sen. de Guadalupe,1869,7,4
+san.nm.0141,Parish Church of Na. Sen. de Guadalupe,1870,7,4
+san.nm.0155,Natividad de Na. Señora,1864,7,3
+san.nm.0155,Natividad de Na. Señora,1865,7,3
+san.nm.0155,Natividad de Na. Señora,1866,7,3
+san.nm.0155,Parish Church de la Imaculada Concepcion de N. Sen.,1867,7,4
+san.nm.0155,Parish Church de la Imaculada Concepcion de N. Sen.,1868,7,4
+san.nm.0155,Parish Church de la Imaculada Concepcion de N. Sen.,1869,7,4
+san.nm.0155,Parish Church de la Imaculada Concepcion de N. Sen.,1870,7,4
+san.nm.0162,Convent and School of Sisters of Loretto,1866,5,1
+san.nm.0162,Schools of Sisters of Loretto,1867,5,4
+san.nm.0162,Schools of Sisters of Loretto,1868,5,4
+san.nm.0162,Schools of Sisters of Loretto,1869,5,4
+san.nm.0162,Schools of Sisters of Loretto,1870,5,4
+san.nm.0163,Convent and School of Sisters of Loretto,1866,5,1
+san.nm.0163,Schools of Sisters of Loretto,1867,5,4
+san.nm.0163,Schools of Sisters of Loretto,1868,5,4
+san.nm.0163,Schools of Sisters of Loretto,1869,5,4
+san.nm.0163,Schools of Sisters of Loretto,1870,5,4
+san.nm.0164,Convent and School of Sisters of Loretto,1866,5,1
+san.nm.0164,Schools of Sisters of Loretto,1867,5,4
+san.nm.0164,Schools of Sisters of Loretto,1868,5,4
+san.nm.0164,Schools of Sisters of Loretto,1869,5,4
+san.nm.0164,Schools of Sisters of Loretto,1870,5,4
+sanf.ca.0007,St. Boniface,1864,7,1
+sanf.ca.0007,St. Boniface's,1865,7,6
+sanf.ca.0007,St. Boniface's,1866,7,6
+sanf.ca.0007,St. Boniface's,1867,7,6
+sanf.ca.0007,St. Boniface's,1868,7,6
+sanf.ca.0007,St. Boniface's,1869,7,6
+sanf.ca.0007,St. Boniface's,1870,7,6
+sanf.ca.0015,St. Theresa's,1864,7,1
+sanf.ca.0015,St. Teresa's,1865,7,6
+sanf.ca.0015,St. Teresa's,1866,7,6
+sanf.ca.0015,St. Teresa's,1867,7,6
+sanf.ca.0015,St. Teresa's,1868,7,6
+sanf.ca.0015,St. Teresa's,1869,7,6
+sanf.ca.0015,St. Teresa's,1870,7,6
+sanf.ca.0021,St. John Baptiste,1864,7,1
+sanf.ca.0021,St. John the Baptist's,1865,7,6
+sanf.ca.0021,St. John the Baptist's,1866,7,6
+sanf.ca.0021,St. John the Baptist's,1867,7,6
+sanf.ca.0021,St. John the Baptist's,1868,7,6
+sanf.ca.0021,St. John the Baptist's,1869,7,6
+sanf.ca.0021,St. John the Baptist's,1870,7,6
+sanf.ca.0022,St. Ann's,1864,7,5
+sanf.ca.0022,St. Ann's,1865,7,5
+sanf.ca.0022,St. Ann's,1866,7,5
+sanf.ca.0022,St. Ann's,1867,7,5
+sanf.ca.0022,St. Ann's,1868,7,5
+sanf.ca.0022,St. Anne's,1869,7,2
+sanf.ca.0022,St. Anne's,1870,7,2
+sanf.ca.0025,St. John Baptiste,1864,7,1
+sanf.ca.0025,St. John the Baptist's,1865,7,6
+sanf.ca.0025,St. John the Baptist's,1866,7,6
+sanf.ca.0025,St. John the Baptist's,1867,7,6
+sanf.ca.0025,St. John the Baptist's,1868,7,6
+sanf.ca.0025,St. John the Baptist's,1869,7,6
+sanf.ca.0025,St. John the Baptist's,1870,7,6
+sanf.ca.0028,St. John Baptiste,1864,7,1
+sanf.ca.0028,St. John the Baptist's,1865,7,6
+sanf.ca.0028,St. John the Baptist's,1866,7,6
+sanf.ca.0028,St. John the Baptist's,1867,7,6
+sanf.ca.0028,St. John the Baptist's,1868,7,6
+sanf.ca.0028,St. John the Baptist's,1869,7,6
+sanf.ca.0028,St. John the Baptist's,1870,7,6
+sanf.ca.0037,St. Catherine's,1864,7,1
+sanf.ca.0037,St. Catharine's,1865,7,6
+sanf.ca.0037,St. Catharine's,1866,7,6
+sanf.ca.0037,St. Catharine's,1867,7,6
+sanf.ca.0037,St. Catharine's,1868,7,6
+sanf.ca.0037,St. Catharine's,1869,7,6
+sanf.ca.0037,St. Catharine's,1870,7,6
+sanf.ca.0042,St. John Baptiste,1864,7,1
+sanf.ca.0042,St. John the Baptist's,1865,7,6
+sanf.ca.0042,St. John the Baptist's,1866,7,6
+sanf.ca.0042,St. John the Baptist's,1867,7,6
+sanf.ca.0042,St. John the Baptist's,1868,7,6
+sanf.ca.0042,St. John the Baptist's,1869,7,6
+sanf.ca.0042,St. John the Baptist's,1870,7,6
+sanf.ca.0053,St. Andrew,1864,7,1
+sanf.ca.0053,St. Andrew's,1865,7,5
+sanf.ca.0053,St. Andrew's,1866,7,5
+sanf.ca.0053,St. Andrew's,1867,7,5
+sanf.ca.0053,St. Andrew's,1868,7,5
+sanf.ca.0053,St.Andrew's,1869,7,1
+sanf.ca.0053,St. Andrew's,1870,7,5
+sanf.ca.0060,St. Leander's,1865,6,5
+sanf.ca.0060,St. Leander's,1866,6,5
+sanf.ca.0060,St. Leander's,1867,6,5
+sanf.ca.0060,St. Leander's,1868,6,5
+sanf.ca.0060,St. Leander's,1869,6,5
+sanf.ca.0060,St. Leander,1870,6,1
+sanf.ca.0061,St. Matthew's,1865,6,5
+sanf.ca.0061,St. Mathew's,1866,6,1
+sanf.ca.0061,St. Matthew's,1867,6,5
+sanf.ca.0061,St. Matthew's,1868,6,5
+sanf.ca.0061,St. Matthew's,1869,6,5
+sanf.ca.0061,St. Matthew's,1870,6,5
+sanf.ca.0065,St. Clare,1864,7,1
+sanf.ca.0065,St. Clare's,1865,7,6
+sanf.ca.0065,St. Clare's,1866,7,6
+sanf.ca.0065,St. Clare's,1867,7,6
+sanf.ca.0065,St. Clare's,1868,7,6
+sanf.ca.0065,St. Clare's,1869,7,6
+sanf.ca.0065,St. Clare's,1870,7,6
+sanf.ca.0067,St. Francis Solano,1864,7,6
+sanf.ca.0067,St. Francis Solano,1865,7,6
+sanf.ca.0067,St. Francis Solano,1866,7,6
+sanf.ca.0067,St. Francis Solano,1867,7,6
+sanf.ca.0067,St. Francis Salano,1868,7,1
+sanf.ca.0067,St. Francis Solano,1869,7,6
+sanf.ca.0067,St. Francis Solano,1870,7,6
+sanf.ca.0069,Nuestra Señora del Pilar,1864,7,6
+sanf.ca.0069,Nuestra Señora del Pilar,1865,7,6
+sanf.ca.0069,Nuestra Señora del Pilar,1866,7,6
+sanf.ca.0069,Nuestro Señora del Pilar,1867,7,1
+sanf.ca.0069,Nuestra Señora del Pilar,1868,7,6
+sanf.ca.0069,Nuestra Señora del Pilar,1869,7,6
+sanf.ca.0069,Nuestra Señora del Pilar,1870,7,6
+sanf.ca.0071,St. Denis,1864,7,1
+sanf.ca.0071,St. Denis',1865,7,6
+sanf.ca.0071,St. Denis',1866,7,6
+sanf.ca.0071,St. Denis',1867,7,6
+sanf.ca.0071,St. Denis',1868,7,6
+sanf.ca.0071,St. Denis',1869,7,6
+sanf.ca.0071,St. Denis',1870,7,6
+sanf.ca.0080,Mount St. Joseph,1864,7,3
+sanf.ca.0080,Mount St. Joseph,1865,7,3
+sanf.ca.0080,Mount St. Joseph's,1866,7,4
+sanf.ca.0080,Mount St. Joseph's,1867,7,4
+sanf.ca.0080,Mount St. Joseph's,1868,7,4
+sanf.ca.0080,Mount St. Joseph's,1869,7,4
+sanf.ca.0080,Mount St. Joseph,1870,7,3
+sanf.ca.0081,Female Orphan Asylum,1867,4,2
+sanf.ca.0081,Female Orphan Asylum,1868,4,2
+sanf.ca.0081,Auxiliary Orphan Asylum,1869,4,2
+sanf.ca.0081,Auxiliary Orphan Asylum,1870,4,2
+sanf.ca.0082,Free School,1864,7,6
+sanf.ca.0082,Free School,1865,7,6
+sanf.ca.0082,Free School,1866,7,6
+sanf.ca.0082,Free School,1867,7,6
+sanf.ca.0082,Free School,1868,7,6
+sanf.ca.0082,Free School,1869,7,6
+sanf.ca.0082,New Presentation Convent,1870,7,1
+sanf.ca.0086,Notre Dame Institute,1867,4,2
+sanf.ca.0086,Notre Dame Institute,1868,4,2
+sanf.ca.0086,Convent of the Sisters of Notre Dame,1869,4,2
+sanf.ca.0086,Convent of the Sisters of Notre Dame,1870,4,2
+sanf.ca.0092,German Free school,1864,7,5
+sanf.ca.0092,German Free school,1865,7,5
+sanf.ca.0092,German Free school,1866,7,5
+sanf.ca.0092,German Free school,1867,7,5
+sanf.ca.0092,German Free School,1868,7,2
+sanf.ca.0092,German Free School,1869,7,2
+sanf.ca.0092,German Free school,1870,7,5
+sanf.ca.0093,Male orphan asylum,1864,7,5
+sanf.ca.0093,Male orphan asylum,1865,7,5
+sanf.ca.0093,Male orphan asylum,1866,7,5
+sanf.ca.0093,Male orphan asylum,1867,7,5
+sanf.ca.0093,Male orphan asylum,1868,7,5
+sanf.ca.0093,Male Orphan Asylum,1869,7,2
+sanf.ca.0093,Male Orphan Asylum,1870,7,2
+sanf.ca.0094,Dominican convent,1864,7,5
+sanf.ca.0094,Dominican convent,1865,7,5
+sanf.ca.0094,Dominican convent,1866,7,5
+sanf.ca.0094,Dominican convent,1867,7,5
+sanf.ca.0094,Dominican convent,1868,7,5
+sanf.ca.0094,Dominican Convent,1869,7,2
+sanf.ca.0094,Dominican Convent,1870,7,2
+sanf.ca.0096,St. Catherine's Convent and Female Academy,1864,7,1
+sanf.ca.0096,St. Catharine's Convent and Female Academy,1865,7,6
+sanf.ca.0096,St. Catharine's Convent and Female Academy,1866,7,6
+sanf.ca.0096,St. Catharine's Convent and Female Academy,1867,7,6
+sanf.ca.0096,St. Catharine's Convent and Female Academy,1868,7,6
+sanf.ca.0096,St. Catharine's Convent and Female Academy,1869,7,6
+sanf.ca.0096,St. Catharine's Convent and Female Academy,1870,7,6
+sanf.ca.0097,Convent and French Academy of Notre Dame,1864,7,2
+sanf.ca.0097,Convent and French Academy of Notre Dame,1865,7,2
+sanf.ca.0097,Convent and Academy of Notre Dame,1866,7,5
+sanf.ca.0097,Convent and Academy of Notre Dame,1867,7,5
+sanf.ca.0097,Convent and Academy of Notre Dame,1868,7,5
+sanf.ca.0097,Convent and Academy of Notre Dame,1869,7,5
+sanf.ca.0097,Convent and Academy of Notre Dame,1870,7,5
+scr.pa.0001,St. Vincent de Paul's,1868,3,1
+scr.pa.0001,Church of St. Vincent de Paul,1869,3,2
+scr.pa.0001,Church of St. Vincent de Paul,1870,3,2
+scr.pa.0002,St. Simon the Apostle,1868,3,2
+scr.pa.0002,St. Simon the Apostle,1869,3,2
+scr.pa.0002,St. Simon,1870,3,1
+scr.pa.0006,St. John the Evangelist,1868,3,1
+scr.pa.0006,St. John Evangelist,1869,3,2
+scr.pa.0006,St. John Evangelist,1870,3,2
+scr.pa.0017,St. Catharine of Sienna,1868,3,2
+scr.pa.0017,St. Catharine of Sienna,1869,3,2
+scr.pa.0017,St. Catharine's,1870,3,1
+scr.pa.0018,St. Thomas of Aquin,1868,3,1
+scr.pa.0018,St. Thomas Aquin,1869,3,2
+scr.pa.0018,St. Thomas Aquin,1870,3,2
+scr.pa.0019,St. Patrick's,1868,3,1
+scr.pa.0019,St. Patrick,1869,3,2
+scr.pa.0019,St. Patrick,1870,3,2
+scr.pa.0021,St. John the Evangelist,1868,3,2
+scr.pa.0021,St. John the Evangelist,1869,3,2
+scr.pa.0021,St. John Evangelist,1870,3,1
+scr.pa.0022,St. Mary Magdalene's,1868,3,2
+scr.pa.0022,St. Mary Magdalene's,1869,3,2
+scr.pa.0022,St. Mary's,1870,3,1
+scr.pa.0026,St. Philomena's,1868,3,2
+scr.pa.0026,St. Philomena's,1869,3,2
+scr.pa.0026,St. Philomena,1870,3,1
+scr.pa.0028,St. Juliana of Falconieri,1868,3,1
+scr.pa.0028,St. Julianna of Falconieri,1869,3,1
+scr.pa.0028,St. Julianna,1870,3,1
+scr.pa.0029,St. Cecilia's,1868,3,2
+scr.pa.0029,St. Cecilia's,1869,3,2
+scr.pa.0029,St. Cecilia,1870,3,1
+scr.pa.0038,St. Mary of the Assumption,1868,3,2
+scr.pa.0038,St. Mary of the Assumption,1869,3,2
+scr.pa.0038,St. Mary's,1870,3,1
+scr.pa.0049,St. Peter and St. Paul,1868,3,2
+scr.pa.0049,St. Peter and St. Paul,1869,3,2
+scr.pa.0049,SS. Peter and Paul,1870,3,1
+scr.pa.0058,St. John Nepomucene's,1868,3,2
+scr.pa.0058,St. John Nepomucene's,1869,3,2
+scr.pa.0058,St. John Nepomucene,1870,3,1
+scr.pa.0075,English church,1868,3,1
+scr.pa.0075,Church of the Annunciation,1869,3,2
+scr.pa.0075,Church of the Annunciation,1870,3,2
+scr.pa.0084,St. Vincent de Paul's,1868,3,1
+scr.pa.0084,St. Lawrence,1869,3,2
+scr.pa.0084,St. Lawrence,1870,3,2
+stj.mo.0010,St. Columbans',1869,2,1
+stj.mo.0010,St. Columbanus',1870,2,1
+stj.mo.0036,St. Joseph's,1869,2,1
+stj.mo.0036,St. Joseph's Cathedral,1870,2,1
+stj.mo.0048,Convent and Academy of the Sacred Heart,1869,2,1
+stj.mo.0048,Convent of the Sacred Heart,1870,2,1
+stj.mo.0050,College of the Christian Brothers,1869,2,1
+stj.mo.0050,St. Joseph's College,1870,2,1
+stl.mo.0068,Sacred Heart,1869,2,1
+stl.mo.0068,St. Mary's,1870,2,1
+stl.mo.0129,St. Charles',1869,2,1
+stl.mo.0129,St. Charles,1870,2,1
+stl.mo.0136,St. Genevieve,1869,2,1
+stl.mo.0136,St. Genevieve's,1870,2,1
+stp.mn.0004,St. Louis' Church,1869,2,1
+stp.mn.0004,St. Louis's Church,1870,2,1
+stp.mn.0007,St. John Ev.,1867,4,1
+stp.mn.0007,St. John's Church,1868,4,3
+stp.mn.0007,St. John's Church,1869,4,3
+stp.mn.0007,St. John's Church,1870,4,3
+stp.mn.0009,St. Genevieve,1867,4,1
+stp.mn.0009,Church of St. Genevieve,1868,4,3
+stp.mn.0009,Church of St. Genevieve,1869,4,3
+stp.mn.0009,Church of St. Genevieve,1870,4,3
+stp.mn.0012,St. Philip's,1867,4,1
+stp.mn.0012,Church of St. Philip,1868,4,3
+stp.mn.0012,Church of St. Philip,1869,4,3
+stp.mn.0012,Church of St. Philip,1870,4,3
+stp.mn.0019,St. Joseph's,1867,4,1
+stp.mn.0019,Church of St. Joseph,1868,4,3
+stp.mn.0019,Church of St. Joseph,1869,4,3
+stp.mn.0019,Church of St. Joseph,1870,4,3
+stp.mn.0020,Guardian Angels,1867,4,1
+stp.mn.0020,Church of Guardian Angels,1868,4,3
+stp.mn.0020,Church of Guardian Angels,1869,4,3
+stp.mn.0020,Church of Guardian Angels,1870,4,3
+stp.mn.0021,Immaculate Conception,1867,4,1
+stp.mn.0021,Church of Immaculate Conception,1868,4,3
+stp.mn.0021,Church of Immaculate Conception,1869,4,3
+stp.mn.0021,Church of Immaculate Conception,1870,4,3
+stp.mn.0022,St. Bernard's,1867,4,1
+stp.mn.0022,Church of St. Bernard,1868,4,3
+stp.mn.0022,Church of St. Bernard,1869,4,3
+stp.mn.0022,Church of St. Bernard,1870,4,3
+stp.mn.0023,St. Hubert's,1867,4,1
+stp.mn.0023,Church of St. Hubert,1868,4,3
+stp.mn.0023,Church of St. Hubert,1869,4,3
+stp.mn.0023,Church of St. Hubert,1870,4,3
+stp.mn.0024,St. Victoria,1867,4,1
+stp.mn.0024,Church of St. Victoria,1868,4,3
+stp.mn.0024,Church of St. Victoria,1869,4,3
+stp.mn.0024,Church of St. Victoria,1870,4,3
+stp.mn.0025,Young America,1867,4,2
+stp.mn.0025,Young America,1868,4,2
+stp.mn.0025,Young America station,1869,4,1
+stp.mn.0025,Young America Church,1870,4,1
+stp.mn.0031,St. Francis Xavier's,1867,4,1
+stp.mn.0031,Church of St. Francis Xavier,1868,4,3
+stp.mn.0031,Church of St. Francis Xavier,1869,4,3
+stp.mn.0031,Church of St. Francis Xavier,1870,4,3
+stp.mn.0032,Guardian Angels,1867,4,1
+stp.mn.0032,Church of Guardian Angels,1868,4,2
+stp.mn.0032,Church of Guardian Angels,1869,4,2
+stp.mn.0032,Church of the Guardian Angels,1870,4,1
+stp.mn.0033,St. Peter's,1867,4,1
+stp.mn.0033,Church of St. Peter,1868,4,3
+stp.mn.0033,Church of St. Peter,1869,4,3
+stp.mn.0033,Church of St. Peter,1870,4,3
+stp.mn.0034,St. John's,1867,4,1
+stp.mn.0034,Church of St. John,1868,4,3
+stp.mn.0034,Church of St. John,1869,4,3
+stp.mn.0034,Church of St. John,1870,4,3
+stp.mn.0036,Church of ---,1867,4,1
+stp.mn.0036,Church of St. Patrick,1868,4,3
+stp.mn.0036,Church of St. Patrick,1869,4,3
+stp.mn.0036,Church of St. Patrick,1870,4,3
+stp.mn.0046,Church of Our Lady of Mount Carmel,1868,3,2
+stp.mn.0046,Church of Our Lady of Mount Carmel,1869,3,2
+stp.mn.0046,Church of Our Lady of Mt. Carmel,1870,3,1
+stp.mn.0048,Church of St. John Baptist,1868,3,2
+stp.mn.0048,Church of St. John Baptist,1869,3,2
+stp.mn.0048,Church of St. John the Baptist,1870,3,1
+stp.mn.0062,St. Joseph's,1867,4,1
+stp.mn.0062,Church of St. Joseph,1868,4,3
+stp.mn.0062,Church of St. Joseph,1869,4,3
+stp.mn.0062,Church of St. Joseph,1870,4,3
+stp.mn.0063,St. Columba's,1867,4,1
+stp.mn.0063,Church of St. Columbkill,1868,4,3
+stp.mn.0063,Church of St. Columbkill,1869,4,3
+stp.mn.0063,Church of St. Columbkill,1870,4,3
+stp.mn.0064,B.V.,1867,4,1
+stp.mn.0064,Church of Blessed Virgin,1868,4,3
+stp.mn.0064,Church of Blessed Virgin,1869,4,3
+stp.mn.0064,Church of Blessed Virgin,1870,4,3
+stp.mn.0069,St. Pius',1867,4,1
+stp.mn.0069,Church of St. Pius V.,1868,4,3
+stp.mn.0069,Church of St. Pius V.,1869,4,3
+stp.mn.0069,Church of St. Pius V.,1870,4,3
+stp.mn.0070,St. Anthony of Padua,1867,4,1
+stp.mn.0070,Church of St. Anthony of Padua,1868,4,3
+stp.mn.0070,Church of St. Anthony of Padua,1869,4,3
+stp.mn.0070,Church of St. Anthony of Padua,1870,4,3
+stp.mn.0071,St. Boniface,1867,4,2
+stp.mn.0071,Church of St. Boniface,1868,4,1
+stp.mn.0071,St. Boniface,1869,4,2
+stp.mn.0071,St. Boniface's,1870,4,1
+stp.mn.0073,St. John Baptist,1867,4,1
+stp.mn.0073,Church of St. John the Baptist,1868,4,3
+stp.mn.0073,Church of St. John the Baptist,1869,4,3
+stp.mn.0073,Church of St. John the Baptist,1870,4,3
+stp.mn.0075,St. Mary's,1867,4,2
+stp.mn.0075,Church of St. Mary,1868,4,1
+stp.mn.0075,St. Mary,1869,4,1
+stp.mn.0075,St. Mary's,1870,4,2
+stp.mn.0076,St. Louis',1867,4,1
+stp.mn.0076,Church of St. Louis,1868,4,3
+stp.mn.0076,Church of St. Louis,1869,4,3
+stp.mn.0076,Church of St. Louis,1870,4,3
+stp.mn.0083,St. John Baptist,1867,4,1
+stp.mn.0083,Church of St. John Baptist,1868,4,3
+stp.mn.0083,Church of St. John Baptist,1869,4,3
+stp.mn.0083,Church of St. John Baptist,1870,4,3
+stp.mn.0086,Crucifixion,1867,4,1
+stp.mn.0086,Church of Crucifixion,1868,4,2
+stp.mn.0086,Church of Crucifixion,1869,4,2
+stp.mn.0086,Church of the Crucifixion,1870,4,1
+stp.mn.0093,Nativity of B.V.,1867,4,1
+stp.mn.0093,Church of the Nativity,1868,4,3
+stp.mn.0093,Church of the Nativity,1869,4,3
+stp.mn.0093,Church of the Nativity,1870,4,3
+stp.mn.0094,St. Patrick's,1867,4,1
+stp.mn.0094,Church of St. Patrick,1868,4,3
+stp.mn.0094,Church of St. Patrick,1869,4,3
+stp.mn.0094,Church of St. Patrick,1870,4,3
+stp.mn.0102,St. Augustine's,1867,4,1
+stp.mn.0102,Church of St. Augustin,1868,4,3
+stp.mn.0102,Church of St. Augustin,1869,4,3
+stp.mn.0102,Church of St. Augustin,1870,4,3
+stp.mn.0108,SS. Peter and Paul's,1867,4,1
+stp.mn.0108,Church of St. Peter and Paul,1868,4,2
+stp.mn.0108,Church of St. Peter and Paul,1869,4,2
+stp.mn.0108,Church of SS. Peter and Paul,1870,4,1
+stp.mn.0115,Holy Cross,1867,4,1
+stp.mn.0115,Church of Holy Cross,1868,4,3
+stp.mn.0115,Church of Holy Cross,1869,4,3
+stp.mn.0115,Church of Holy Cross,1870,4,3
+stp.mn.0116,St. Peter's,1867,4,1
+stp.mn.0116,Church of St. Peter,1868,4,3
+stp.mn.0116,Church of St. Peter,1869,4,3
+stp.mn.0116,Church of St. Peter,1870,4,3
+stp.mn.0117,B.V.,1867,4,1
+stp.mn.0117,Church of Visitation,1868,4,3
+stp.mn.0117,Church of Visitation,1869,4,3
+stp.mn.0117,Church of Visitation,1870,4,3
+stp.mn.0118,St. Michael's,1867,4,1
+stp.mn.0118,Church of St. Michael,1868,4,3
+stp.mn.0118,Church of St. Michael,1869,4,3
+stp.mn.0118,Church of St. Michael,1870,4,3
+stp.mn.0121,St. Bridget's,1867,4,1
+stp.mn.0121,Church of St. Bridget,1868,4,3
+stp.mn.0121,Church of St. Bridget,1869,4,3
+stp.mn.0121,Church of St. Bridget,1870,4,3
+stp.mn.0129,Immaculate Conception,1867,4,1
+stp.mn.0129,Church of the Immaculate Conception,1868,4,2
+stp.mn.0129,Church of the Immaculate Conception,1869,4,2
+stp.mn.0129,Church of Immaculate Conception,1870,4,1
+stp.mn.0130,St. Patrick's,1867,4,1
+stp.mn.0130,Church of St. Patrick,1868,4,3
+stp.mn.0130,Church of St. Patrick,1869,4,3
+stp.mn.0130,Church of St. Patrick,1870,4,3
+stp.mn.0131,Annunciation B.V.,1867,3,1
+stp.mn.0131,Church of the Annunciation,1868,3,2
+stp.mn.0131,Church of the Annunciation,1869,3,2
+stp.mn.0132,St. Louis',1867,4,1
+stp.mn.0132,Church of St. Louis,1868,4,3
+stp.mn.0132,Church of St. Louis,1869,4,3
+stp.mn.0132,Church of St. Louis,1870,4,3
+stp.mn.0138,St. Clotilda's,1867,4,1
+stp.mn.0138,Church of Immaculate Conception,1868,4,3
+stp.mn.0138,Church of Immaculate Conception,1869,4,3
+stp.mn.0138,Church of Immaculate Conception,1870,4,3
+stp.mn.0139,SS. Peter and Paul,1867,4,1
+stp.mn.0139,Church of SS. Peter and Paul,1868,4,3
+stp.mn.0139,Church of SS. Peter and Paul,1869,4,3
+stp.mn.0139,Church of SS. Peter and Paul,1870,4,3
+stp.mn.0140,St. Joseph's,1867,4,1
+stp.mn.0140,Church of St. Joseph,1868,4,3
+stp.mn.0140,Church of St. Joseph,1869,4,3
+stp.mn.0140,Church of St. Joseph,1870,4,3
+stp.mn.0141,Immaculate Conception,1867,4,1
+stp.mn.0141,Church of St. Martin,1868,4,1
+stp.mn.0141,Church of SS. Peter and Paul,1869,4,2
+stp.mn.0141,Church of SS. Peter and Paul,1870,4,2
+stp.mn.0149,St. Mark's,1867,4,1
+stp.mn.0149,Church of St. Mark,1868,4,3
+stp.mn.0149,Church of St. Mark,1869,4,3
+stp.mn.0149,Church of St. Mark,1870,4,3
+stp.mn.0150,St. Mary's,1867,4,1
+stp.mn.0150,St. Mary,1868,4,3
+stp.mn.0150,St. Mary,1869,4,3
+stp.mn.0150,St. Mary,1870,4,3
+stp.mn.0151,St. Martin's,1867,4,1
+stp.mn.0151,Church of St. Martin,1868,4,3
+stp.mn.0151,Church of St. Martin,1869,4,3
+stp.mn.0151,Church of St. Martin,1870,4,3
+stp.mn.0153,St. Winceslaus,1867,4,1
+stp.mn.0153,Church of St. Wenceslaus,1868,4,3
+stp.mn.0153,Church of St. Wenceslaus,1869,4,3
+stp.mn.0153,Church of St. Wenceslaus,1870,4,3
+stp.mn.0154,St. Patrick's,1867,4,1
+stp.mn.0154,Church of St. Patrick,1868,4,2
+stp.mn.0154,Church of Saint Patrick,1869,4,1
+stp.mn.0154,Church of St. Patrick,1870,4,2
+stp.mn.0156,Purification B.V.M.,1867,4,1
+stp.mn.0156,Church of Purification of B.V.M.,1868,4,3
+stp.mn.0156,Church of Purification of B.V.M.,1869,4,3
+stp.mn.0156,Church of Purification of B.V.M.,1870,4,3
+stp.mn.0158,St. Nicholas,1867,4,1
+stp.mn.0158,Church of St. Nicholas,1868,4,3
+stp.mn.0158,Church of St. Nicholas,1869,4,3
+stp.mn.0158,Church of St. Nicholas,1870,4,3
+stp.mn.0166,St. Joseph's,1867,4,1
+stp.mn.0166,Church of St. Joseph,1868,4,3
+stp.mn.0166,Church of St. Joseph,1869,4,3
+stp.mn.0166,Church of St. Joseph,1870,4,3
+stp.mn.0182,Nativity B.V.M,1867,4,1
+stp.mn.0182,Church of the Nativity,1868,4,3
+stp.mn.0182,Church of the Nativity,1869,4,3
+stp.mn.0182,Church of the Nativity,1870,4,3
+stp.mn.0186,St. Felix's,1867,4,1
+stp.mn.0186,Church of St. Felix,1868,4,3
+stp.mn.0186,Church of St. Felix,1869,4,3
+stp.mn.0186,Church of St. Felix,1870,4,3
+stp.mn.0196,St. Joseph's,1867,4,1
+stp.mn.0196,Church of St. Joseph,1868,4,3
+stp.mn.0196,Church of St. Joseph,1869,4,3
+stp.mn.0196,Church of St. Joseph,1870,4,3
+stp.mn.0197,St. Thomas',1867,4,1
+stp.mn.0197,Church of St. Thomas,1868,4,3
+stp.mn.0197,Church of St. Thomas,1869,4,3
+stp.mn.0197,Church of St. Thomas,1870,4,3
+stp.mn.0203,St. Michael's,1867,4,1
+stp.mn.0203,Church of St. Michael,1868,4,3
+stp.mn.0203,Church of St. Michael,1869,4,3
+stp.mn.0203,Church of St. Michael,1870,4,3
+stp.mn.0204,St. Mary's,1867,4,1
+stp.mn.0204,St. Mary,1868,4,3
+stp.mn.0204,St. Mary,1869,4,3
+stp.mn.0204,St. Mary,1870,4,3
+stp.mn.0217,Mission of Half-Breeds and Chippeways,1867,4,1
+stp.mn.0217,Mission of Half-Breeds and Chippewas,1868,4,3
+stp.mn.0217,Mission of Half-Breeds and Chippewas,1869,4,3
+stp.mn.0217,Mission of Half-Breeds and Chippewas,1870,4,3
+stp.mn.0218,Mission of Fond du Lac,1867,4,3
+stp.mn.0218,Mission of Fond du Lac,1868,4,3
+stp.mn.0218,Mission of Fond du Lac,1869,4,3
+stp.mn.0218,Mission of Font du Lac,1870,4,1
+stp.mn.0227,St. Gertrude's  Convent and Academy,1867,3,1
+stp.mn.0227,St. Gertrude's Academy,1868,3,2
+stp.mn.0227,St. Gertrude's Academy,1869,3,2
+stp.mn.0247,Academy of the Sisters of Notre Dame,1867,2,1
+stp.mn.0247,Sisters of Notre Dame,1870,2,1
+vic.nc.0005,St. Patrick's,1868,3,1
+vic.nc.0005,St. Ann's,1869,3,1
+vic.nc.0005,St. Anne's,1870,3,1
+wil.de.0001,St. Peter's,1868,3,1
+wil.de.0001,St. Peter's Pro-Cathedral,1869,3,2
+wil.de.0001,St. Peter's Pro-Cathedral,1870,3,2
+wil.de.0012,St. Francis Xavier,1866,5,2
+wil.de.0012,St. Francis Xavier,1867,5,2
+wil.de.0012,St. Francis Xavier's,1868,5,3
+wil.de.0012,St. Francis Xavier's,1869,5,3
+wil.de.0012,St. Francis Xavier's,1870,5,3
+wil.de.0015,St. Teresa,1868,3,2
+wil.de.0015,St. Teresa,1869,3,2
+wil.de.0015,St. Teresa's,1870,3,1
+wil.de.0019,St. Dennis',1866,5,1
+wil.de.0019,St. Denis',1867,5,4
+wil.de.0019,St. Denis',1868,5,4
+wil.de.0019,St. Denis',1869,5,4
+wil.de.0019,St. Denis',1870,5,4
