@@ -1,0 +1,140 @@
+---
+title: "update_formulas"
+output: html_document
+date: "2025-01-16"
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+#Importing packages 
+library(dplyr)
+library(readr)
+library(tidyr)
+library(stringr)
+library(googledrive)
+library(googlesheets4)
+library(DT)
+library(purrr)
+library(lubridate)
+library(gargle)
+
+#Login to Google
+gs4_deauth()
+#gs4_auth(token = gargle::secret_read_rds(
+#  ".secrets/gs4-token.rds",
+#  key = "GOOGLE_DRIVE_KEY"
+#))
+gs4_auth(cache = ".secrets", email = "schroejh@bc.edu", scope = "https://www.googleapis.com/auth/drive")
+drive_auth(token = gs4_token())
+
+#Specify ID for each year folder 
+folder_ids <- c("1vsjVWIWOAH1xN8RPvhgmI6ky1vA7CfcJ",
+                "145ECofup4M7ZnA1dUF5_pDZN3OWEK1Yb",
+                "1gi-k4cgD-XR_AiaSq6J9OPf3OWwkIPCt",
+                "1IYkTrGI07fTcjaggY_12V72syNATNSIp",
+                "10-NQy1b9lXuXnm5X_FuzYpetI_1PgjOQ",
+                "1FbOjmMtKKbgpDou-eyVbhb162RQJMNy-",
+                "1LEYANh7PIV9BIC4GpmWByWR4mi2dNtih")
+
+#List all the files in all the folders
+files <- lapply(folder_ids, function(folder) {
+  drive_ls(as_id(folder))
+})
+files <- do.call("rbind", files) 
+files <- files %>% filter(!(str_detect(name, "TEMPLATE")))
+
+```
+
+```{r}
+# master
+  # T = (persID) =peopleIDs!T:T
+
+# peopleInfo
+
+# A = (persTitle) =master!U:U
+# B = (persName) =master!V:V
+# C = (persSuffix) =master!W:W
+# D = (persRole) =master!X:X
+# E = (persNote) =master!Y:Y
+# F = (persName_clean) =ARRAYFORMULA(LOWER(REGEXREPLACE(REGEXREPLACE(REGEXREPLACE(B2:B, "[[:punct:]-—]", ""), "\b(Von|De|La|Der|Van|von|de|la|der|van|Du|Da|du|da)\s+(\w+)", "$1-$2"), "^\s", "")))
+# G = (lastName) =ARRAYFORMULA(IFERROR(REGEXEXTRACT(F2:F, "\s(\S+)$"), F2:F))
+# H = (firstMiddle) ==ARRAYFORMULA(IF(LEN(F2:F) - LEN(SUBSTITUTE(F2:F, " ", "")) = 0, , IFERROR(REGEXEXTRACT(F2:F, "^(.*)\s\S+$"), F2:F)))
+# I = (firstName) =ARRAYFORMULA(IFERROR(REGEXEXTRACT(H2:H, "^\S+"), H2:H))
+# J = (middleName) =ARRAYFORMULA(IFERROR(REGEXEXTRACT(H2:H, "^\S+\s(.*)"), ""))
+# K = (initialID) =ARRAYFORMULA(
+  # SUBSTITUTE(
+    # IF( 
+      # REGEXMATCH(A2:A, "(Sister|Mother|OtherException|Brother|Bro.|Sœur|Soeur|Madame|Madam)") +
+      # REGEXMATCH(B2:B, "(Brother|Sister|Ladies|Sœur|Soeur|Madame|Madam)") +
+      # (ISBLANK(I2:I) * ISBLANK(G2:G)),
+      # "",
+      # IF(
+        # ISBLANK(I2:I),
+        # G2:G,
+        # IF(
+          # LEN(I2:I) >= 3,
+          # IF(
+            # ISBLANK(J2:J),
+            # LEFT(I2:I, 3) & "_" & G2:G,
+            # LEFT(I2:I, 3) & "_" & LEFT(J2:J, 1) & "_" & G2:G
+          # ),
+          # IF(
+            # LEN(I2:I) = 2,
+            # IF(
+              # ISBLANK(J2:J),
+              # LEFT(I2:I, 2) & "_" & G2:G,
+              # LEFT(I2:I, 2) & "_" & LEFT(J2:J, 1) & "_" & G2:G
+            # ),
+            # IF(
+              # LEN(I2:I) = 1,
+              # IF(
+                # ISBLANK(J2:J),
+                # LEFT(I2:I, 1) & "_" & G2:G,
+                # LEFT(I2:I, 1) & "_" & LEFT(J2:J, 1) & "_" & G2:G
+              # ),
+              # ""
+            # )
+          # )
+        # )
+      # )
+    # ),
+    # "__", "_"
+  # )
+#)
+# L = (persID_gen) =ARRAYFORMULA(XLOOKUP(peopleInfo!K2 & master!AD$2 & master!AC$2,
+  #IMPORTRANGE("10rvRUGe4br313NCdOI7saxbwb9xmuY5OyOZkFojPk2k", "personIDs!A:A") & 
+  #IMPORTRANGE("10rvRUGe4br313NCdOI7saxbwb9xmuY5OyOZkFojPk2k", "personIDs!B:B") & 
+  #IMPORTRANGE("10rvRUGe4br313NCdOI7saxbwb9xmuY5OyOZkFojPk2k", "personIDs!C:C"),
+  #IMPORTRANGE("10rvRUGe4br313NCdOI7saxbwb9xmuY5OyOZkFojPk2k", "personIDs!E:E"), ""))
+```
+
+```{r}
+#Example
+info <- NULL
+for(i in 1:nrow(files)){
+  
+  #i = 1
+  
+  #year <- as.numeric(str_extract(files$name[i], "\\d+"))
+  #place <- str_extract(files$name[i], "[A-Za-z]+")
+        
+  AC2 <- range_read(files$id[i], 
+            sheet = "master", 
+            range = "AC2") %>% colnames()
+        
+  AD2 <- range_read(files$id[i], 
+            sheet = "master", 
+            range = "AD2") %>% colnames()
+  
+  info_sheet <- c(AC2, AD2)
+  
+  info <- bind_cols(info, info_sheet)
+  
+  Sys.sleep(1)
+        
+}
+
+colnames(info) <- files$name
+```
+
