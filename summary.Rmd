@@ -29,7 +29,7 @@ n_people <- master %>% filter(!is.na(persID)) %>% distinct(persID) %>%
 n_sheets <- master %>% distinct(file_id) %>% count() %>% pull(n)
 ```
 
-## Today is `r Sys.Date()`, and last I checked we have encoded `r n_insts` unique institutions and `r n_people` unique people on `r n_sheets` separate Google Sheets. 
+## Today is `r Sys.Date()`, and last I checked we have encoded **`r n_insts`** unique institutions and **`r n_people`** unique people on **`r n_sheets`** separate Google Sheets. 
 
 # Lookup Next Available ID
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
