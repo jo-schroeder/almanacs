@@ -128,6 +128,11 @@ master_pers <- master %>% select(c(1, 20:28, 29:30)) %>%
                  persNote, memberType, member, affiliated),
             any_vars(!is.na(.)))
 
+## Make a list of all the ones who have 00 more than 2 or 3, let's check if they're the same
+## We don't need the people without the IDs in the person info sheet, maybe they get their own
+## Next institution ID lookup
+## Reconsile institutions
+
 ```
 
 # Institution Information

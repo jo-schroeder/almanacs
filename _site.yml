@@ -4,8 +4,10 @@ exclude: ["/data", "/src"]
 navbar:
   title: "Almanac Reports"
   left:
-    - text: ""
+    - text: "Search"
       href: index.html
+    - text: "Summary"
+      href: summary.html
 output:
   html_document:
     theme: cosmo

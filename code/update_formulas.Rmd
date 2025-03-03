@@ -107,34 +107,39 @@ files <- files %>% filter(!(str_detect(name, "TEMPLATE")))
   #IMPORTRANGE("10rvRUGe4br313NCdOI7saxbwb9xmuY5OyOZkFojPk2k", "personIDs!B:B") & 
   #IMPORTRANGE("10rvRUGe4br313NCdOI7saxbwb9xmuY5OyOZkFojPk2k", "personIDs!C:C"),
   #IMPORTRANGE("10rvRUGe4br313NCdOI7saxbwb9xmuY5OyOZkFojPk2k", "personIDs!E:E"), ""))
+
+store <- info
+# 7,923 unique institutions?
 ```
 
 ```{r}
 #Example
 info <- NULL
 for(i in 1:nrow(files)){
-  
-  #i = 1
-  
-  #year <- as.numeric(str_extract(files$name[i], "\\d+"))
-  #place <- str_extract(files$name[i], "[A-Za-z]+")
-        
-  AC2 <- range_read(files$id[i], 
+
+tryCatch(  
+  {
+  A <- read_sheet(files$id[i], 
             sheet = "master", 
-            range = "AC2") %>% colnames()
-        
-  AD2 <- range_read(files$id[i], 
-            sheet = "master", 
-            range = "AD2") %>% colnames()
+            range = "A:A")
   
-  info_sheet <- c(AC2, AD2)
+  if(nrow(A) == 1) {
+    next
+  } else {
   
-  info <- bind_cols(info, info_sheet)
+  info <- bind_rows(info, A)
   
-  Sys.sleep(1)
+  }
+  
+  Sys.sleep(5)
+  
+  },
+  error = function(cond) {
+    message("Something's amiss!")
+  }
+)
         
 }
 
-colnames(info) <- files$name
 ```
 

@@ -240,3 +240,7 @@ joined <- info1 %>%
 
 ```
 
+```{r}
+info_long <- info %>% pivot_longer(cols = everything())
+```
+
