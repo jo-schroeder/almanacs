@@ -72,8 +72,4 @@ datatable(numerous_people, rownames= FALSE,
 
 ```
 
-# Problems
-```{r}
-
-```
 

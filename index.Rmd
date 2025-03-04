@@ -44,8 +44,8 @@ files <- lapply(folder_ids, function(folder) {
 
 #Data frame with all files
 files <- do.call("rbind", files)
-files <- files %>% 
-  filter(!(str_detect(name, "TEMPLATE")))
+files <- files #%>% 
+  #filter(!(str_detect(name, "TEMPLATE")))
 
 new_files <- files %>% 
   mutate(modifiedTime = map_chr(drive_resource, ~ .x[["modifiedTime"]])) %>%
@@ -65,7 +65,7 @@ no_rows_sheets <- NULL
 problem_sheets <- NULL
 
 for (i in 1:nrow(files)) {
-   
+  
   tryCatch(
     {
     sheet_master <- read_sheet(files$id[i], sheet = sheet) %>%
@@ -73,7 +73,7 @@ for (i in 1:nrow(files)) {
               year = str_extract(files$name[i], "\\d+"),
               file_id = files$id[i]) %>%
       rename(any_of(lookup)) %>%
-      mutate(across(everything(), as.character),
+      mutate(across(everything(), as.character)) %>%
              city_reg = ifelse(is.na(city_reg), "none", city_reg), 
              state_reg = ifelse(is.na(state_reg), "none", state_reg)) %>%
       select(-any_of(not_these))
@@ -93,6 +93,7 @@ for (i in 1:nrow(files)) {
     message("Something didn't work right!")
   })
   
+  #Sys.sleep(5)
 }
 
 time2 <- Sys.time()
