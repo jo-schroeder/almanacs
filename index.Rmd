@@ -50,7 +50,7 @@ new_files <- files %>%
   filter(modified_yesterday == TRUE)
 ```
 
-```{r, eval = FALSE, message = FALSE, warning = FALSE, include = FALSE}
+```{r, message = FALSE, warning = FALSE, include = FALSE}
 # Get the master sheet from each file
 sheet <- "master"
 lookup <- c(persTitle = "personTitle", persTitle = "title", instID = 0, instID = "ros", attendingInstID = "attendingIstD", attendingInstID = "attendingChurchID", attendingInstID = "AttendingChurchID")
