@@ -3,6 +3,13 @@ title: "Summary"
 output: html_document
 date: ""
 ---
+
+<style type="text/css" rel="stylesheet">
+  d-title {
+      display: none;
+    }
+</style>
+
 Last updated `r Sys.Date()`
 
 ```{r setup, message = FALSE, warning = FALSE, include = FALSE}
@@ -54,7 +61,7 @@ numerous_people <- master %>% select(persID, persName, diocese, year) %>%
   select(persID, persName, diocese, year) %>% distinct()
 
 datatable(numerous_people, rownames= FALSE,
-          options = list(list(1, 'asc'), list(4, 'asc'),
+          options = list(order = list(list(1, 'asc')), 
                          searchHighlight = TRUE),
           filter = list(position = 'top', clear = FALSE))
 
@@ -62,6 +69,11 @@ datatable(numerous_people, rownames= FALSE,
 # We don't need the people without the IDs in the person info sheet, maybe they get their own
 # Next institution ID lookup
 # Reconcile institutions
+
+```
+
+# Problems
+```{r}
 
 ```
 
