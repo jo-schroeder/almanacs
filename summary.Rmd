@@ -37,17 +37,17 @@ next_available_id <- master %>% select(instID, diocese) %>%
   filter(!is.na(instID)) %>% distinct() %>% 
   mutate(id_no = as.numeric(str_extract(instID, "[:digit:]{4}"))) %>%
   group_by(diocese) %>% slice_max(order_by = id_no, n = 1) %>%
-  select(diocese, id_no)
+  select(diocese, id_no) %>% distinct()
 
 datatable(next_available_id, filter = list(position = 'top', clear = FALSE))
 ```
-
+# Check Common Names
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
 numerous_people <- master %>% select(persID, persName, diocese, year) %>% 
   filter(!is.na(persID), !is.na(persName)) %>%
   mutate(id_no = as.numeric(str_extract(persID, "[:digit:]{3}"))) %>%
   filter(id_no >= 3) %>% arrange(persName) %>%
-  select(persID, persName, diocese, year)
+  select(persID, persName, diocese, year) %>% distinct()
 
 datatable(numerous_people, filter = list(position = 'top', clear = FALSE))
 
