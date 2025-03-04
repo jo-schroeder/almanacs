@@ -39,17 +39,24 @@ next_available_id <- master %>% select(instID, diocese) %>%
   group_by(diocese) %>% slice_max(order_by = id_no, n = 1) %>%
   select(diocese, id_no) %>% distinct()
 
-datatable(next_available_id, filter = list(position = 'top', clear = FALSE))
+datatable(next_available_id, rownames= FALSE,
+          options = list(pageLength = 1, searchHighlight = TRUE),
+          filter = list(position = 'top', clear = FALSE))
 ```
 # Check Common Names
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
 numerous_people <- master %>% select(persID, persName, diocese, year) %>% 
   filter(!is.na(persID), !is.na(persName)) %>%
-  mutate(id_no = as.numeric(str_extract(persID, "[:digit:]{3}"))) %>%
-  filter(id_no >= 3) %>% arrange(persName) %>%
+  mutate(id_n = as.numeric(str_extract(persID, "[:digit:]{3}")),
+         id_root = str_remove(persID, "[:digit:]{3}")) %>%
+  group_by(id_root) %>% mutate(max_ids = max(id_n)) %>%
+  filter(max_ids >= 3) %>% ungroup(id_root) %>%
   select(persID, persName, diocese, year) %>% distinct()
 
-datatable(numerous_people, filter = list(position = 'top', clear = FALSE))
+datatable(numerous_people, rownames= FALSE,
+          options = list(list(1, 'asc'), list(4, 'asc'),
+                         searchHighlight = TRUE),
+          filter = list(position = 'top', clear = FALSE))
 
 # Make a list of all the ones who have 00 more than 2 or 3, let's check if they're the same
 # We don't need the people without the IDs in the person info sheet, maybe they get their own

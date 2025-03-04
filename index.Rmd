@@ -169,38 +169,45 @@ master_pers <- master %>% select(c(1, 20:28, 29:30)) %>%
   fill(instID, .direction = "down") %>% distinct() %>%
   filter_at(vars(persID, persTitle, persName, persSuffix, persRole,
                  persNote, memberType, member, affiliated),
-            any_vars(!is.na(.)))
-
-## Make a list of all the ones who have 00 more than 2 or 3, let's check if they're the same
-## We don't need the people without the IDs in the person info sheet, maybe they get their own
-## Next institution ID lookup
-## Reconsile institutions
-
+            any_vars(!is.na(.))) %>%
+  filter(!is.na(persID))
 ```
 
 # Institution Information
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
-datatable(master_inst, filter = list(position = 'top', clear = FALSE))
+datatable(master_inst, rownames= FALSE,
+          options = list(searchHighlight = TRUE),
+          filter = list(position = 'top', clear = FALSE,
+                                     rownames= FALSE))
 ```
 
 # Institution Geographic Information
 
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
-datatable(master_geo, filter = list(position = 'top', clear = FALSE))
+datatable(master_geo, rownames= FALSE,
+          options = list(searchHighlight = TRUE),
+          filter = list(position = 'top', clear = FALSE,
+                                    rownames= FALSE))
 ```
 
 # Institution Attending Information
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
-datatable(master_att, filter = list(position = 'top', clear = FALSE))
+datatable(master_att, rownames= FALSE,
+          options = list(searchHighlight = TRUE),
+          filter = list(position = 'top', clear = FALSE,
+                                    rownames= FALSE))
 ```
 
 # Institution Person Information
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
-datatable(master_pers, filter = list(position = 'top', clear = FALSE))
+datatable(master_pers, rownames= FALSE,
+          options = list(searchHighlight = TRUE),
+          filter = list(position = 'top', clear = FALSE,
+                                     rownames= FALSE))
 ```
 
 ```{r, include = FALSE, eval = FALSE}
