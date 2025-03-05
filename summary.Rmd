@@ -5,7 +5,7 @@ date: ""
 ---
 
 <style type="text/css" rel="stylesheet">
-  d-title {
+  h1 {
       display: none;
     }
 </style>

@@ -5,7 +5,7 @@ date: ""
 ---
 
 <style type="text/css" rel="stylesheet">
-  d-title {
+  h1 {
       display: none;
     }
 </style>
@@ -82,6 +82,7 @@ for (i in 1:nrow(files)) {
               file_id = files$id[i]) %>%
       rename(any_of(lookup)) %>%
       mutate(across(everything(), as.character), 
+             across(everything(), na_if, "NULL"),
              city_reg = ifelse(is.na(city_reg), "none", city_reg), 
              state_reg = ifelse(is.na(state_reg), "none", state_reg)) %>%
       select(-any_of(not_these))
@@ -268,7 +269,8 @@ for (i in 1:nrow(new_files)) {
       mutate(across(everything(), as.character),
              city_reg = ifelse(is.na(city_reg), "none", city_reg), 
              state_reg = ifelse(is.na(state_reg), "none", state_reg)) %>%
-      select(-any_of(not_these))
+      select(-any_of(not_these)) %>%
+      
     print(new_files$id[i])
     print(nrow(sheet_master))
      if(nrow(sheet_master) != 0) {
