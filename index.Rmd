@@ -107,7 +107,6 @@ master <- master %>% select(1:32)
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
 fwrite(master, "./_data/master.csv.gz")
-fwrite(problem_sheets,  "./_data/problem_sheets.csv")
 
 #Inst info
 master_inst <- master %>% select(c(1:6, 29:30)) %>%
@@ -178,17 +177,17 @@ datatable(master_pers, rownames= FALSE,
 ```
 
 # FYI
-```{r, warning = FALSE}
+```{r, warning = FALSE, echo = FALSE}
 no_rows <- files %>% filter(id %in% no_rows_sheets) %>% pull(name)
 problems <- files %>% filter(id %in% problem_sheets) %>% pull(name)
 
-if(no_rows != 0) {
+if(length(no_rows) != 0) {
   message(paste0("These sheets are empty: ", print(no_rows)))
 } else {
   message(paste0("No sheets are empty!"))
 }
 
-if(problems != 0) {
+if(length(problems) != 0) {
   message(paste0("These sheets are giving us problems: ", print(problems))) 
 } else {
   message(paste0("No sheets are giving us problems!"))
