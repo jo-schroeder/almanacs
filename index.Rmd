@@ -44,8 +44,8 @@ files <- lapply(folder_ids, function(folder) {
 
 #Data frame with all files
 files <- do.call("rbind", files)
-files <- files #%>% 
-  #filter(!(str_detect(name, "TEMPLATE")))
+files <- files %>% 
+  filter(!(str_detect(name, "TEMPLATE")))
 
 new_files <- files %>% 
   mutate(modifiedTime = map_chr(drive_resource, ~ .x[["modifiedTime"]])) %>%
@@ -64,8 +64,8 @@ master <- data.frame("instID" = NA, "type" = NA, "instName" = NA, "language" = N
 no_rows_sheets <- NULL
 problem_sheets <- NULL
 
-for (i in 1:nrow(files)) {
-  
+for (i in 163:nrow(files)) {
+  warning(print(paste0("trying ", files$name[i])))
   tryCatch(
     {
     sheet_master <- read_sheet(files$id[i], sheet = sheet) %>%
@@ -73,24 +73,27 @@ for (i in 1:nrow(files)) {
               year = str_extract(files$name[i], "\\d+"),
               file_id = files$id[i]) %>%
       rename(any_of(lookup)) %>%
-      mutate(across(everything(), as.character)) %>%
+      mutate(across(everything(), as.character), 
              city_reg = ifelse(is.na(city_reg), "none", city_reg), 
              state_reg = ifelse(is.na(state_reg), "none", state_reg)) %>%
       select(-any_of(not_these))
-    print(files$id[i])
-    print(nrow(sheet_master))
+    
+    print(paste0(files$name[i], " went through the cleaning!"))
+    
      if(nrow(sheet_master) != 0) {
       master <- bind_rows(sheet_master, master)
-      
-      }
-     else {
-       no_rows_sheets <- c(no_rows_sheets, new_files$id[i])
-       next
+       print(paste0("we bound the rows of ", files$name[i], " (", nrow(sheet_master), " rows)"))
+       
+      } else {
+       no_rows_sheets <- c(no_rows_sheets, files$id[i])
+       print(paste0(files$name[i], " has no rows"))
+  
       }
   },
   error = function(e) {
-    problem_sheets <- c(problem_sheets, new_files$id[i])
-    message("Something didn't work right!")
+    problem_sheets <- c(problem_sheets, files$id[i])
+    warning(paste0(files$name[i], " is giving us trouble!"))
+    
   })
   
   #Sys.sleep(5)
@@ -100,55 +103,6 @@ time2 <- Sys.time()
 
 print(time2-time1)
 master <- master %>% select(1:32)
-```
-
-```{r, eval = FALSE, message = FALSE, warning = FALSE, include = FALSE}
-# Get the master sheet from each file
-sheet <- "master"
-lookup <- c(persTitle = "personTitle", persTitle = "title", instID = 0, instID = "ros", attendingInstID = "attendingIstD", attendingInstID = "attendingChurchID", attendingInstID = "AttendingChurchID")
-not_these <- c("", "temp")
-
-time1 <- Sys.time()
-master <- data.frame("instID" = NA, "type" = NA, "instName" = NA, "language" = NA, "instNote" = NA, "placeName" = NA, "region" = NA, "county_orig" = NA, "county_reg"   = NA, "city_orig" = NA, "city_reg" = NA, "state_orig" = NA, "state_reg" = NA, "latitude" = NA, "longitude" = NA, "attendingInstID" = NA, "attendingChurch" = NA, "attendingChurchFrequency" = NA, "attendingChurchNote" = NA, "persID" = NA, "persTitle" = NA, "persName" = NA, "persSuffix" = NA, "persRole" = NA, "persNote"      = NA, "memberType" = NA, "member" = NA, "affiliated" = NA, "diocese" = NA, "year" = NA)
-problem_sheets <- NULL
-
-for (i in 1:nrow(new_files)) {
-   
-  tryCatch(
-    {
-    sheet_master <- read_sheet(new_files$id[i], sheet = sheet) %>%
-       mutate(diocese = str_extract(new_files$name[i], "[A-Za-z]+"),
-              year = str_extract(new_files$name[i], "\\d+"),
-              file_id = new_files$id[i]) %>%
-      rename(any_of(lookup)) %>%
-      mutate(across(everything(), as.character),
-             city_reg = ifelse(is.na(city_reg), "none", city_reg), 
-             state_reg = ifelse(is.na(state_reg), "none", state_reg)) %>%
-      select(-any_of(not_these))
-    print(new_files$id[i])
-    print(nrow(sheet_master))
-     if(nrow(sheet_master) != 0) {
-      master <- bind_rows(sheet_master, master)
-      }
-     else {
-       problem_sheets <- c(problem_sheets,new_files$id[i])
-       next
-      }
-  },
-  error = function(e) {
-    problem_sheets <- c(problem_sheets,new_files$id[i])
-    message("Something didn't work right!")
-  })
-  
-}
-
-time2 <- Sys.time()
-
-print(time2-time1)
-master_new <- master %>% select(1:32)
-
-# Making Tables
-master <- fread("./_data/master.csv.gz") %>% mutate(across(everything(), as.character)) %>% filter(!(file_id %in% new_files$id)) %>% bind_rows(master_new) %>% mutate_all(list(~na_if(.,"")))
 ```
 
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
@@ -224,13 +178,25 @@ datatable(master_pers, rownames= FALSE,
 ```
 
 # FYI
-```{r}
+```{r, warning = FALSE}
 no_rows <- files %>% filter(id %in% no_rows_sheets) %>% pull(name)
 problems <- files %>% filter(id %in% problem_sheets) %>% pull(name)
+
+if(no_rows != 0) {
+  message(paste0("These sheets are empty: ", print(no_rows)))
+} else {
+  message(paste0("No sheets are empty!"))
+}
+
+if(problems != 0) {
+  message(paste0("These sheets are giving us problems: ", print(problems))) 
+} else {
+  message(paste0("No sheets are giving us problems!"))
+}
+
 ```
 
-These sheets are empty: `r print(no_rows)`
-These sheets are giving us problems: `r print(problems)`
+
 
 
 ```{r, include = FALSE, eval = FALSE}
@@ -271,4 +237,53 @@ columns %>% filter(V21 == "personTitle")
 write.csv(columns, "columns.csv")
 
 
+```
+
+```{r, eval = FALSE, message = FALSE, warning = FALSE, include = FALSE}
+# Get the master sheet from each file
+sheet <- "master"
+lookup <- c(persTitle = "personTitle", persTitle = "title", instID = 0, instID = "ros", attendingInstID = "attendingIstD", attendingInstID = "attendingChurchID", attendingInstID = "AttendingChurchID")
+not_these <- c("", "temp")
+
+time1 <- Sys.time()
+master <- data.frame("instID" = NA, "type" = NA, "instName" = NA, "language" = NA, "instNote" = NA, "placeName" = NA, "region" = NA, "county_orig" = NA, "county_reg"   = NA, "city_orig" = NA, "city_reg" = NA, "state_orig" = NA, "state_reg" = NA, "latitude" = NA, "longitude" = NA, "attendingInstID" = NA, "attendingChurch" = NA, "attendingChurchFrequency" = NA, "attendingChurchNote" = NA, "persID" = NA, "persTitle" = NA, "persName" = NA, "persSuffix" = NA, "persRole" = NA, "persNote"      = NA, "memberType" = NA, "member" = NA, "affiliated" = NA, "diocese" = NA, "year" = NA)
+problem_sheets <- NULL
+
+for (i in 1:nrow(new_files)) {
+   
+  tryCatch(
+    {
+    sheet_master <- read_sheet(new_files$id[i], sheet = sheet) %>%
+       mutate(diocese = str_extract(new_files$name[i], "[A-Za-z]+"),
+              year = str_extract(new_files$name[i], "\\d+"),
+              file_id = new_files$id[i]) %>%
+      rename(any_of(lookup)) %>%
+      mutate(across(everything(), as.character),
+             city_reg = ifelse(is.na(city_reg), "none", city_reg), 
+             state_reg = ifelse(is.na(state_reg), "none", state_reg)) %>%
+      select(-any_of(not_these))
+    print(new_files$id[i])
+    print(nrow(sheet_master))
+     if(nrow(sheet_master) != 0) {
+      master <- bind_rows(sheet_master, master)
+      }
+     else {
+       problem_sheets <- c(problem_sheets,new_files$id[i])
+       next
+      }
+  },
+  error = function(e) {
+    problem_sheets <- c(problem_sheets,new_files$id[i])
+    message("Something didn't work right!")
+  })
+  
+}
+
+time2 <- Sys.time()
+
+print(time2-time1)
+master_new <- master %>% select(1:32)
+
+# Making Tables
+master <- fread("./_data/master.csv.gz") %>% mutate(across(everything(), as.character)) %>% filter(!(file_id %in% new_files$id)) %>% bind_rows(master_new) %>% mutate_all(list(~na_if(.,"")))
 ```
