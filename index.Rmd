@@ -64,7 +64,7 @@ master <- data.frame("instID" = NA, "type" = NA, "instName" = NA, "language" = N
 no_rows_sheets <- NULL
 problem_sheets <- NULL
 
-for (i in 163:nrow(files)) {
+for (i in 1:nrow(files)) {
   warning(print(paste0("trying ", files$name[i])))
   tryCatch(
     {
@@ -96,7 +96,7 @@ for (i in 163:nrow(files)) {
     
   })
   
-  #Sys.sleep(5)
+  Sys.sleep(5)
 }
 
 time2 <- Sys.time()
