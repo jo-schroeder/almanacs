@@ -50,6 +50,7 @@ datatable(next_available_id, rownames= FALSE,
           options = list(pageLength = 1, searchHighlight = TRUE),
           filter = list(position = 'top', clear = FALSE))
 ```
+
 # Check Common Names
 ```{r, echo = FALSE, warning = FALSE, message = FALSE}
 numerous_people <- master %>% select(persID, persName, diocese, year) %>% 

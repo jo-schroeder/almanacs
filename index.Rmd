@@ -3,6 +3,14 @@ title: "Search"
 output: html_document
 date: ""
 ---
+
+<style type="text/css" rel="stylesheet">
+  d-title {
+      display: none;
+    }
+</style>
+
+
 Last updated `r Sys.Date()`
 
 ```{r setup, message = FALSE, warning = FALSE, include = FALSE}
