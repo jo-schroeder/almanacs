@@ -1,0 +1,31 @@
+name: Save Selected Data
+
+on:
+  workflow_dispatch:  # Allows manual triggers
+  repository_dispatch:  # Allows API calls from your website
+    types: [update-data]
+
+jobs:
+  update-file:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Save data file in _data folder
+        run: |
+          echo '${{ github.event.client_payload.content }}' > _data/selected_rows.json
+
+      - name: Commit and push changes
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # Use the GH_TOKEN secret here
+        run: |
+          git add _data/selected_rows.json
+          git commit -m "Updated selected rows data"
+          git push

@@ -36,7 +36,7 @@ drive_auth(token = gs4_token())
 
 ```
 
-```{r, message = FALSE, warning = FALSE, include = FALSE}
+```{r get-files, message = FALSE, warning = FALSE, include = FALSE}
 # Get file ids from folders
 folder_ids <- c("1vsjVWIWOAH1xN8RPvhgmI6ky1vA7CfcJ",
     "145ECofup4M7ZnA1dUF5_pDZN3OWEK1Yb",
@@ -61,7 +61,7 @@ new_files <- files %>%
   filter(modified_yesterday == TRUE)
 ```
 
-```{r, message = FALSE, warning = FALSE, include = FALSE}
+```{r get-master-sheets, message = FALSE, warning = FALSE, include = FALSE}
 # Get the master sheet from each file
 sheet <- "master"
 lookup <- c(persTitle = "personTitle", persTitle = "title", instID = 0, instID = "ros", attendingInstID = "attendingIstD", attendingInstID = "attendingChurchID", attendingInstID = "AttendingChurchID")
@@ -114,7 +114,7 @@ print(time2-time1)
 master <- master %>% select(1:32)
 ```
 
-```{r, echo = FALSE, warning = FALSE, message = FALSE}
+```{r create-dfs, echo = FALSE, warning = FALSE, message = FALSE}
 fwrite(master, "./_data/master.csv.gz")
 
 #Inst info
@@ -150,7 +150,7 @@ master_pers <- master %>% select(c(1, 20:28, 29:30)) %>%
 
 # Institution Information
 
-```{r, echo = FALSE, warning = FALSE, message = FALSE}
+```{r institution-df, echo = FALSE, warning = FALSE, message = FALSE}
 datatable(master_inst, rownames= FALSE,
           options = list(searchHighlight = TRUE),
           filter = list(position = 'top', clear = FALSE,
@@ -160,7 +160,7 @@ datatable(master_inst, rownames= FALSE,
 # Institution Geographic Information
 
 
-```{r, echo = FALSE, warning = FALSE, message = FALSE}
+```{r geo-df, echo = FALSE, warning = FALSE, message = FALSE}
 datatable(master_geo, rownames= FALSE,
           options = list(searchHighlight = TRUE),
           filter = list(position = 'top', clear = FALSE,
@@ -169,7 +169,7 @@ datatable(master_geo, rownames= FALSE,
 
 # Institution Attending Information
 
-```{r, echo = FALSE, warning = FALSE, message = FALSE}
+```{r attending-df, echo = FALSE, warning = FALSE, message = FALSE}
 datatable(master_att, rownames= FALSE,
           options = list(searchHighlight = TRUE),
           filter = list(position = 'top', clear = FALSE,
@@ -178,7 +178,7 @@ datatable(master_att, rownames= FALSE,
 
 # Institution Person Information
 
-```{r, echo = FALSE, warning = FALSE, message = FALSE}
+```{r person-df, echo = FALSE, warning = FALSE, message = FALSE}
 datatable(master_pers, rownames= FALSE,
           options = list(searchHighlight = TRUE),
           filter = list(position = 'top', clear = FALSE,
@@ -186,7 +186,7 @@ datatable(master_pers, rownames= FALSE,
 ```
 
 # FYI
-```{r, warning = FALSE, echo = FALSE}
+```{r fyi, warning = FALSE, echo = FALSE}
 no_rows <- files %>% filter(id %in% no_rows_sheets) %>% pull(name)
 problems <- files %>% filter(id %in% problem_sheets) %>% pull(name)
 
@@ -203,9 +203,6 @@ if(length(problems) != 0) {
 }
 
 ```
-
-
-
 
 ```{r, include = FALSE, eval = FALSE}
 # Get the peopleInfo sheet from each file

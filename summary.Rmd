@@ -4,6 +4,60 @@ output: html_document
 date: ""
 ---
 
+<script>
+async function sendDataToGitHub() {
+  var data = [];
+
+  // Collect selected rows
+  $('#yourTableID tbody tr').each(function () {
+    if ($(this).find('input.rowCheckbox').prop('checked')) {
+      var rowData = $(this).find('td').map(function () {
+        return $(this).text().trim();
+      }).get();
+      data.push(rowData);
+    }
+  });
+
+  if (data.length === 0) {
+    alert('No rows selected!');
+    return;
+  }
+
+  // Convert data to JSON format
+  var jsonData = JSON.stringify({ selectedRows: data });
+
+  // GitHub API URL for repository dispatch
+  const repoOwner = "jo-schroeder"; // Replace with your GitHub username
+  const repoName = "almanacs"; // Replace with your repository
+  const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/actions/workflows/update-data.yml/dispatches`;
+
+  // Make API request to trigger the GitHub Action
+  fetch(apiUrl, {
+    method: "POST",
+    headers: {
+      "Authorization": `token ${GH_TOKEN}`, // Use GH_TOKEN secret from repository
+      "Accept": "application/vnd.github.v3+json",
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      ref: "main", // Change branch if necessary
+      inputs: { content: jsonData }
+    })
+  })
+  .then(response => {
+    if (response.ok) {
+      alert("Data successfully sent to GitHub!");
+    } else {
+      alert("Error uploading data!");
+    }
+  })
+  .catch(error => console.error("GitHub API Error:", error));
+}
+
+
+</script>
+
+
 <style type="text/css" rel="stylesheet">
   h1 {
       display: none;
@@ -28,7 +82,7 @@ library(data.table)
 master <- fread("./_data/master.csv.gz") %>% mutate(across(everything(), as.character)) %>% mutate_all(list(~na_if(.,"")))
 ```
 
-```{r, message = FALSE, warning = FALSE, include = FALSE}
+```{r get-summary-info, message = FALSE, warning = FALSE, include = FALSE}
 n_insts <- master %>% filter(!is.na(instID)) %>% 
   distinct(instID) %>% count() %>% pull(n)
 n_people <- master %>% filter(!is.na(persID)) %>% distinct(persID) %>% 
@@ -39,7 +93,7 @@ n_sheets <- master %>% distinct(file_id) %>% count() %>% pull(n)
 ## Today is `r Sys.Date()`, and last I checked we have encoded **`r n_insts`** unique institutions and **`r n_people`** unique people on **`r n_sheets`** separate Google Sheets. 
 
 # Lookup Next Available ID
-```{r, echo = FALSE, warning = FALSE, message = FALSE}
+```{r lookup-next-avail, echo = FALSE, warning = FALSE, message = FALSE}
 next_available_id <- master %>% select(instID, diocese) %>% 
   filter(!is.na(instID)) %>% distinct() %>% 
   mutate(id_no = as.numeric(str_extract(instID, "[:digit:]{4}"))) %>%
@@ -52,24 +106,35 @@ datatable(next_available_id, rownames= FALSE,
 ```
 
 # Check Common Names
-```{r, echo = FALSE, warning = FALSE, message = FALSE}
+```{r check-common-names, echo = FALSE, warning = FALSE, message = FALSE}
 numerous_people <- master %>% select(persID, persName, diocese, year) %>% 
   filter(!is.na(persID), !is.na(persName)) %>%
   mutate(id_n = as.numeric(str_extract(persID, "[:digit:]{3}")),
          id_root = str_remove(persID, "[:digit:]{3}")) %>%
   group_by(id_root) %>% mutate(max_ids = max(id_n)) %>%
   filter(max_ids >= 3) %>% ungroup(id_root) %>%
-  select(persID, persName, diocese, year) %>% distinct()
+  select(persID, persName, diocese, year) %>% distinct() %>%
+  mutate(Select = sprintf('<input type="checkbox" class="rowCheckbox">'))
 
-datatable(numerous_people, rownames= FALSE,
-          options = list(order = list(list(1, 'asc')), 
-                         searchHighlight = TRUE),
-          filter = list(position = 'top', clear = FALSE))
-
-# Make a list of all the ones who have 00 more than 2 or 3, let's check if they're the same
-# We don't need the people without the IDs in the person info sheet, maybe they get their own
-# Next institution ID lookup
-# Reconcile institutions
+# Create the DataTable with a "Save to GitHub" button
+datatable(
+  numerous_people,
+  rownames = FALSE,
+  escape = FALSE,
+  options = list(
+    dom = 'Bfrtip',
+    buttons = list(
+      list(
+        text = "Save to GitHub",
+        action = JS("sendDataToGitHub()")  # Calls the JavaScript function
+      )
+    ),
+    order = list(list(1, 'asc')),
+    searchHighlight = TRUE
+  ),
+  filter = list(position = 'top', clear = FALSE),
+  extensions = 'Buttons'
+)
 
 ```
 
