@@ -5,11 +5,11 @@ date: ""
 ---
 
 <script>
-async function sendDataToGitHub() {
+sendDataToGitHub() {
   var data = [];
 
   // Collect selected rows
-  $('#yourTableID tbody tr').each(function () {
+  $('#DataTables_Table_1 tbody tr').each(function () {
     if ($(this).find('input.rowCheckbox').prop('checked')) {
       var rowData = $(this).find('td').map(function () {
         return $(this).text().trim();
@@ -18,24 +18,19 @@ async function sendDataToGitHub() {
     }
   });
 
-  if (data.length === 0) {
-    alert('No rows selected!');
-    return;
-  }
-
   // Convert data to JSON format
   var jsonData = JSON.stringify({ selectedRows: data });
 
   // GitHub API URL for repository dispatch
   const repoOwner = "jo-schroeder"; // Replace with your GitHub username
   const repoName = "almanacs"; // Replace with your repository
-  const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/actions/workflows/update-data.yml/dispatches`;
+  const apiUrl = https://api.github.com/repos/${repoOwner}/${repoName}/actions/workflows/update-data.yml/dispatches;
 
   // Make API request to trigger the GitHub Action
   fetch(apiUrl, {
     method: "POST",
     headers: {
-      "Authorization": `token ${GH_TOKEN}`, // Use GH_TOKEN secret from repository
+      "Authorization": token ${GH_TOKEN}, // Use GH_TOKEN secret from repository
       "Accept": "application/vnd.github.v3+json",
       "Content-Type": "application/json"
     },
@@ -54,9 +49,7 @@ async function sendDataToGitHub() {
   .catch(error => console.error("GitHub API Error:", error));
 }
 
-
 </script>
-
 
 <style type="text/css" rel="stylesheet">
   h1 {
@@ -125,7 +118,8 @@ datatable(
     dom = 'Bfrtip',
     buttons = list(
       list(
-        text = "Save to GitHub",
+        extend = "collection",
+         text = "Save to GitHub",
         action = JS("sendDataToGitHub()")  # Calls the JavaScript function
       )
     ),
@@ -137,5 +131,7 @@ datatable(
 )
 
 ```
+
+
 
 
