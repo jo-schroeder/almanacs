@@ -5,49 +5,7 @@ date: ""
 ---
 
 <script>
-sendDataToGitHub() {
-  var data = [];
 
-  // Collect selected rows
-  $('#DataTables_Table_1 tbody tr').each(function () {
-    if ($(this).find('input.rowCheckbox').prop('checked')) {
-      var rowData = $(this).find('td').map(function () {
-        return $(this).text().trim();
-      }).get();
-      data.push(rowData);
-    }
-  });
-
-  // Convert data to JSON format
-  var jsonData = JSON.stringify({ selectedRows: data });
-
-  // GitHub API URL for repository dispatch
-  const repoOwner = "jo-schroeder"; // Replace with your GitHub username
-  const repoName = "almanacs"; // Replace with your repository
-  const apiUrl = https://api.github.com/repos/${repoOwner}/${repoName}/actions/workflows/update-data.yml/dispatches;
-
-  // Make API request to trigger the GitHub Action
-  fetch(apiUrl, {
-    method: "POST",
-    headers: {
-      "Authorization": token ${GH_TOKEN}, // Use GH_TOKEN secret from repository
-      "Accept": "application/vnd.github.v3+json",
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      ref: "main", // Change branch if necessary
-      inputs: { content: jsonData }
-    })
-  })
-  .then(response => {
-    if (response.ok) {
-      alert("Data successfully sent to GitHub!");
-    } else {
-      alert("Error uploading data!");
-    }
-  })
-  .catch(error => console.error("GitHub API Error:", error));
-}
 
 </script>
 
@@ -60,13 +18,13 @@ sendDataToGitHub() {
 Last updated `r Sys.Date()`
 
 ```{r setup, message = FALSE, warning = FALSE, include = FALSE}
+library(DT)
 library(dplyr)
 library(readr)
 library(tidyr)
 library(stringr)
 library(googledrive)
 library(googlesheets4)
-library(DT)
 library(purrr)
 library(lubridate)
 library(gargle)
@@ -107,27 +65,70 @@ numerous_people <- master %>% select(persID, persName, diocese, year) %>%
   group_by(id_root) %>% mutate(max_ids = max(id_n)) %>%
   filter(max_ids >= 3) %>% ungroup(id_root) %>%
   select(persID, persName, diocese, year) %>% distinct() %>%
-  mutate(Select = sprintf('<input type="checkbox" class="rowCheckbox">'))
+  mutate(Select = '<input type="checkbox" class="rowCheckbox">')
 
-# Create the DataTable with a "Save to GitHub" button
+
 datatable(
   numerous_people,
   rownames = FALSE,
   escape = FALSE,
+  extensions = c('Buttons'),
   options = list(
     dom = 'Bfrtip',
     buttons = list(
       list(
         extend = "collection",
-         text = "Save to GitHub",
-        action = JS("sendDataToGitHub()")  # Calls the JavaScript function
+        text = "Save to GitHub",
+        action = JS(
+        paste0("function sendDataToGitHub() {
+  var data = [];
+
+  // Collect selected rows
+  $('#DataTables_Table_1 tbody tr').each(function () {
+    if ($(this).find('input.rowCheckbox').prop('checked')) {
+      var rowData = $(this).find('td').map(function () {
+        return $(this).text().trim();
+      }).get();
+      data.push(rowData);
+    }
+  });
+
+  // Convert data to JSON format
+  var jsonData = JSON.stringify({ selectedRows: data });
+
+  // GitHub API URL for repository dispatch
+  const repoOwner = 'jo-schroeder'; // Replace with your GitHub username
+  const repoName = 'almanacs'; // Replace with your repository
+  const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/actions/workflows/update-data.yml/dispatches`;
+
+  // Make API request to trigger the GitHub Action
+  fetch(apiUrl, {
+    method: 'POST',
+    headers: {
+      'Authorization': `token ${GH_TOKEN}`,
+      'Accept': 'application/vnd.github.v3+json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      ref: 'main', // Change branch if necessary
+      inputs: { content: jsonData }
+    })
+  })
+  .then(response => {
+    if (response.ok) {
+      alert('Data successfully sent to GitHub!');
+    } else {
+      alert('Error uploading data!');
+    }
+  })
+  .catch(error => console.error('GitHub API Error:', error));
+}"))
       )
     ),
     order = list(list(1, 'asc')),
     searchHighlight = TRUE
   ),
-  filter = list(position = 'top', clear = FALSE),
-  extensions = 'Buttons'
+  filter = list(position = 'top', clear = FALSE)
 )
 
 ```
