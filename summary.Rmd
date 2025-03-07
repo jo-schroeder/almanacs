@@ -4,15 +4,15 @@ output: html_document
 date: ""
 ---
 
-<script>
-
-
-</script>
-
 <style type="text/css" rel="stylesheet">
   h1 {
       display: none;
     }
+  #check-common-names {
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+  }
 </style>
 
 Last updated `r Sys.Date()`
@@ -55,6 +55,12 @@ datatable(next_available_id, rownames= FALSE,
           options = list(pageLength = 1, searchHighlight = TRUE),
           filter = list(position = 'top', clear = FALSE))
 ```
+
+<div id="passwordPrompt">
+  <label for="passwordInput">Enter password:</label>
+  <input type="text" id="passwordInput"> <!-- Password is visible -->
+  <button onclick="checkPassword()">Submit</button>
+</div>
 
 # Check Common Names
 ```{r check-common-names, echo = FALSE, warning = FALSE, message = FALSE}
@@ -133,6 +139,23 @@ datatable(
 
 ```
 
-
+<script>
+  function checkPassword() {
+    var password = document.getElementById("passwordInput").value;
+    if (password === "pickles") {
+      document.getElementById("passwordPrompt").style.display = "none";
+    var section = document.getElementById("check-common-names");
+    if (section) {
+      section.style.visibility = "visible";
+      section.style.height = "auto"; // Reset height
+      section.style.overflow = "visible"; // Allow content to show
+    } else {
+      console.error("Div with ID 'check-common-names' not found!");
+    }
+  } else {
+    alert("Incorrect password. Try again!");
+  }
+}
+</script>
 
 
