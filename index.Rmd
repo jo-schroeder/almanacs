@@ -38,13 +38,15 @@ drive_auth(token = gs4_token())
 
 ```{r get-files, message = FALSE, warning = FALSE, include = FALSE}
 # Get file ids from folders
-folder_ids <- c("1vsjVWIWOAH1xN8RPvhgmI6ky1vA7CfcJ",
-    "145ECofup4M7ZnA1dUF5_pDZN3OWEK1Yb",
-    "1gi-k4cgD-XR_AiaSq6J9OPf3OWwkIPCt",
-    "1IYkTrGI07fTcjaggY_12V72syNATNSIp",
-    "10-NQy1b9lXuXnm5X_FuzYpetI_1PgjOQ",
-    "1FbOjmMtKKbgpDou-eyVbhb162RQJMNy-",
-    "1LEYANh7PIV9BIC4GpmWByWR4mi2dNtih")
+folder_ids <- c("1vsjVWIWOAH1xN8RPvhgmI6ky1vA7CfcJ", #1870
+    "145ECofup4M7ZnA1dUF5_pDZN3OWEK1Yb", #1869
+    "1gi-k4cgD-XR_AiaSq6J9OPf3OWwkIPCt", #1868
+    "1IYkTrGI07fTcjaggY_12V72syNATNSIp", #1867
+    "10-NQy1b9lXuXnm5X_FuzYpetI_1PgjOQ", #1866
+    "1FbOjmMtKKbgpDou-eyVbhb162RQJMNy-", #1865
+    "1LEYANh7PIV9BIC4GpmWByWR4mi2dNtih", #1864
+#add older years
+)
 
 files <- lapply(folder_ids, function(folder) {
   drive_ls(as_id(folder))
@@ -116,6 +118,7 @@ master <- master %>% select(1:32)
 
 ```{r create-dfs, echo = FALSE, warning = FALSE, message = FALSE}
 fwrite(master, "./_data/master.csv.gz")
+fwrite(master, "./_data/master.csv")
 
 #Inst info
 master_inst <- master %>% select(c(1:6, 29:30)) %>%
