@@ -118,7 +118,7 @@ master <- master %>% select(1:32)
 
 ```{r create-dfs, echo = FALSE, warning = FALSE, message = FALSE}
 fwrite(master, "./_data/master.csv.gz")
-fwrite(master, "./_data/master.csv")
+fwrite(master, "./_data/master.csv", row.names = FALSE)
 
 #Inst info
 master_inst <- master %>% select(c(1:6, 29:30)) %>%
