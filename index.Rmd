@@ -45,7 +45,11 @@ folder_ids <- c("1vsjVWIWOAH1xN8RPvhgmI6ky1vA7CfcJ", #1870
     "10-NQy1b9lXuXnm5X_FuzYpetI_1PgjOQ", #1866
     "1FbOjmMtKKbgpDou-eyVbhb162RQJMNy-", #1865
     "1LEYANh7PIV9BIC4GpmWByWR4mi2dNtih", #1864
-#add older years
+    "1kg-I2DYN4HsQ-jIFhym7nmvkubc9GyFD", #1834
+    "1tUormlmSj0P8342ZVdkFHwK5Zzlz4pd_", #1835
+    "1uNGRy3a3EBJjnjlppZ29cLqlvTxDijG7", #1836
+    "1icyrHfA04vVziPAf4B8cL8x6pyltLl4m", #1837
+    "1W4k8-Y1GWLJv74j8mXCKJPxaIngui4xP" #1838
 )
 
 files <- lapply(folder_ids, function(folder) {

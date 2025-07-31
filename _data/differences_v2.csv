@@ -1,0 +1,56 @@
+rowname,name,value.x,value.y,sheet
+23,city_orig,Cynthiana,Cynthania,Covington1870
+67,city_orig,Bonnet Caré,Bonnet Care,NewOrleans1870
+33,city_orig,Little Rock,AR,LittleRock1870
+1,instName,Cathedral of the Holy Name,Corner of N. State and Superior streets,Chicago1870
+40,attendingChurchFrequency,4th Sunday,once in three months,Baltimore1870
+7,instID,for.in.0005,for.in.0004,FortWayne1869
+7,city_orig,Arcola,Angola,FortWayne1869
+28,instID,erie.pa.0130,erie.pa.0037,Erie1869
+112,city_orig,Mulberry,"Mulberry, Cedar P.O.",Galveston1869
+8,attendingInstID,mon.ca.0001,mon.ca.0052,Monterey1869
+31,attendingInstID,stp.mn.0033,stp.mn.0058,StPaul1869
+44,city_orig,Angola and North-Evans,Angola,Buffalo1869
+5,instID,nes.wa.0003,nes.wa.0002,Nesqualy1869
+5,city_orig,Chinook Point,Cape Disappointment,Nesqualy1869
+21,instID,new.la.0009,new.la.0008,NewOrleans1869
+21,instName,St. Rose of Lima,St. Ann's,NewOrleans1869
+12,instName,St. Patrick's,St. Patricks's,SanFrancisco1869
+41,city_orig,Cantu los Arroyos,Büchel Settlement,Galveston1868
+5,instID,nes.wa.0003,nes.wa.0002,Nesqualy1868
+5,city_orig,Chinook Point,Cape Disappointment,Nesqualy1868
+32,city_orig,French Corral,French Coral,VAMarysvilleCalifornia1868
+61,instID,ore.or.0056,ore.or.0061,OregonCity1868
+8,attendingInstID,mon.ca.0001,mon.ca.0052,Monterey1868
+10,instName,St. Patrick's,St. Patricks's,SanFrancisco1868
+10,city_orig,New-Canada,New Canada,StPaul1868
+60,instID,ore.or.0087,ore.or.0068,OregonCity1867
+5,instID,nes.wa.0003,nes.wa.0002,Nesqualy1867
+5,city_orig,Chinook Point,Cape Disappointment,Nesqualy1867
+8,attendingInstID,mon.ca.0001,mon.ca.0052,Monterey1867
+32,city_orig,French Corral,French Coral,VAMarysvilleCalifornia1867
+155,attendingInstID,nyc.ny.0198,nyc.ny.0340,NewYorkCity1867
+14,instID,sanf.ca.0005,sanf.ca.0006,SanFrancisco1867
+14,instName,St. Ignatius',Notre Dame des Victoires,SanFrancisco1867
+5,instID,gra.ca.0002,gra.ca.0003,VAMarysvilleCalifornia1866
+5,city_orig,Albion,Alleghany Town,VAMarysvilleCalifornia1866
+5,attendingChurch,attended from Mendocino City,church attended from Downiville,VAMarysvilleCalifornia1866
+7,instID,mon.ca.0004,mon.ca.0002,Monterey1866
+7,city_orig,Wilmington,San Gabriel,Monterey1866
+14,instID,sanf.ca.0005,sanf.ca.0006,SanFrancisco1866
+14,instName,St. Ignatius',Notre Dame des Victoires,SanFrancisco1866
+59,instID,ore.or.0087,ore.or.0068,OregonCity1866
+8,instID,nes.wa.0048,nes.wa.0005,Nesqualy1866
+8,city_orig,Simcoe,Yakama,Nesqualy1866
+4,instID,gra.ca.0057,gra.ca.0002,VAMarysvilleCalifornia1865
+4,city_orig,Oroville,Albion,VAMarysvilleCalifornia1865
+4,attendingChurch,attended from Marysville,attended from Mendocino City,VAMarysvilleCalifornia1865
+1,instName,St. Augustin and St. James' Cathedral,St. Augustine and St. James' Cathedral,Nesqualy1865
+7,instID,mon.ca.0003,mon.ca.0002,Monterey1865
+7,city_orig,San Fernando,San Gabriel,Monterey1865
+10,instName,St. Patrick's,St. Patricks's,SanFrancisco1865
+7,instID,mon.ca.0003,mon.ca.0002,Monterey1864
+7,city_orig,San Fernando,San Gabriel,Monterey1864
+1,instName,St. Augustin and St. James's Cathedral,St. Augustine and St. James' Cathedral,Nesqualy1864
+18,instID,sanf.ca.0008,sanf.ca.0009,SanFrancisco1864
+18,instName,St. Joseph's,St. Peter's,SanFrancisco1864
